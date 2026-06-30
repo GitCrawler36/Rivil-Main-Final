@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Page Not Found | Rivil International Education Consultants</title>
+<meta name="description" content="The page you are looking for could not be found. Explore Rivil International's study destinations or return to the homepage.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
+<script src="rivil-data.js"></script>
+<script src="rivil-app.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+
+<div id="navbar"></div>
+
+<section class="flex items-center justify-center px-margin-mobile md:px-margin-desktop" style="min-height:80vh;">
+  <div class="max-w-2xl text-center">
+    <p class="hero-rise hero-rise-1 font-display-lg text-[7rem] sm:text-[10rem] font-bold leading-none text-primary">404</p>
+    <h1 class="hero-rise hero-rise-2 mt-2 font-display-lg text-[32px] sm:text-display-lg-mobile font-bold leading-tight text-white">Page Not Found</h1>
+    <p class="hero-rise hero-rise-3 mx-auto mt-5 max-w-md font-body-lg text-silver/70">Sorry, the page you are looking for doesn't exist or has been moved.</p>
+    <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="index.html" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Back to Home</a>
+      <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    initNavbar();
+    initFooter();
+    initWhatsApp('Hi, I would like to know more about studying abroad. Please contact me.');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Rivil International — custom animations & overrides
+   ========================================================================== */
+
+/* ---------- Scroll reveal (driven by initScrollAnimations) ---------- */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- WhatsApp button pulse ring ---------- */
+
+@keyframes wa-pulse {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  70%  { transform: scale(1.65); opacity: 0; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+
+.wa-pulse-ring {
+  animation: wa-pulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ---------- Hero entrance ---------- */
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-rise   { animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-rise-1 { animation-delay: 0.08s; }
+.hero-rise-2 { animation-delay: 0.22s; }
+.hero-rise-3 { animation-delay: 0.38s; }
+.hero-rise-4 { animation-delay: 0.54s; }
+
+/* Slow, subtle Ken Burns drift on hero photography */
+@keyframes hero-drift {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+.hero-drift {
+  animation: hero-drift 18s ease-out both;
+}
+
+/* ---------- Hero crossfade slider ---------- */
+
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.is-active {
+  opacity: 0.45;
+}
+
+/* ---------- University logo marquee ---------- */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.marquee-row-2 .marquee-track {
+  animation-direction: reverse;
+  animation-duration: 55s;
+}
+
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Hide the horizontal scrollbar on the social feed scroller */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ---------- Decorative underline stroke for headline accents ---------- */
+
+.accent-underline {
+  background-image: linear-gradient(120deg, rgba(238, 181, 46, 0.55), rgba(238, 181, 46, 0.55));
+  background-repeat: no-repeat;
+  background-size: 100% 0.32em;
+  background-position: 0 88%;
+}
+
+/* ---------- Smooth scrolling & typography polish ---------- */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background-color: #556B2F;
+  color: #ffffff;
+}
+
+/* ---------- Stitch homepage design-system components ---------- */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+  background: rgba(5, 7, 8, 0.85);
+}
+
+.bento-card {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bento-card:hover {
+  transform: scale(1.01);
+}
+
+/* ---------- Māori art separators ---------- */
+/* Real pattern images rendered white on the dark page background. */
+
+.maori-separator img {
+  width: 100%;
+  display: block;
+  filter: invert(1);
+  opacity: 0.85;
+}
+
+/* New Zealand "cave" pages: tint separators cyan to match the atmosphere. */
+.maori-separator-cave img {
+  filter: invert(1) brightness(0.7) sepia(1) hue-rotate(160deg) saturate(3);
+  opacity: 0.9;
+}
+
+/* ---------- Custom scrollbar (thin, green thumb) ---------- */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #556B2F #050708;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050708;
+}
+::-webkit-scrollbar-thumb {
+  background: #556B2F;
+  border-radius: 9999px;
+  border: 2px solid #050708;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6a8540;
+}
+
+/* ---------- New Zealand cave-atmosphere helpers ---------- */
+
+.cave-body {
+  background-color: #020A09;
+}
+.cave-card {
+  background: rgba(5, 20, 18, 0.72);
+  border: 1px solid rgba(0, 180, 200, 0.18);
+  backdrop-filter: blur(8px);
+}
+.cave-heading {
+  text-shadow: 0 0 40px rgba(0, 200, 220, 0.25);
+}
+.cave-hero {
+  background: radial-gradient(ellipse at 30% 50%, #0a2420 0%, #020A09 60%);
+}
+
+/* ---------- Video testimonial horizontal scroller ---------- */
+
+.video-scroller {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.video-scroller > * {
+  scroll-snap-align: start;
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .wa-pulse-ring,
+  .hero-rise,
+  .hero-rise-1,
+  .hero-rise-2,
+  .hero-rise-3,
+  .hero-rise-4,
+  .hero-drift,
+  .marquee-track {
+    animation: none;
+  }
+
+  .hero-slide { transition: none; }
+
+  .hero-rise { opacity: 1; transform: none; }
+}
+
+/* ---------- Small-screen refinements ---------- */
+
+@media (max-width: 640px) {
+  /* Keep the floating WhatsApp button clear of iOS home indicator */
+  .fixed.bottom-5 {
+    bottom: max(1.25rem, env(safe-area-inset-bottom, 1.25rem));
+  }
+}
+
+/* ---------- Destination country-map fallback ---------- */
+/* When a map image is missing or fails to load, reveal the placeholder label. */
+.map-fallback .map-fallback-label {
+  display: flex;
+}

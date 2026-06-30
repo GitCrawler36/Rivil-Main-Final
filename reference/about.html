@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Rivil International Education Consultants</title>
+  <meta name="description" content="Founded in 2004 by a Sri Lankan family, Rivil International has guided students to universities abroad for over 21 years — completely free of charge.">
+  <link rel="icon" type="image/png" href="Rivil_Main_logo-removebg-preview.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pine: { 50:'#f0f7f4', 100:'#dcebe4', 200:'#bcd7cb', 300:'#8fbcaa', 400:'#56987f', 500:'#377a63', 600:'#27614e', 700:'#1f4e40', 800:'#1a4036', 900:'#16352d', 950:'#0b201b' },
+            gold: { 300:'#f7d878', 400:'#eeb52e', 500:'#d99c18', 600:'#b97c10', 700:'#955d12' },
+            cream: '#faf7f1'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="rivil-data.js"></script>
+  <script src="rivil-app.js"></script>
+</head>
+<body class="bg-cream font-sans text-pine-950 antialiased">
+
+  <div id="navbar"></div>
+
+  <!-- Section 1: Hero -->
+  <section class="scroll-reveal relative isolate overflow-hidden" style="height:65vh;min-height:420px;">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=80" alt="Modern office" class="h-full w-full object-cover" loading="eager" fetchpriority="high">
+      <div class="absolute inset-0 bg-pine-950/75"></div>
+    </div>
+    <div class="relative h-full flex items-center">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h1 class="hero-rise hero-rise-1 max-w-3xl font-display text-4xl sm:text-6xl font-semibold leading-[1.08] text-white">About Rivil International</h1>
+        <p class="hero-rise hero-rise-2 mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-white/75">Sri Lanka's most trusted overseas education consultancy since 2004.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Who We Are -->
+  <section class="scroll-reveal">
+    <div class="mx-auto max-w-7xl px-6 py-24">
+      <div class="grid items-center gap-16 lg:grid-cols-2">
+        <!-- Left: Image block -->
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80"
+            alt="Students collaborating around a table"
+            class="w-full rounded-3xl object-cover shadow-lg"
+            style="aspect-ratio:4/3;"
+            loading="lazy"
+          >
+          <div class="absolute -bottom-5 -right-5 rounded-2xl bg-pine-950 px-6 py-4 text-gold-400 shadow-xl">
+            <p class="font-display text-4xl font-semibold text-gold-400 leading-none">2004</p>
+            <p class="mt-1 text-xs uppercase tracking-wider text-cream/60">Established</p>
+          </div>
+        </div>
+        <!-- Right: Text block -->
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">Who We Are</p>
+          <h2 class="mt-3 font-display text-4xl font-semibold leading-tight text-pine-950">Turning Sri Lankan ambitions into global achievements</h2>
+          <p class="mt-6 text-lg leading-relaxed text-pine-950/70">Rivil International Education Consultants was established in 2004 with a single, unwavering purpose &mdash; to make the world's best universities accessible to Sri Lankan students. What began as a small consultancy in Mount Lavinia has grown into one of Sri Lanka's most trusted names in overseas education, guiding thousands of students every year towards recognised institutions across the United Kingdom, New Zealand, Australia, Canada, Malaysia, and Singapore.</p>
+          <p class="mt-4 text-base leading-relaxed text-pine-950/65">Driven by our core values of knowledge, experience, and ethics, we have built a reputation on one simple promise &mdash; to treat every student as an individual. We understand that each student arrives with a unique combination of qualifications, ambitions, and circumstances. Our team of experienced education consultants brings patient, personalised attention to every case, ensuring that the guidance you receive is genuinely tailored to you.</p>
+          <p class="mt-4 text-base leading-relaxed text-pine-950/65">We are proud of our outstanding 100% success rate &mdash; a record we have maintained consistently year after year. But to us, that figure represents something far more important than a statistic. It represents students who are now living their dreams abroad, building careers, and returning home with internationally recognised qualifications. At Rivil, we do not just process applications &mdash; we build bridges between aspirations and achievements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Three Core Pillars -->
+  <section class="scroll-reveal bg-white py-20">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">What Drives Us</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-semibold leading-tight text-pine-950">Our values in practice</h2>
+      </div>
+      <div class="mt-14 grid gap-8 lg:grid-cols-3">
+        <!-- Card 1: Knowledge -->
+        <div class="rounded-2xl border-b-2 border-gold-400 bg-pine-50/40 p-8 ring-1 ring-pine-950/5">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-pine-50">
+            <span class="material-symbols-outlined text-pine-700" style="font-size:32px;">auto_stories</span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-pine-950">Decades of Knowledge</h3>
+          <p class="mt-3 text-base leading-relaxed text-pine-950/65">With over 21 years of continuous practice in overseas education, our counsellors carry a depth of institutional knowledge that no newcomer can replicate. We know which universities suit which profiles, which programmes are most valued by employers, and which pathways open the most doors for Sri Lankan students specifically.</p>
+        </div>
+        <!-- Card 2: Experience -->
+        <div class="rounded-2xl border-b-2 border-gold-400 bg-pine-50/40 p-8 ring-1 ring-pine-950/5">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-pine-50">
+            <span class="material-symbols-outlined text-pine-700" style="font-size:32px;">workspace_premium</span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-pine-950">Proven Experience</h3>
+          <p class="mt-3 text-base leading-relaxed text-pine-950/65">Our track record speaks for itself. Since 2004, we have successfully placed students in hundreds of institutions across six countries. Our experience spans every level &mdash; from foundation programmes and diplomas to postgraduate degrees &mdash; and every major discipline including business, engineering, health sciences, IT, and the arts.</p>
+        </div>
+        <!-- Card 3: Ethics -->
+        <div class="rounded-2xl border-b-2 border-gold-400 bg-pine-50/40 p-8 ring-1 ring-pine-950/5">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-pine-50">
+            <span class="material-symbols-outlined text-pine-700" style="font-size:32px;">verified</span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-pine-950">Uncompromising Ethics</h3>
+          <p class="mt-3 text-base leading-relaxed text-pine-950/65">We have never charged a student a single rupee for our services &mdash; and we never will. Our guidance is completely free because we believe that access to quality education should not come with a financial barrier. Every recommendation we make is guided by what is genuinely best for the student, not by commissions or institutional incentives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Our Mission -->
+  <section class="scroll-reveal bg-pine-950 py-20">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-400">Our Mission</p>
+      <blockquote class="mt-6 font-display text-2xl sm:text-3xl italic leading-relaxed text-white">&ldquo;To facilitate Sri Lankan students in accessing quality, affordable international education &mdash; and to support them at every step of the journey towards an internationally recognised qualification in their chosen field.&rdquo;</blockquote>
+      <div class="mx-auto mt-10 h-px w-24 bg-gold-400"></div>
+      <div class="mt-10 flex flex-wrap justify-center gap-12">
+        <div>
+          <p class="font-display text-4xl font-semibold text-gold-400">21+</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-cream/60">Years Serving Students</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl font-semibold text-gold-400">1,000+</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-cream/60">Students Placed</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl font-semibold text-gold-400">100%</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-cream/60">Success Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: What Makes Us Different -->
+  <section class="scroll-reveal bg-pine-50 py-20">
+    <div class="mx-auto max-w-7xl px-6">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">Why Choose Rivil</p>
+      <h2 class="mt-3 max-w-2xl font-display text-3xl sm:text-4xl font-semibold leading-tight text-pine-950">Not just consultants &mdash; committed facilitators</h2>
+      <div class="mt-12 space-y-8">
+        <!-- Row 1 -->
+        <div class="flex items-start gap-5">
+          <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <span class="material-symbols-outlined" style="font-size:24px;">check</span>
+          </span>
+          <div>
+            <h3 class="font-display text-xl font-semibold text-pine-950">Personalised for Every Student</h3>
+            <p class="mt-2 text-base leading-relaxed text-pine-950/65">We believe that no two students are the same. Every consultation begins with listening &mdash; understanding your background, your strengths, your goals, and your constraints before we ever suggest a destination or institution.</p>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="flex items-start gap-5">
+          <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <span class="material-symbols-outlined" style="font-size:24px;">check</span>
+          </span>
+          <div>
+            <h3 class="font-display text-xl font-semibold text-pine-950">Completely Free, Always</h3>
+            <p class="mt-2 text-base leading-relaxed text-pine-950/65">Our service has been free for Sri Lankan students since the day we opened. No registration fees. No consultation fees. No hidden charges at any stage of the process. We are funded by our institutional partnerships, not by the students we serve.</p>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="flex items-start gap-5">
+          <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <span class="material-symbols-outlined" style="font-size:24px;">check</span>
+          </span>
+          <div>
+            <h3 class="font-display text-xl font-semibold text-pine-950">IELTS Support Included</h3>
+            <p class="mt-2 text-base leading-relaxed text-pine-950/65">English proficiency is one of the most common barriers Sri Lankan students face when applying abroad. Our team provides guidance on IELTS preparation &mdash; including recommended resources, practice materials, and advice on meeting the language requirements of your chosen institution.</p>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="flex items-start gap-5">
+          <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold-400 text-pine-950">
+            <span class="material-symbols-outlined" style="font-size:24px;">check</span>
+          </span>
+          <div>
+            <h3 class="font-display text-xl font-semibold text-pine-950">From Shortlist to Departure</h3>
+            <p class="mt-2 text-base leading-relaxed text-pine-950/65">We do not disappear after you submit an application. Our counsellors remain with you through offer acceptance, visa applications, and a comprehensive pre-departure briefing &mdash; so you arrive in your new country prepared and confident.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Recognised By -->
+  <section class="bg-pine-950 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="max-w-2xl">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold-400">
+          Recognised By
+        </p>
+        <h2 class="mt-4 font-display text-3xl sm:text-4xl font-semibold
+                   text-white leading-tight">
+          Accreditations that matter.
+        </h2>
+        <p class="mt-4 text-base text-cream/55 leading-relaxed">
+          Our qualifications are not self-declared &mdash; they are independently
+          recognised by the governing bodies of the countries we serve. These
+          accreditations are the reason our students' applications carry weight.
+        </p>
+      </div>
+
+      <!-- Accreditation cards grid -->
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: British Council -->
+        <div class="scroll-reveal group relative overflow-hidden rounded-3xl
+                    bg-white/5 border border-white/10 p-8
+                    hover:bg-white/8 hover:border-gold-400/30
+                    transition-all duration-300">
+          <!-- Top accent line -->
+          <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r
+                      from-gold-400/0 via-gold-400 to-gold-400/0
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          </div>
+          <!-- Logo placeholder -->
+          <div class="h-14 w-14 rounded-2xl bg-gold-400/10 border border-gold-400/20
+                      flex items-center justify-center">
+            <!-- Replace with real logo: <img src="assets/accreditations/british-council.png"
+                 alt="British Council" class="h-8 w-auto object-contain"> -->
+            <span class="text-gold-400 text-xl">🇬🇧</span>
+          </div>
+          <!-- Content -->
+          <h3 class="mt-6 font-display text-lg font-semibold text-white">
+            British Council
+          </h3>
+          <p class="mt-3 text-sm text-cream/55 leading-relaxed">
+            Recognised by the British Council, the United Kingdom's international
+            organisation for education and cultural relations &mdash; validating our
+            expertise in UK university placements.
+          </p>
+          <!-- Credential tag -->
+          <div class="mt-6 inline-flex items-center gap-1.5 rounded-full
+                      bg-gold-400/10 border border-gold-400/20
+                      px-3 py-1 text-xs font-medium text-gold-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
+            UK Certified Partner
+          </div>
+        </div>
+
+        <!-- Card 2: Education New Zealand -->
+        <div class="scroll-reveal group relative overflow-hidden rounded-3xl
+                    bg-white/5 border border-white/10 p-8
+                    hover:bg-white/8 hover:border-gold-400/30
+                    transition-all duration-300">
+          <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r
+                      from-gold-400/0 via-gold-400 to-gold-400/0
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          </div>
+          <div class="h-14 w-14 rounded-2xl bg-gold-400/10 border border-gold-400/20
+                      flex items-center justify-center">
+            <!-- Replace with: <img src="assets/accreditations/enz.png"
+                 alt="Education New Zealand" class="h-8 w-auto object-contain"> -->
+            <span class="text-gold-400 text-xl">🇳🇿</span>
+          </div>
+          <h3 class="mt-6 font-display text-lg font-semibold text-white">
+            Education New Zealand
+          </h3>
+          <p class="mt-3 text-sm text-cream/55 leading-relaxed">
+            Accredited by Education New Zealand, the New Zealand government's
+            official international education agency &mdash; reflecting our long-standing
+            expertise in NZ placements since 2004.
+          </p>
+          <div class="mt-6 inline-flex items-center gap-1.5 rounded-full
+                      bg-gold-400/10 border border-gold-400/20
+                      px-3 py-1 text-xs font-medium text-gold-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
+            NZ Government Accredited
+          </div>
+        </div>
+
+        <!-- Card 3: ICEF Certified -->
+        <div class="scroll-reveal group relative overflow-hidden rounded-3xl
+                    bg-white/5 border border-white/10 p-8
+                    hover:bg-white/8 hover:border-gold-400/30
+                    transition-all duration-300">
+          <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r
+                      from-gold-400/0 via-gold-400 to-gold-400/0
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          </div>
+          <div class="h-14 w-14 rounded-2xl bg-gold-400/10 border border-gold-400/20
+                      flex items-center justify-center">
+            <!-- Replace with: <img src="assets/accreditations/icef.png"
+                 alt="ICEF" class="h-8 w-auto object-contain"> -->
+            <span class="text-gold-400 text-xl">🏆</span>
+          </div>
+          <h3 class="mt-6 font-display text-lg font-semibold text-white">
+            ICEF Certified
+          </h3>
+          <p class="mt-3 text-sm text-cream/55 leading-relaxed">
+            Certified by ICEF &mdash; the global standard for international student
+            recruitment. ICEF certification signals to universities worldwide
+            that we operate to the highest professional and ethical standards.
+          </p>
+          <div class="mt-6 inline-flex items-center gap-1.5 rounded-full
+                      bg-gold-400/10 border border-gold-400/20
+                      px-3 py-1 text-xs font-medium text-gold-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
+            Global Standard Certified
+          </div>
+        </div>
+
+        <!-- Card 4: Study Australia -->
+        <div class="scroll-reveal group relative overflow-hidden rounded-3xl
+                    bg-white/5 border border-white/10 p-8
+                    hover:bg-white/8 hover:border-gold-400/30
+                    transition-all duration-300">
+          <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r
+                      from-gold-400/0 via-gold-400 to-gold-400/0
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          </div>
+          <div class="h-14 w-14 rounded-2xl bg-gold-400/10 border border-gold-400/20
+                      flex items-center justify-center">
+            <!-- Replace with: <img src="assets/accreditations/study-australia.png"
+                 alt="Study Australia" class="h-8 w-auto object-contain"> -->
+            <span class="text-gold-400 text-xl">🇦🇺</span>
+          </div>
+          <h3 class="mt-6 font-display text-lg font-semibold text-white">
+            Study Australia
+          </h3>
+          <p class="mt-3 text-sm text-cream/55 leading-relaxed">
+            Recognised by Study Australia, the Australian Government's official
+            international education initiative &mdash; affirming our credentials as a
+            trusted pathway for Sri Lankan students pursuing Australian degrees.
+          </p>
+          <div class="mt-6 inline-flex items-center gap-1.5 rounded-full
+                      bg-gold-400/10 border border-gold-400/20
+                      px-3 py-1 text-xs font-medium text-gold-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
+            AU Government Recognised
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom trust line -->
+      <div class="mt-14 pt-10 border-t border-white/8 flex flex-col sm:flex-row
+                  items-center justify-between gap-6">
+        <p class="text-sm text-cream/40 text-center sm:text-left max-w-lg">
+          These accreditations are reviewed and renewed annually. They represent
+          our ongoing commitment to maintaining the highest standards in overseas
+          education consultancy.
+        </p>
+        <a href="contact.html"
+           class="shrink-0 inline-flex items-center gap-2 rounded-full
+                  border border-white/20 px-6 py-3 text-sm font-medium
+                  text-cream/70 hover:text-white hover:border-white/40
+                  transition-colors duration-200">
+          Speak with our team
+          <svg class="w-4 h-4" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 7: CTA Banner -->
+  <section class="scroll-reveal bg-pine-800 py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl font-semibold leading-tight text-white">Ready to take the first step?</h2>
+      <p class="mt-3 text-base leading-relaxed text-cream/70">Speak with a Rivil counsellor today &mdash; completely free, no commitment.</p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-gold-400 px-8 py-4 font-bold text-pine-950 hover:bg-gold-300 transition-colors">
+          Book a Free Consultation
+        </a>
+        <a href="eligibility.html" class="inline-flex items-center justify-center rounded-full border border-white px-8 py-4 font-bold text-white hover:bg-white/10 transition-colors">
+          Check Your Eligibility &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initNavbar();
+      initFooter();
+      initWhatsApp('Hi, I would like to know more about Rivil International. Please contact me.');
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>

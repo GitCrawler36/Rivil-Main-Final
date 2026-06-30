@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Check Your Eligibility | Rivil International Education Consultants</title>
+<meta name="description" content="Answer a few quick questions and find out if you are ready to apply to a university abroad. Free, no obligation eligibility check from Rivil International.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mobile.css">
+<script src="rivil-data.js"></script>
+<script src="rivil-app.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+
+<div id="navbar"></div>
+
+<!-- Hero -->
+<section class="relative flex items-center overflow-hidden px-margin-mobile md:px-margin-desktop" style="height:40vh;min-height:320px;">
+  <div class="absolute inset-0 z-0 bg-gradient-to-b from-surface-container-low to-background"></div>
+  <div class="relative z-10 max-w-3xl mx-auto text-center w-full">
+    <span class="font-label-sm text-primary tracking-[0.2em] uppercase hero-rise hero-rise-1">Eligibility Check</span>
+    <h1 class="hero-rise hero-rise-2 mt-4 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-white">Check Your Eligibility</h1>
+    <p class="hero-rise hero-rise-3 mt-6 font-body-lg text-body-lg text-silver/80 max-w-xl mx-auto">Answer a few quick questions and find out if you are ready to apply to a university abroad.</p>
+  </div>
+</section>
+
+<!-- Separator 3 -->
+<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
+
+<!-- Form -->
+<section class="pb-section-gap pt-8 px-margin-mobile md:px-margin-desktop">
+  <div class="mx-auto max-w-[700px]">
+    <!-- Progress bar -->
+    <div id="progress-wrap" class="mb-8">
+      <div class="flex items-center justify-between mb-2">
+        <span id="step-label" class="font-label-sm uppercase text-primary">Step 1 of 3 &middot; About You</span>
+        <span id="step-count" class="font-label-sm text-silver/50">1 / 3</span>
+      </div>
+      <div class="h-2 w-full rounded-full bg-surface-container overflow-hidden">
+        <div id="progress-fill" class="h-full bg-primary transition-all duration-300" style="width:33%;"></div>
+      </div>
+    </div>
+
+    <form id="eligibility-form" class="rounded-xl bg-surface-container border border-outline-variant/30 p-7 sm:p-10" novalidate>
+      <!-- Step 1 -->
+      <div data-step="1">
+        <h2 class="font-headline-lg text-headline-lg text-white">About You</h2>
+        <div class="mt-6 grid gap-5 sm:grid-cols-2">
+          <div><label class="block text-sm font-semibold text-silver mb-2">Full Name <span class="text-primary">*</span></label><input type="text" name="fullName" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white placeholder:text-silver/35 focus:border-primary outline-none transition-colors" placeholder="Your name"></div>
+          <div><label class="block text-sm font-semibold text-silver mb-2">Email Address <span class="text-primary">*</span></label><input type="email" name="email" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white placeholder:text-silver/35 focus:border-primary outline-none transition-colors" placeholder="you@example.com"></div>
+          <div><label class="block text-sm font-semibold text-silver mb-2">Phone Number <span class="text-primary">*</span></label><input type="tel" name="phone" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white placeholder:text-silver/35 focus:border-primary outline-none transition-colors" placeholder="+94 7X XXX XXXX"></div>
+          <div><label class="block text-sm font-semibold text-silver mb-2">Age <span class="text-primary">*</span></label><select name="age" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select age range</option><option>Under 18</option><option>18–22</option><option>23–28</option><option>29–35</option><option>35+</option></select></div>
+          <div class="sm:col-span-2"><label class="block text-sm font-semibold text-silver mb-2">Nationality</label><input type="text" name="nationality" value="Sri Lankan" readonly class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-silver/70 cursor-not-allowed"></div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div data-step="2" class="hidden">
+        <h2 class="font-headline-lg text-headline-lg text-white">Your Background</h2>
+        <div class="mt-6 grid gap-5 sm:grid-cols-2">
+          <div><label class="block text-sm font-semibold text-silver mb-2">Highest Qualification <span class="text-primary">*</span></label><select name="qualification" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>O/Levels</option><option>A/Levels</option><option>Diploma</option><option>Bachelor's Degree</option><option>Master's Degree</option><option>Other</option></select></div>
+          <div><label class="block text-sm font-semibold text-silver mb-2">Current Field of Study</label><input type="text" name="field" class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white placeholder:text-silver/35 focus:border-primary outline-none transition-colors" placeholder="e.g. Commerce, IT, Biology"></div>
+          <div><label class="block text-sm font-semibold text-silver mb-2">Professional Background <span class="text-primary">*</span></label><select name="profBackground" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>School Student</option><option>Recent Graduate</option><option>Working Professional</option><option>Career Changer</option><option>Other</option></select></div>
+          <div><label class="block text-sm font-semibold text-silver mb-2">Years of Work Experience</label><select name="experience" class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>None</option><option>Less than 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select></div>
+          <div class="sm:col-span-2"><label class="block text-sm font-semibold text-silver mb-2">English Proficiency <span class="text-primary">*</span></label><select name="english" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>Native/Fluent</option><option>IELTS 6.0+</option><option>IELTS 5.5</option><option>Basic English</option><option>No qualification yet</option></select></div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div data-step="3" class="hidden">
+        <h2 class="font-headline-lg text-headline-lg text-white">Your Goals</h2>
+        <div class="mt-6 space-y-5">
+          <div>
+            <label class="block text-sm font-semibold text-silver mb-3">Preferred Destination <span class="text-primary">*</span></label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="New Zealand" class="accent-primary">New Zealand</label>
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="United Kingdom" class="accent-primary">United Kingdom</label>
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="Australia" class="accent-primary">Australia</label>
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="Canada" class="accent-primary">Canada</label>
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="Malaysia" class="accent-primary">Malaysia</label>
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="Singapore" class="accent-primary">Singapore</label>
+              <label class="flex items-center gap-2 rounded-lg bg-background border border-outline-variant/40 px-3 py-2.5 text-sm text-silver cursor-pointer hover:border-primary/50"><input type="checkbox" name="destinations" value="Not sure yet" class="accent-primary">Not sure yet</label>
+            </div>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div><label class="block text-sm font-semibold text-silver mb-2">Study Level <span class="text-primary">*</span></label><select name="studyLevel" required class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>Foundation/Pathway</option><option>Undergraduate</option><option>Postgraduate</option><option>Diploma/Certificate</option><option>Not sure yet</option></select></div>
+            <div><label class="block text-sm font-semibold text-silver mb-2">Intended Start</label><select name="start" class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>January 2026</option><option>May 2026</option><option>September 2026</option><option>January 2027</option><option>Not sure yet</option></select></div>
+            <div class="sm:col-span-2"><label class="block text-sm font-semibold text-silver mb-2">How did you hear about us?</label><select name="source" class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white focus:border-primary outline-none transition-colors"><option value="">Select</option><option>Google</option><option>Facebook</option><option>Instagram</option><option>Friend/Family</option><option>University Fair</option><option>Other</option></select></div>
+            <div class="sm:col-span-2"><label class="block text-sm font-semibold text-silver mb-2">Additional comments</label><textarea name="comments" rows="3" class="w-full rounded-lg bg-background border border-outline-variant/40 px-4 py-3 text-sm text-white placeholder:text-silver/35 focus:border-primary outline-none transition-colors resize-y" placeholder="Anything else you'd like us to know (optional)"></textarea></div>
+          </div>
+        </div>
+      </div>
+
+      <p id="form-error" class="hidden mt-5 text-sm text-error font-medium"></p>
+
+      <!-- Controls -->
+      <div class="mt-8 flex items-center justify-between gap-4">
+        <button type="button" id="btn-back" class="hidden border border-white/30 text-white px-6 py-3 rounded-lg font-headline-md hover:bg-white/10 transition-all">Back</button>
+        <div class="flex-1"></div>
+        <button type="button" id="btn-next" class="bg-primary text-white px-8 py-3 rounded-lg font-headline-md hover:brightness-110 transition-all">Next</button>
+        <button type="submit" id="btn-submit" class="hidden bg-primary text-white px-8 py-3 rounded-lg font-headline-md hover:brightness-110 transition-all">See My Result</button>
+      </div>
+    </form>
+
+    <!-- Result card -->
+    <div id="result-card" class="hidden relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 p-8 sm:p-10 text-center">
+      <div class="absolute top-0 left-0 right-0 h-[3px] bg-primary"></div>
+      <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary"><span class="material-symbols-outlined text-white text-[32px]">verified</span></span>
+      <h2 class="mt-5 font-display-lg text-[32px] font-bold text-white">You look like a strong candidate!</h2>
+      <p class="mx-auto mt-3 max-w-md font-body-md text-silver/70">Based on your profile, our counsellors will review your details and be in touch within 24 hours to discuss your options for <span id="result-destinations" class="text-primary font-semibold">your chosen destinations</span>.</p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a id="result-wa" href="#" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">WhatsApp Us Now</a>
+        <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Book a Consultation</a>
+      </div>
+    </div>
+
+    <!-- Why check eligibility -->
+    <div class="mt-16 grid gap-6 md:grid-cols-3">
+      <div class="scroll-reveal rounded-xl bg-surface-container border border-outline-variant/30 p-7"><span class="material-symbols-outlined text-primary text-[32px]">person_search</span><h3 class="mt-4 font-headline-md text-white">Personalised Assessment</h3><p class="mt-2 font-body-md text-sm text-silver/65">Our counsellors review your profile and match you to the most suitable institutions.</p></div>
+      <div class="scroll-reveal rounded-xl bg-surface-container border border-outline-variant/30 p-7"><span class="material-symbols-outlined text-primary text-[32px]">handshake</span><h3 class="mt-4 font-headline-md text-white">No Commitment</h3><p class="mt-2 font-body-md text-sm text-silver/65">Checking your eligibility is completely free and comes with no obligation to proceed.</p></div>
+      <div class="scroll-reveal rounded-xl bg-surface-container border border-outline-variant/30 p-7"><span class="material-symbols-outlined text-primary text-[32px]">bolt</span><h3 class="mt-4 font-headline-md text-white">Fast Response</h3><p class="mt-2 font-body-md text-sm text-silver/65">We review all submissions within 24 hours and will contact you directly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Separator 3 -->
+<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
+
+<div id="footer"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    initNavbar();
+    initFooter();
+    initWhatsApp('Hi, I would like to check my eligibility for studying abroad. Please contact me.');
+    initScrollAnimations();
+
+    var form = document.getElementById('eligibility-form');
+    var steps = form.querySelectorAll('[data-step]');
+    var current = 1, total = steps.length;
+    var labels = ['About You', 'Your Background', 'Your Goals'];
+    var btnBack = document.getElementById('btn-back');
+    var btnNext = document.getElementById('btn-next');
+    var btnSubmit = document.getElementById('btn-submit');
+    var errEl = document.getElementById('form-error');
+
+    function showStep(n) {
+      steps.forEach(function (s) { s.classList.toggle('hidden', parseInt(s.getAttribute('data-step'), 10) !== n); });
+      document.getElementById('progress-fill').style.width = Math.round((n / total) * 100) + '%';
+      document.getElementById('step-label').textContent = 'Step ' + n + ' of ' + total + ' · ' + labels[n - 1];
+      document.getElementById('step-count').textContent = n + ' / ' + total;
+      btnBack.classList.toggle('hidden', n === 1);
+      btnNext.classList.toggle('hidden', n === total);
+      btnSubmit.classList.toggle('hidden', n !== total);
+      errEl.classList.add('hidden');
+    }
+
+    function validateStep(n) {
+      var stepEl = form.querySelector('[data-step="' + n + '"]');
+      var required = stepEl.querySelectorAll('[required]');
+      for (var i = 0; i < required.length; i++) {
+        if (!required[i].value.trim()) {
+          errEl.textContent = 'Please complete all required fields before continuing.';
+          errEl.classList.remove('hidden');
+          required[i].focus();
+          return false;
+        }
+        if (required[i].type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(required[i].value)) {
+          errEl.textContent = 'Please enter a valid email address.';
+          errEl.classList.remove('hidden');
+          required[i].focus();
+          return false;
+        }
+      }
+      if (n === 3) {
+        var checked = form.querySelectorAll('input[name="destinations"]:checked');
+        if (!checked.length) {
+          errEl.textContent = 'Please select at least one preferred destination.';
+          errEl.classList.remove('hidden');
+          return false;
+        }
+      }
+      return true;
+    }
+
+    btnNext.addEventListener('click', function () {
+      if (validateStep(current)) { current++; showStep(current); window.scrollTo({ top: form.offsetTop - 90, behavior: 'smooth' }); }
+    });
+    btnBack.addEventListener('click', function () { if (current > 1) { current--; showStep(current); } });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validateStep(current)) return;
+      var dests = Array.prototype.map.call(form.querySelectorAll('input[name="destinations"]:checked'), function (c) { return c.value; });
+      var destText = dests.length ? dests.join(', ') : 'your chosen destinations';
+      document.getElementById('result-destinations').textContent = destText;
+      var name = (form.querySelector('[name="fullName"]').value || '').split(' ')[0] || 'there';
+      document.getElementById('result-wa').href = RIVIL.waLink('Hi, my name is ' + name + '. I just completed the eligibility check and I am interested in: ' + destText + '. Please contact me.');
+      document.getElementById('eligibility-form').classList.add('hidden');
+      document.getElementById('progress-wrap').classList.add('hidden');
+      var rc = document.getElementById('result-card');
+      rc.classList.remove('hidden');
+      rc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    showStep(1);
+  });
+</script>
+</body>
+</html>

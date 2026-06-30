@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rivil International Education Consultants | Study Abroad from Sri Lanka — Free Service</title>
+  <meta name="description" content="Sri Lanka's trusted overseas education consultancy since 2004. Free guidance for Sri Lankan students applying to universities in New Zealand, the UK, Australia, Canada, Malaysia and Singapore.">
+  <link rel="icon" type="image/png" href="Rivil_Main_logo-removebg-preview.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pine: { 50:'#f0f7f4', 100:'#dcebe4', 200:'#bcd7cb', 300:'#8fbcaa', 400:'#56987f', 500:'#377a63', 600:'#27614e', 700:'#1f4e40', 800:'#1a4036', 900:'#16352d', 950:'#0b201b' },
+            gold: { 300:'#f7d878', 400:'#eeb52e', 500:'#d99c18', 600:'#b97c10', 700:'#955d12' },
+            cream: '#faf7f1'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="rivil-data.js"></script>
+  <script src="rivil-app.js"></script>
+</head>
+<body class="bg-cream font-sans text-pine-950 antialiased">
+
+  <div id="navbar"></div>
+
+  <!-- ============ 1. Hero (with auto-playing crossfade image slider) ============ -->
+  <section class="relative isolate overflow-hidden bg-pine-950">
+    <div class="absolute inset-0 -z-10">
+      <div id="hero-slider" class="absolute inset-0">
+        <img class="hero-slide absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1800&q=80" alt="University graduates celebrating" loading="eager" fetchpriority="high">
+        <img class="hero-slide absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1800&q=80" alt="Students on a university campus" loading="lazy">
+        <img class="hero-slide absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=80" alt="A historic university city" loading="lazy">
+        <img class="hero-slide absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1800&q=80" alt="A study-abroad destination skyline" loading="lazy">
+        <img class="hero-slide absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1800&q=80" alt="Students working together" loading="lazy">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-pine-950 via-pine-950/80 to-pine-950/40"></div>
+      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-pine-950 to-transparent"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:pt-28 sm:pb-32 lg:pt-36 lg:pb-44">
+      <div class="max-w-3xl">
+        <p class="hero-rise hero-rise-1 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-semibold text-gold-300 ring-1 ring-white/15 backdrop-blur">
+          <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
+          Mount Lavinia, Colombo &middot; Trusted since 2004
+        </p>
+
+        <h1 class="hero-rise hero-rise-2 mt-7 font-display text-4xl sm:text-6xl lg:text-7xl font-semibold leading-[1.06] text-white">
+          The world&rsquo;s best universities,
+          <span class="accent-underline text-gold-300">within your reach.</span>
+        </h1>
+
+        <p class="hero-rise hero-rise-3 mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-cream/80">
+          For over 21 years, Rivil International has helped Sri Lankan students gain admission to universities across six countries &mdash; and our guidance is completely free. No fees, no commissions, no hidden costs.
+        </p>
+
+        <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="#destinations" class="inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-8 py-4 text-sm sm:text-base font-bold text-pine-950 shadow-lg shadow-gold-400/20 hover:bg-gold-300 transition-colors">
+            Explore Destinations
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/25 px-8 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white hover:text-pine-950 transition-colors">
+            Book a Free Consultation
+          </a>
+          <a href="eligibility.html" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold-400/60 px-8 py-4 text-sm sm:text-base font-semibold text-gold-300 hover:bg-gold-400 hover:text-pine-950 hover:border-gold-400 transition-colors">
+            Check Eligibility
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <p class="hero-rise hero-rise-4 mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-cream/60">
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>No fees</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>No commissions</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>No hidden costs</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Stats strip ============ -->
+  <section class="relative bg-pine-950 pb-16 sm:pb-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px overflow-hidden rounded-3xl bg-white/10 ring-1 ring-white/10">
+        <div class="bg-pine-900/80 px-6 py-9 sm:py-11 text-center">
+          <p class="font-display text-4xl sm:text-5xl font-semibold text-gold-400" data-target="21" data-suffix="+">0</p>
+          <p class="mt-2.5 text-xs sm:text-sm font-medium uppercase tracking-wider text-cream/60">Years of Experience</p>
+        </div>
+        <div class="bg-pine-900/80 px-6 py-9 sm:py-11 text-center">
+          <p class="font-display text-4xl sm:text-5xl font-semibold text-gold-400" data-target="1000" data-suffix="+">0</p>
+          <p class="mt-2.5 text-xs sm:text-sm font-medium uppercase tracking-wider text-cream/60">Students Guided</p>
+        </div>
+        <div class="bg-pine-900/80 px-6 py-9 sm:py-11 text-center">
+          <p class="font-display text-4xl sm:text-5xl font-semibold text-gold-400" data-target="6">0</p>
+          <p class="mt-2.5 text-xs sm:text-sm font-medium uppercase tracking-wider text-cream/60">Study Destinations</p>
+        </div>
+        <div class="bg-pine-900/80 px-6 py-9 sm:py-11 text-center">
+          <p class="font-display text-4xl sm:text-5xl font-semibold text-gold-400" data-target="100" data-suffix="%">0</p>
+          <p class="mt-2.5 text-xs sm:text-sm font-medium uppercase tracking-wider text-cream/60">Free Service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. Study Destinations (carousel) ============ -->
+  <section id="destinations" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="scroll-reveal max-w-2xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">Where will you go?</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">Six destinations. One trusted guide.</h2>
+        <p class="mt-5 text-base sm:text-lg leading-relaxed text-pine-950/65">From the lecture halls of London to the harbours of Auckland, we place Sri Lankan students at recognised institutions across six countries.</p>
+      </div>
+
+      <div class="relative mt-12 sm:mt-16">
+        <div id="dest-viewport" class="overflow-hidden">
+          <div id="destination-cards" class="flex"></div>
+        </div>
+        <button id="dest-prev" type="button" aria-label="Previous destinations" class="absolute -left-3 sm:-left-5 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-pine-800 shadow-lg shadow-pine-950/10 ring-1 ring-pine-950/5 hover:bg-pine-50 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="dest-next" type="button" aria-label="Next destinations" class="absolute -right-3 sm:-right-5 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-pine-800 shadow-lg shadow-pine-950/10 ring-1 ring-pine-950/5 hover:bg-pine-50 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div id="dest-dots" class="mt-8 flex items-center justify-center gap-2"></div>
+    </div>
+  </section>
+
+  <!-- ============ 4. About teaser (unchanged) ============ -->
+  <section class="bg-white py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:gap-20 lg:grid-cols-2">
+        <div class="scroll-reveal relative order-2 lg:order-1">
+          <div class="overflow-hidden rounded-3xl">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80" alt="Students working together" class="aspect-[4/3] w-full object-cover" loading="lazy">
+          </div>
+          <div class="absolute -bottom-6 -right-2 sm:-right-6 rounded-2xl bg-pine-900 px-6 py-5 shadow-xl shadow-pine-950/20">
+            <p class="font-display text-3xl font-semibold text-gold-400">Since 2004</p>
+            <p class="mt-1 text-xs font-medium uppercase tracking-wider text-cream/60">A family-founded consultancy</p>
+          </div>
+        </div>
+        <div class="scroll-reveal order-1 lg:order-2">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">About Rivil International</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">A Sri Lankan family business with a global outlook</h2>
+          <p class="mt-6 text-base sm:text-lg leading-relaxed text-pine-950/65">Founded in 2004 by a Sri Lankan family, Rivil International has spent more than 21 years guiding students from our office in Mount Lavinia to universities across the world &mdash; and we have never charged a student a single rupee for it.</p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-start gap-3.5">
+              <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+              <p class="text-[15px] leading-relaxed text-pine-950/80"><strong class="font-semibold text-pine-950">Completely free for students</strong> &mdash; no fees, no commissions, no hidden costs at any stage.</p>
+            </li>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+              <p class="text-[15px] leading-relaxed text-pine-950/80"><strong class="font-semibold text-pine-950">Over 21 years of experience</strong> placing Sri Lankan students at universities abroad.</p>
+            </li>
+            <li class="flex items-start gap-3.5">
+              <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold-400/20 text-gold-600"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+              <p class="text-[15px] leading-relaxed text-pine-950/80"><strong class="font-semibold text-pine-950">Based in Mount Lavinia</strong> &mdash; meet our counsellors face to face, right here in Colombo.</p>
+            </li>
+          </ul>
+          <a href="about.html" class="mt-9 inline-flex items-center gap-2 rounded-full bg-pine-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-pine-700 transition-colors">
+            Our Story
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. Services ============ -->
+  <section class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="scroll-reveal mx-auto max-w-2xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">What We Do For You</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">Everything you need &mdash; completely free</h2>
+        <p class="mt-5 text-base sm:text-lg leading-relaxed text-pine-950/65">From your first enquiry to landing at the airport, our counsellors handle every step at no cost to you.</p>
+      </div>
+      <div id="services-grid" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+  </section>
+
+  <!-- ============ 6. Student process infographic ============ -->
+  <section class="bg-pine-950 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="scroll-reveal mx-auto max-w-2xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-400">How it works</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight text-white">From first enquiry to first lecture</h2>
+        <p class="mt-5 text-base sm:text-lg leading-relaxed text-cream/70">A clear, guided journey &mdash; and every step of it is completely free.</p>
+      </div>
+
+      <div class="relative mt-16">
+        <!-- desktop dashed connector -->
+        <div class="hidden md:block absolute top-7 left-[12.5%] right-[12.5%] border-t-2 border-dashed border-white/20"></div>
+        <div class="hidden md:block absolute top-7 right-[10.5%] -translate-y-1/2 text-white/30">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </div>
+        <!-- mobile vertical timeline line -->
+        <div class="md:hidden absolute left-7 top-7 bottom-10 w-0.5 bg-white/15"></div>
+
+        <div id="process-steps" class="relative grid gap-12 md:grid-cols-4 md:gap-6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. Testimonials (card slider) ============ -->
+  <section class="bg-pine-50 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="scroll-reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <div class="max-w-2xl">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">Success stories</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">Students who made it abroad</h2>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <button id="testi-prev" type="button" aria-label="Previous testimonial" class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-pine-800 shadow-sm ring-1 ring-pine-950/5 hover:bg-pine-100 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="testi-next" type="button" aria-label="Next testimonial" class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-pine-800 shadow-sm ring-1 ring-pine-950/5 hover:bg-pine-100 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="testi-viewport" class="mt-12 overflow-hidden">
+        <div id="testimonial-track" class="flex"></div>
+      </div>
+      <div id="testi-dots" class="mt-8 flex items-center justify-center gap-2"></div>
+    </div>
+  </section>
+
+  <!-- ============ 8. Social feed ============ -->
+  <section class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="scroll-reveal mx-auto max-w-2xl text-center">
+        <p class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-gold-600">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Follow Our Journey
+        </p>
+        <h2 class="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">Life with Rivil, in pictures</h2>
+      </div>
+
+      <!-- Replace placeholder cards with real Instagram embed or screenshots when available -->
+      <div id="social-feed" class="no-scrollbar mt-12 -mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0"></div>
+
+      <div class="mt-8 text-center">
+        <a href="https://www.instagram.com/rivilinternational/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-pine-800 hover:text-pine-600 transition-colors">
+          Follow us on Instagram
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. Callback banner ============ -->
+  <section class="bg-pine-800 py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div class="scroll-reveal">
+          <h2 class="font-display text-3xl sm:text-4xl font-semibold leading-tight text-white">Get a Free Call Back</h2>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-cream/75">Leave your details and a counsellor will call you within 2 hours.</p>
+        </div>
+        <div class="scroll-reveal">
+          <form id="callback-form" class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto]">
+            <input type="text" name="name" required placeholder="Name" aria-label="Name" class="min-w-0 rounded-full bg-white px-5 py-3.5 text-sm text-pine-950 placeholder-pine-950/40 outline-none focus:ring-2 focus:ring-gold-400">
+            <input type="email" name="email" required placeholder="Email" aria-label="Email" class="min-w-0 rounded-full bg-white px-5 py-3.5 text-sm text-pine-950 placeholder-pine-950/40 outline-none focus:ring-2 focus:ring-gold-400">
+            <input type="tel" name="phone" required placeholder="Phone" aria-label="Phone" class="min-w-0 rounded-full bg-white px-5 py-3.5 text-sm text-pine-950 placeholder-pine-950/40 outline-none focus:ring-2 focus:ring-gold-400">
+            <button type="submit" class="rounded-full bg-gold-400 px-7 py-3.5 text-sm font-bold text-pine-950 hover:bg-gold-300 transition-colors">Request Call Back</button>
+          </form>
+          <div id="callback-success" class="hidden rounded-2xl bg-white/10 px-6 py-5 text-center ring-1 ring-white/20">
+            <p class="font-semibold text-white">Thank you &mdash; we will call you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    /* ---------- Hero crossfade slider ---------- */
+    function initHeroSlider() {
+      var slides = document.querySelectorAll('#hero-slider .hero-slide');
+      if (!slides.length) return;
+      var i = 0;
+      slides[0].classList.add('is-active');
+      if (slides.length < 2) return;
+
+      function show(n) {
+        slides[i].classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active');
+      }
+
+      var timer = setInterval(function () { show(i + 1); }, 5000);
+
+      /* Touch swipe — left = next, right = previous, min 50px */
+      var heroSlider = document.getElementById('hero-slider');
+      var hero = heroSlider && heroSlider.closest('section');
+      if (hero) {
+        var sx = 0, sy = 0;
+        hero.addEventListener('touchstart', function (e) {
+          sx = e.changedTouches[0].screenX;
+          sy = e.changedTouches[0].screenY;
+        }, { passive: true });
+        hero.addEventListener('touchend', function (e) {
+          var dx = e.changedTouches[0].screenX - sx;
+          var dy = e.changedTouches[0].screenY - sy;
+          if (Math.abs(dx) >= 50 && Math.abs(dx) > Math.abs(dy)) {
+            clearInterval(timer);
+            show(dx < 0 ? i + 1 : i - 1);
+            timer = setInterval(function () { show(i + 1); }, 5000);
+          }
+        }, { passive: true });
+      }
+    }
+
+    /* ---------- Generic carousel ---------- */
+    function makeCarousel(opts) {
+      var viewport = document.getElementById(opts.viewport);
+      var track = document.getElementById(opts.track);
+      if (!viewport || !track || !track.children.length) return;
+      var prevBtn = document.getElementById(opts.prev);
+      var nextBtn = document.getElementById(opts.next);
+      var dotsWrap = opts.dots ? document.getElementById(opts.dots) : null;
+      var gap = opts.gap != null ? opts.gap : 24;
+      var index = 0, slideW = 0, perView = 1, maxIndex = 0, timer = null;
+
+      track.style.transition = 'transform 0.5s cubic-bezier(0.22,1,0.36,1)';
+
+      function children() { return Array.prototype.slice.call(track.children); }
+
+      function dotClass(active) {
+        return 'h-2.5 rounded-full transition-all duration-300 ' + (active ? 'w-7 bg-gold-400' : 'w-2.5 bg-pine-950/20');
+      }
+
+      function buildDots() {
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        for (var i = 0; i <= maxIndex; i++) {
+          (function (i) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            b.className = dotClass(i === index);
+            b.addEventListener('click', function () { goto(i); });
+            dotsWrap.appendChild(b);
+          })(i);
+        }
+      }
+
+      function update() {
+        track.style.transform = 'translateX(' + (-index * slideW) + 'px)';
+        if (dotsWrap) {
+          Array.prototype.slice.call(dotsWrap.children).forEach(function (b, i) {
+            b.className = dotClass(i === index);
+          });
+        }
+      }
+
+      function goto(i) {
+        index = Math.max(0, Math.min(i, maxIndex));
+        update();
+      }
+      function next() { goto(index >= maxIndex ? 0 : index + 1); }
+      function prev() { goto(index <= 0 ? maxIndex : index - 1); }
+
+      function layout() {
+        perView = window.innerWidth < 768 ? opts.mobile : opts.desktop;
+        slideW = viewport.clientWidth / perView;
+        var childW = slideW - gap;
+        children().forEach(function (s) {
+          s.style.flex = '0 0 auto';
+          s.style.width = childW + 'px';
+          s.style.marginRight = gap + 'px';
+        });
+        maxIndex = Math.max(0, Math.ceil(children().length - perView));
+        if (index > maxIndex) index = maxIndex;
+        buildDots();
+        update();
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', prev);
+      if (nextBtn) nextBtn.addEventListener('click', next);
+
+      if (opts.autoplay) {
+        var start = function () { timer = setInterval(next, opts.autoplay); };
+        var stop = function () { clearInterval(timer); };
+        viewport.addEventListener('mouseenter', stop);
+        viewport.addEventListener('mouseleave', start);
+        start();
+      }
+
+      /* Touch swipe — left = next, right = previous, min 50px */
+      var touchStartX = 0, touchStartY = 0, touching = false;
+      viewport.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+        touching = true;
+        if (opts.autoplay) clearInterval(timer);
+      }, { passive: true });
+      viewport.addEventListener('touchend', function (e) {
+        if (!touching) return;
+        touching = false;
+        var dx = e.changedTouches[0].screenX - touchStartX;
+        var dy = e.changedTouches[0].screenY - touchStartY;
+        if (Math.abs(dx) >= 50 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0) next(); else prev();
+        }
+        if (opts.autoplay) timer = setInterval(next, opts.autoplay);
+      }, { passive: true });
+
+      window.addEventListener('resize', layout);
+      layout();
+    }
+
+    /* ---------- Enhance the (reused) destination cards for the carousel ---------- */
+    function enhanceDestinationCards() {
+      var track = document.getElementById('destination-cards');
+      if (!track) return;
+      var flags = { 'new-zealand': '🇳🇿', 'uk': '🇬🇧', 'australia': '🇦🇺', 'canada': '🇨🇦', 'malaysia': '🇲🇾', 'singapore': '🇸🇬' };
+      var dests = window.RIVIL_DATA.destinations;
+      Array.prototype.slice.call(track.children).forEach(function (card, i) {
+        /* Cards rely on scroll-reveal; off-screen carousel cards never trigger
+           the observer, so reveal them all up front. */
+        card.classList.add('is-revealed');
+        card.style.transitionDelay = '0ms';
+        var d = dests[i];
+        if (!d) return;
+        var span = document.createElement('span');
+        span.className = 'absolute top-4 left-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-2xl shadow-md';
+        span.textContent = flags[d.slug] || '🌍';
+        card.insertBefore(span, card.firstChild);
+      });
+    }
+
+    /* ---------- Services ---------- */
+    function renderServices() {
+      var grid = document.getElementById('services-grid');
+      if (!grid) return;
+      grid.innerHTML = window.RIVIL_DATA.services.map(function (s, i) {
+        return '<div class="scroll-reveal rounded-3xl border-b-4 border-gold-400 bg-white p-7 sm:p-8 shadow-sm shadow-pine-950/5 ring-1 ring-pine-950/5 hover:shadow-lg hover:shadow-pine-950/10 transition-shadow duration-300" style="transition-delay:' + (i % 3) * 90 + 'ms">' +
+          '<span class="flex h-14 w-14 items-center justify-center rounded-full bg-pine-50 text-pine-800">' +
+            '<span class="material-symbols-outlined" style="font-size:30px">' + s.icon + '</span>' +
+          '</span>' +
+          '<h3 class="mt-5 font-display text-xl font-semibold text-pine-950">' + s.title + '</h3>' +
+          '<p class="mt-2.5 text-sm leading-relaxed text-pine-950/65">' + s.description + '</p>' +
+        '</div>';
+      }).join('');
+    }
+
+    /* ---------- Student process infographic ---------- */
+    function renderProcess() {
+      var wrap = document.getElementById('process-steps');
+      if (!wrap) return;
+      var steps = [
+        { n: '1', title: 'Tell us your goal', desc: 'Explore destinations and send us an enquiry — online or in person at our office.', time: 'Day 1' },
+        { n: '2', title: 'Meet your counsellor', desc: 'A counsellor reviews your profile and replies with honest, tailored advice.', time: '24 hrs' },
+        { n: '3', title: 'Apply with confidence', desc: 'We prepare and submit your applications, then track them through to a decision.', time: '1–2 weeks' },
+        { n: '4', title: 'Pack your bags', desc: 'Offer in hand, we guide your visa and pre-departure briefing before you fly.', time: 'Ongoing' }
+      ];
+      wrap.innerHTML = steps.map(function (s) {
+        return '<div class="relative z-10 flex items-start gap-5 md:flex-col md:items-center md:gap-0 md:text-center">' +
+          '<span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-pine-800 font-display text-2xl font-semibold text-gold-400 ring-4 ring-pine-950">' + s.n + '</span>' +
+          '<div class="md:mt-6">' +
+            '<h3 class="font-display text-xl font-semibold text-white">' + s.title + '</h3>' +
+            '<p class="mt-2 max-w-xs text-sm leading-relaxed text-cream/70">' + s.desc + '</p>' +
+            '<span class="mt-4 inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-gold-300">' + s.time + '</span>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    /* ---------- Testimonials ---------- */
+    function renderTestimonials() {
+      var track = document.getElementById('testimonial-track');
+      if (!track) return;
+      var flags = { 'New Zealand': '🇳🇿', 'United Kingdom': '🇬🇧', 'Australia': '🇦🇺', 'Canada': '🇨🇦', 'Malaysia': '🇲🇾', 'Singapore': '🇸🇬' };
+      function initials(n) { return n.split(' ').map(function (w) { return w.charAt(0); }).slice(0, 2).join('').toUpperCase(); }
+      var star = '<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.447a1 1 0 00-.363 1.118l1.287 3.957c.3.922-.755 1.688-1.54 1.118l-3.37-2.446a1 1 0 00-1.175 0l-3.37 2.446c-.784.57-1.838-.196-1.539-1.118l1.287-3.957a1 1 0 00-.363-1.118L2.98 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>';
+      var stars = '<div class="flex gap-0.5 text-gold-400">' + star + star + star + star + star + '</div>';
+
+      track.innerHTML = window.RIVIL_DATA.testimonials.map(function (t) {
+        var flag = flags[t.destination] || '🌍';
+        return '<div class="testi-slide">' +
+          '<figure class="flex h-full flex-col rounded-3xl bg-white p-8 sm:p-10 shadow-sm shadow-pine-950/5 ring-1 ring-pine-950/5">' +
+            stars +
+            '<blockquote class="mt-6 flex-1 font-display text-lg sm:text-xl italic leading-relaxed text-pine-950/80">&ldquo;' + t.quote + '&rdquo;</blockquote>' +
+            '<figcaption class="mt-8 flex items-center gap-4 border-t border-pine-950/10 pt-6">' +
+              '<span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-pine-800 font-display text-xl font-semibold text-gold-400">' + initials(t.name) + '</span>' +
+              '<div>' +
+                '<p class="font-semibold text-pine-950">' + t.name + '</p>' +
+                '<span class="mt-1.5 inline-flex items-center gap-1.5 rounded-full bg-pine-50 px-3 py-1 text-xs font-semibold text-pine-800">' + flag + ' ' + t.destination + '</span>' +
+              '</div>' +
+            '</figcaption>' +
+          '</figure>' +
+        '</div>';
+      }).join('');
+    }
+
+    /* ---------- Social feed placeholders ---------- */
+    function renderSocialFeed() {
+      var feed = document.getElementById('social-feed');
+      if (!feed) return;
+      var igPath = 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z';
+      var card =
+        '<div class="snap-start shrink-0 w-60 sm:w-72">' +
+          '<div class="flex aspect-square items-center justify-center rounded-3xl bg-pine-100 text-pine-400">' +
+            '<svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="' + igPath + '"/></svg>' +
+          '</div>' +
+          '<p class="mt-3 text-center text-sm text-pine-950/60">Follow us @rivilinternational</p>' +
+        '</div>';
+      feed.innerHTML = card + card + card + card + card;
+    }
+
+    /* ---------- Callback form (no backend) ---------- */
+    function initCallbackForm() {
+      var form = document.getElementById('callback-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        form.classList.add('hidden');
+        var success = document.getElementById('callback-success');
+        if (success) success.classList.remove('hidden');
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      initNavbar();
+      initFooter();
+      initWhatsApp('Hi, I would like to know more about studying abroad. Please contact me.');
+      initSideAlert();
+
+      initHeroSlider();
+
+      renderDestinationCards('destination-cards');
+      enhanceDestinationCards();
+      makeCarousel({ viewport: 'dest-viewport', track: 'destination-cards', prev: 'dest-prev', next: 'dest-next', dots: 'dest-dots', mobile: 1.2, desktop: 3, gap: 24 });
+
+      renderServices();
+      renderProcess();
+
+      renderTestimonials();
+      makeCarousel({ viewport: 'testi-viewport', track: 'testimonial-track', prev: 'testi-prev', next: 'testi-next', dots: 'testi-dots', mobile: 1, desktop: 2, gap: 24, autoplay: 6000 });
+
+      renderSocialFeed();
+      initCallbackForm();
+
+      initStatsCounter();
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>

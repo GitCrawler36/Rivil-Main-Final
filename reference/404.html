@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Rivil International Education Consultants</title>
+  <meta name="description" content="The page you are looking for could not be found. Explore Rivil International's study destinations or return to the homepage.">
+  <link rel="icon" type="image/png" href="Rivil_Main_logo-removebg-preview.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pine: { 50:'#f0f7f4', 100:'#dcebe4', 200:'#bcd7cb', 300:'#8fbcaa', 400:'#56987f', 500:'#377a63', 600:'#27614e', 700:'#1f4e40', 800:'#1a4036', 900:'#16352d', 950:'#0b201b' },
+            gold: { 300:'#f7d878', 400:'#eeb52e', 500:'#d99c18', 600:'#b97c10', 700:'#955d12' },
+            cream: '#faf7f1'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="rivil-data.js"></script>
+  <script src="rivil-app.js"></script>
+</head>
+<body class="bg-cream font-sans text-pine-950 antialiased">
+
+  <div id="navbar"></div>
+
+  <section class="py-24 sm:py-36">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+      <p class="hero-rise hero-rise-1 font-display text-[7rem] sm:text-[10rem] font-semibold leading-none text-pine-200">404</p>
+      <h1 class="hero-rise hero-rise-2 mt-2 font-display text-3xl sm:text-5xl font-semibold leading-tight">This page seems to have gone abroad</h1>
+      <p class="hero-rise hero-rise-3 mx-auto mt-5 max-w-md text-base leading-relaxed text-pine-950/65">The page you are looking for does not exist or has moved. Let us point you back in the right direction.</p>
+      <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="index.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-pine-800 px-8 py-4 text-sm font-bold text-white hover:bg-pine-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Back to Homepage
+        </a>
+        <a href="index.html#destinations" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-pine-950/15 px-8 py-4 text-sm font-bold text-pine-950 hover:bg-pine-950 hover:text-white transition-colors">Explore Destinations</a>
+      </div>
+
+      <div class="hero-rise hero-rise-4 mt-14 border-t border-pine-950/10 pt-10">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold-600">Or jump to a page</p>
+        <nav class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium text-pine-950/70" aria-label="Site pages">
+          <a href="index.html" class="hover:text-pine-800 transition-colors">Home</a>
+          <a href="about.html" class="hover:text-pine-800 transition-colors">About</a>
+          <a href="services.html" class="hover:text-pine-800 transition-colors">Services</a>
+          <a href="how-it-works.html" class="hover:text-pine-800 transition-colors">How It Works</a>
+          <a href="destinations-other.html" class="hover:text-pine-800 transition-colors">Study Destinations</a>
+          <a href="eligibility.html" class="hover:text-pine-800 transition-colors">Eligibility Check</a>
+          <a href="events.html" class="hover:text-pine-800 transition-colors">Events</a>
+          <a href="success-stories.html" class="hover:text-pine-800 transition-colors">Success Stories</a>
+          <a href="contact.html" class="hover:text-pine-800 transition-colors">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initNavbar();
+      initFooter();
+      initWhatsApp('Hi, I would like to know more about studying abroad. Please contact me.');
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>
