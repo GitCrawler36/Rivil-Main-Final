@@ -133,10 +133,10 @@
     }).join('');
 
     var desktopLinks =
-      '<a href="index.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('index.html') + '">Home</a>' +
-      '<a href="about.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('about.html') + '">About</a>' +
+      '<a href="index.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('index.html') + '">Home</a>' +
+      '<a href="about.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('about.html') + '">About</a>' +
       '<div class="relative" id="nav-dd-wrap">' +
-        '<button id="nav-dd-btn" type="button" aria-expanded="false" class="flex items-center gap-1 px-3 py-2 font-body-md transition-colors ' + (onDestPage ? 'text-primary font-semibold' : 'text-silver hover:text-primary') + '">' +
+        '<button id="nav-dd-btn" type="button" aria-expanded="false" class="flex items-center gap-1.5 px-4 py-2 font-body-md transition-colors ' + (onDestPage ? 'text-primary font-semibold' : 'text-silver hover:text-primary') + '">' +
           'Study Destinations' +
           '<span id="nav-dd-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>' +
         '</button>' +
@@ -148,11 +148,11 @@
           '</div>' +
         '</div>' +
       '</div>' +
-      '<a href="services.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('services.html') + '">Services</a>' +
-      '<a href="events.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('events.html') + '">Events</a>' +
-      '<a href="success-stories.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('success-stories.html') + '">Success Stories</a>' +
-      '<a href="eligibility.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('eligibility.html') + '">Eligibility</a>' +
-      '<a href="contact.html" class="px-3 py-2 font-body-md transition-colors ' + linkCls('contact.html') + '">Contact</a>';
+      '<a href="services.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('services.html') + '">Services</a>' +
+      '<a href="events.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('events.html') + '">Events</a>' +
+      '<a href="success-stories.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('success-stories.html') + '">Success Stories</a>' +
+      '<a href="eligibility.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('eligibility.html') + '">Eligibility</a>' +
+      '<a href="contact.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('contact.html') + '">Contact</a>';
 
     var mobileDestLinks = destinations.map(function (d) {
       var flag = FLAG_EMOJIS[d.slug] || '🌍';
@@ -166,9 +166,9 @@
       '<nav id="site-nav" class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/50 transition-all duration-300">' +
         '<div class="mx-auto max-w-container-max flex h-[68px] items-center justify-between px-margin-mobile md:px-margin-desktop">' +
           '<a href="index.html" class="font-display-lg text-[22px] lg:text-[26px] font-bold text-white tracking-tight shrink-0" aria-label="Rivil International — Home">' + BRAND + '</a>' +
-          '<div class="hidden lg:flex items-center gap-2">' + desktopLinks + '</div>' +
+          '<div class="hidden lg:flex items-center gap-1">' + desktopLinks + '</div>' +
           '<div class="hidden lg:flex items-center gap-3">' +
-            '<a href="contact.html" class="bg-primary text-white px-6 py-2.5 rounded-lg font-body-md hover:brightness-110 transition-all duration-300">Free Consultation</a>' +
+            '<a href="contact.html" class="bg-primary text-white px-6 py-2.5 rounded-lg font-body-md font-semibold tracking-wide hover:bg-[#465827] transition-colors duration-200">Free Consultation</a>' +
           '</div>' +
           '<button id="nav-mobile-btn" type="button" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-surface-container">' +
             '<span id="nav-icon-open" class="material-symbols-outlined">menu</span>' +
@@ -192,7 +192,7 @@
           '<a href="success-stories.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('success-stories.html') + '">Success Stories</a>' +
           '<a href="eligibility.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('eligibility.html') + '">Eligibility</a>' +
           '<a href="contact.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('contact.html') + '">Contact</a>' +
-          '<a href="contact.html" class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-body-md font-semibold text-white">Free Consultation</a>' +
+          '<a href="contact.html" class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-body-md font-semibold tracking-wide text-white hover:bg-[#465827] transition-colors">Free Consultation</a>' +
         '</div>' +
       '</nav>';
 
