@@ -18,6 +18,8 @@ window.RIVIL_DATA = {
         { name: "AUT University", city: "Auckland", programmes: ["Business", "Design", "Health", "IT"], ranking: "QS Top 500", website: "https://www.aut.ac.nz" },
         { name: "Victoria University of Wellington", city: "Wellington", programmes: ["Law", "Commerce", "Humanities", "Science"], ranking: "QS Top 300", website: "https://www.wgtn.ac.nz" },
         { name: "University of Otago", city: "Dunedin", programmes: ["Medicine", "Science", "Commerce", "Humanities"], ranking: "QS Top 300", website: "https://www.otago.ac.nz" },
+        { name: "University of Canterbury", city: "Christchurch", programmes: ["Engineering", "Science", "Business", "Law"], ranking: "QS Top 300", website: "https://www.canterbury.ac.nz" },
+        { name: "University of Waikato", city: "Hamilton", programmes: ["Management", "Computer Science", "Law", "Education"], ranking: "QS Top 250", website: "https://www.waikato.ac.nz" },
         { name: "Lincoln University", city: "Christchurch", programmes: ["Agriculture", "Environment", "Commerce", "Science"], ranking: null, website: "https://www.lincoln.ac.nz" },
         { name: "Unitec Institute of Technology", city: "Auckland", programmes: ["Business", "IT", "Engineering", "Design"], ranking: null, website: "https://www.unitec.ac.nz" },
         { name: "Massey University", city: "Palmerston North / Auckland", programmes: ["Business", "Creative Arts", "Science", "Engineering"], ranking: "QS Top 500", website: "https://www.massey.ac.nz" }
@@ -224,6 +226,8 @@ window.RIVIL_DATA = {
     "AUT University": "assets/logos/aut-university.png",
     "Victoria University of Wellington": "assets/logos/victoria-university-of-wellington.png",
     "University of Otago": "assets/logos/university-of-otago.png",
+    "University of Canterbury": "assets/logos/university-of-canterbury.avif",
+    "University of Waikato": "assets/logos/university-of-waikato.png",
     "Lincoln University": "assets/logos/lincoln-university.png",
     "Unitec Institute of Technology": "assets/logos/unitec-institute-of-technology.png",
     "Massey University": "assets/logos/massey-university.png",
@@ -368,5 +372,43 @@ window.RIVIL_DATA = {
       climate: "Tropical",
       mapImage: "assets/maps/singapore-map.png"
     }
+  },
+
+  /* Full New Zealand institution directory, grouped for the destination page.
+     Self-contained (name / city / tags / logo) so the page can render both
+     groups without touching the existing destinations[].universities list.
+     Grouping mirrors the two logo sub-folders under assets/logos/new-zealand/. */
+  nzInstitutions: {
+    universities: [
+      { name: "University of Auckland", city: "Auckland", tags: ["Business", "Engineering"], logo: "assets/logos/new-zealand/universities/university-of-auckland.jpg" },
+      { name: "University of Otago", city: "Dunedin", tags: ["Medicine", "Sciences"], logo: "assets/logos/new-zealand/universities/university-of-otago.jpg" },
+      { name: "Victoria University of Wellington", city: "Wellington", tags: ["Law", "Humanities"], logo: "assets/logos/new-zealand/universities/victoria-university-of-wellington.png" },
+      { name: "University of Canterbury", city: "Christchurch", tags: ["Engineering", "Sciences"], logo: "assets/logos/new-zealand/universities/university-of-canterbury.avif" },
+      { name: "University of Waikato", city: "Hamilton", tags: ["Management", "Computer Science"], logo: "assets/logos/new-zealand/universities/university-of-waikato.jpg" },
+      { name: "Massey University", city: "Palmerston North", tags: ["Agriculture", "Business"], logo: "assets/logos/new-zealand/universities/massey-university.png" },
+      { name: "Lincoln University", city: "Christchurch", tags: ["Agriculture", "Environment"], logo: "assets/logos/new-zealand/universities/lincoln-university.png" },
+      { name: "Auckland Institute of Studies", city: "Auckland", tags: ["Business", "Hospitality"], logo: "assets/logos/new-zealand/universities/auckland-institute-of-studies.png" }
+    ],
+    polytechnics: [
+      { name: "Auckland University of Technology", city: "Auckland", tags: ["Design", "Health"], logo: "assets/logos/new-zealand/polytechnics/auckland-university-of-technology.png" },
+      { name: "Unitec Institute of Technology", city: "Auckland", tags: ["Trades", "IT"], logo: "assets/logos/new-zealand/polytechnics/unitec-institute-of-technology.png" },
+      { name: "Eastern Institute of Technology", city: "Napier", tags: ["Nursing", "Viticulture"], logo: "assets/logos/new-zealand/polytechnics/eastern-institute-of-technology.png" },
+      { name: "Toi Ohomai Institute of Technology", city: "Rotorua", tags: ["Forestry", "Tourism"], logo: "assets/logos/new-zealand/polytechnics/toi-ohomai-institute-of-technology.jpg" },
+      { name: "Ara Institute of Canterbury", city: "Christchurch", tags: ["Engineering", "Hospitality"], logo: "assets/logos/new-zealand/polytechnics/ara-institute-of-canterbury.png" },
+      { name: "Manukau Institute of Technology", city: "Auckland", tags: ["Trades", "Engineering"], logo: "assets/logos/new-zealand/polytechnics/manukau-institute-of-technology.png" },
+      { name: "Otago Polytechnic", city: "Dunedin", tags: ["Design", "Nursing"], logo: "assets/logos/new-zealand/polytechnics/otago-polytechnic.png" },
+      { name: "Whitireia Community Polytechnic", city: "Porirua", tags: ["Nursing", "Creative Arts"], logo: "assets/logos/new-zealand/polytechnics/whitireia-community-polytechnic.png" },
+      { name: "Wellington Institute of Technology", city: "Lower Hutt", tags: ["Engineering", "Hospitality"], logo: "assets/logos/new-zealand/polytechnics/wellington-institute-of-technology.png" },
+      { name: "Western Institute of Technology at Taranaki", city: "New Plymouth", tags: ["Engineering", "Business"], logo: "assets/logos/new-zealand/polytechnics/western-institute-of-technology-at-taranaki.jpg" },
+      { name: "NorthTec", city: "Whangārei", tags: ["Trades", "Environmental"], logo: "assets/logos/new-zealand/polytechnics/northtec.png" },
+      { name: "Southern Institute of Technology", city: "Invercargill", tags: ["Business", "IT"], logo: "assets/logos/new-zealand/polytechnics/southern-institute-of-technology.jpg" },
+      { name: "Waikato Institute of Technology", city: "Hamilton", tags: ["Engineering", "Media Arts"], logo: "assets/logos/new-zealand/polytechnics/waikato-institute-of-technology.png" },
+      { name: "New Zealand Tertiary College", city: "Auckland", tags: ["Early Childhood", "Teaching"], logo: "assets/logos/new-zealand/polytechnics/new-zealand-tertiary-college.jpg" },
+      { name: "Universal College of Learning", city: "Palmerston North", tags: ["Nursing", "Business"], logo: "assets/logos/new-zealand/polytechnics/universal-college-of-learning.png" },
+      { name: "International Aviation Academy of New Zealand", city: "Christchurch", tags: ["Aviation", "Engineering"], logo: "assets/logos/new-zealand/polytechnics/international-aviation-academy-of-new-zealand.png" },
+      { name: "Air New Zealand Aviation Institute", city: "Auckland", tags: ["Aviation", "Engineering"], logo: "assets/logos/new-zealand/polytechnics/air-nz-aviation-institute.jpg" },
+      { name: "The Culinary Collective", city: "Auckland", tags: ["Culinary Arts", "Hospitality"], logo: "assets/logos/new-zealand/polytechnics/the-culinary-collective.webp" },
+      { name: "UP Education", city: "Auckland", tags: ["Foundation", "Pathways"], logo: "assets/logos/new-zealand/polytechnics/up-education.webp" }
+    ]
   }
 };

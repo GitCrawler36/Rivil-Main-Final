@@ -121,6 +121,39 @@ html {
   background: rgba(5, 7, 8, 0.85);
 }
 
+/* Crop the source artwork's transparent padding so the brand itself fills the
+   header. Keeping the high-resolution source at a fixed display size also
+   gives the small lettering a cleaner edge than sizing the padded PNG by height. */
+.site-logo {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 174px;
+  height: 44px;
+  overflow: hidden;
+}
+
+.site-logo-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 186px;
+  height: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1);
+}
+
+@media (min-width: 1024px) {
+  .site-logo {
+    width: 182px;
+  }
+
+  .site-logo-image {
+    width: 194px;
+  }
+}
+
 .bento-card {
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }

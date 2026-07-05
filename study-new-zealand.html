@@ -4,90 +4,194 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Study in New Zealand | Rivil International Education Consultants</title>
-<meta name="description" content="Study in New Zealand with Rivil International — explore our New Zealand university network, post-study work options and key facts. Free guidance for Sri Lankan students.">
+<meta name="description" content="Study in New Zealand with free guidance from Rivil International. Globally recognised universities, scholarships, post-study work visas up to 3 years — trusted by Sri Lankan students since 2004.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="tailwind-config.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="destination-theme.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
+<script src="destination-motion.js"></script>
 </head>
-<body class="cave-body text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="theme-nz text-on-background font-body-md antialiased overflow-x-hidden">
 
 <div id="navbar"></div>
 
-<!-- Hero -->
-<section class="cave-hero relative flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop" style="min-height:100vh;">
-  <!-- Organic cave walls -->
-  <div class="absolute inset-y-0 left-0 w-[15%] bg-black/60 z-10" style="clip-path: polygon(0 0, 100% 0, 70% 50%, 100% 100%, 0 100%);"></div>
-  <div class="absolute inset-y-0 right-0 w-[15%] bg-black/60 z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 30% 50%);"></div>
-  <div class="relative z-20 max-w-2xl text-center">
-    <p class="font-label-sm uppercase tracking-[0.2em] text-cave-cyan/70 hero-rise hero-rise-1">Home &rarr; Study Destinations &rarr; New Zealand</p>
-    <h1 class="hero-rise hero-rise-2 mt-6 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-white cave-heading">Study in New Zealand</h1>
-    <p id="dest-tagline" class="hero-rise hero-rise-3 mt-6 font-body-lg text-body-lg text-silver/70 max-w-xl mx-auto"></p>
-    <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-      <a id="hero-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-      <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Book Free Consultation</a>
+<!-- Section 1 — Hero -->
+<section class="dest-hero">
+  <div class="dest-hero-media">
+    <div class="dest-hero-img" role="img" aria-label="Mount Cook rising above the Southern Alps, New Zealand"></div>
+  </div>
+  <div class="dest-hero-overlay"></div>
+  <div class="dest-hero-content">
+    <span class="dest-pill hero-rise hero-rise-1">Study Abroad Excellence</span>
+    <h1 class="dest-hero-title hero-rise hero-rise-2">Study in New Zealand</h1>
+    <p class="dest-hero-sub hero-rise hero-rise-3">Forge your future in a land of breathtaking landscapes, world-renowned universities and boundless opportunity &mdash; with globally recognised qualifications and up to three years of post-study work rights.</p>
+    <div class="dest-btn-row hero-rise hero-rise-4">
+      <a href="#universities" class="dest-btn dest-btn-primary">Explore Opportunities</a>
+      <a href="#universities" class="dest-btn dest-btn-outline">View Rankings</a>
     </div>
   </div>
-  <a href="#overview" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-cave-cyan/70 animate-bounce" aria-label="Scroll down"><span class="material-symbols-outlined text-[32px]">expand_more</span></a>
 </section>
 
-<!-- Overview -->
-<section id="overview" class="py-section-gap">
-  <div class="mx-auto max-w-[700px] px-margin-mobile md:px-margin-desktop text-center scroll-reveal">
-    <p id="dest-overview" class="font-body-lg text-body-lg text-silver/70 leading-relaxed"></p>
+<!-- Section 2 — Country intro -->
+<section class="dest-section" id="about-new-zealand">
+  <div class="dest-section-inner">
+    <h2 class="dest-country-title scroll-reveal">New Zealand</h2>
+    <div class="dest-intro-grid">
+      <div class="dest-img-card scroll-reveal">
+        <img src="assets/destinations/new-zealand/hero-mount-cook.jpg" alt="The Southern Alps of New Zealand at dusk" loading="lazy">
+        <span class="dest-img-tag dest-img-tag-tl">New Zealand</span>
+        <span class="dest-img-tag dest-img-tag-bl">Southern Alps, NZ</span>
+      </div>
+      <div class="scroll-reveal">
+        <h3 class="dest-intro-heading">The Ultimate Study Destination</h3>
+        <p class="dest-intro-copy">New Zealand offers internationally recognised degrees in a safe, welcoming country celebrated for its quality of life. With a world-class education system built on the British model and tuition that remains affordable compared with the UK and Australia, it is no wonder thousands of students choose Aotearoa every year.</p>
+        <ul class="dest-check-list">
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Globally recognised qualifications, respected across every sector</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>A safe and welcoming environment for international students</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Post-study work visa of up to three years after you graduate</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Separator 3 (cave) -->
-<div class="maori-separator maori-separator-cave w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
+<!-- Section 3 — World-Class Institutions -->
+<section class="dest-section dest-section-bg dest-bg-universities" id="universities">
+  <div class="dest-section-inner">
+    <span class="dest-eyebrow scroll-reveal">Where you could study</span>
+    <h2 class="dest-section-title scroll-reveal">World-Class Institutions</h2>
+    <p class="dest-section-sub scroll-reveal">From globally ranked universities to specialist polytechnics and colleges, New Zealand offers a recognised qualification wherever your ambitions lie &mdash; and we will help you find your place at any of them.</p>
 
-<!-- Why Study -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-12">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-cave-cyan">Why Study in New Zealand</span>
-    <h2 class="mt-3 font-display-lg text-[40px] leading-tight text-white cave-heading">A safe, world-class place to learn</h2>
+    <div class="dest-group scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">08</span>
+        <div>
+          <span class="dest-eyebrow">Accredited</span>
+          <h3 class="dest-group-title">Universities</h3>
+        </div>
+      </div>
+    </div>
+    <div id="university-cards-new-zealand" class="dest-uni-grid"></div>
+
+    <div class="dest-group dest-group-spaced scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">19</span>
+        <div>
+          <span class="dest-eyebrow">Accredited</span>
+          <h3 class="dest-group-title">Government Polytechnics &amp; Colleges</h3>
+        </div>
+      </div>
+    </div>
+    <div id="polytechnic-cards-new-zealand" class="dest-uni-grid"></div>
   </div>
-  <div id="why-grid" class="grid grid-cols-1 md:grid-cols-2 gap-gutter"></div>
 </section>
 
-<!-- Separator 2 (cave) -->
-<div class="maori-separator maori-separator-cave w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-2.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- University Cards -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-4">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-cave-cyan">Our New Zealand University Network</span>
-    <h2 class="mt-3 font-display-lg text-[40px] leading-tight text-white cave-heading">Where you could study</h2>
-    <p class="mt-4 font-body-md text-silver/60">Click any university to visit their official website.</p>
+<!-- Section 4 — Scholarships & Funding -->
+<section class="dest-section dest-section-bg dest-bg-scholarships" id="scholarships">
+  <div class="dest-section-inner">
+    <div class="dest-glass-panel dest-scholarship-panel scroll-reveal">
+      <h2 class="dest-section-title dest-align-left">Scholarships &amp; Funding</h2>
+      <p class="dest-section-sub dest-align-left dest-sub-flush">Education in New Zealand is an investment in your future. To support high-achieving international students, a range of scholarship programmes are available from the New Zealand Government and from individual universities. Our counsellors will help you identify what you may qualify for &mdash; completely free.</p>
+      <div class="dest-scholarship-grid">
+        <div>
+          <h3 class="dest-scholarship-name">Manaaki New Zealand Scholarships</h3>
+          <p class="dest-scholarship-desc">The New Zealand Government&rsquo;s official scholarship programme for students from eligible countries, covering tuition, living costs and travel for selected programmes of study.</p>
+        </div>
+        <div>
+          <h3 class="dest-scholarship-name">University Merit Scholarships</h3>
+          <p class="dest-scholarship-desc">Most New Zealand universities offer merit-based entrance scholarships for high-achieving international students, including vice-chancellor&rsquo;s awards for first-year entry.</p>
+        </div>
+      </div>
+      <a href="eligibility.html" class="dest-btn dest-btn-light">Check Eligibility</a>
+    </div>
   </div>
-  <div id="university-cards-new-zealand" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"></div>
-
-  <!-- Country stats -->
-  <div class="mt-16 scroll-reveal mb-8"><h3 class="font-headline-lg text-headline-lg text-white">New Zealand by the numbers</h3></div>
-  <div id="stats-grid-new-zealand" class="grid grid-cols-2 lg:grid-cols-4 gap-gutter"></div>
 </section>
 
-<!-- Separator 1 (cave) -->
-<div class="maori-separator maori-separator-cave w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-1.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Map -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div id="country-map-new-zealand"></div>
+<!-- Section 5 — Student Life & Culture -->
+<section class="dest-section dest-section-bg dest-bg-gallery dest-overlay-strong" id="student-life">
+  <div class="dest-section-inner" id="life-gallery">
+    <div class="dest-gallery-head scroll-reveal">
+      <div>
+        <h2 class="dest-section-title dest-align-left">Student Life &amp; Culture</h2>
+        <p class="dest-section-sub dest-align-left dest-sub-flush">Beyond the lecture hall, New Zealand offers a lifestyle defined by balance, outdoor adventure and famously warm hospitality.</p>
+      </div>
+      <div class="dest-gallery-arrows">
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="-1" aria-label="Scroll gallery left"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="1" aria-label="Scroll gallery right"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </div>
+    <!-- PLACEHOLDER GALLERY IMAGES: replace these stock Unsplash photos with
+         real Rivil student / New Zealand photography when available. -->
+    <div class="dest-gallery scroll-reveal">
+      <figure class="dest-gallery-item">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Hikers on a mountain trail" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Outdoor Adventure</h4>
+          <p>From mountain trails to coastal surf, the outdoors is your playground.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Students socialising together" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Social Connection</h4>
+          <p>Student clubs and a thriving social scene in every university city.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Graduates celebrating on campus" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Campus Life</h4>
+          <p>Modern campuses with world-class facilities and student support.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=80" alt="A New Zealand cityscape at dusk" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>City Living</h4>
+          <p>Compact, liveable cities where everything is within easy reach.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Sunlight over a mountain valley" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Weekend Escapes</h4>
+          <p>National parks, lakes and beaches only ever a short drive away.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
-<!-- Separator 3 (cave) -->
-<div class="maori-separator maori-separator-cave w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- WhatsApp CTA -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
-  <div class="cave-card rounded-3xl p-12 md:p-20 text-center scroll-reveal">
-    <h2 class="font-display-lg text-[40px] leading-tight text-white cave-heading">Ready to study in New Zealand?</h2>
-    <p class="mt-3 font-body-lg text-silver/75">Chat with our New Zealand specialists directly on WhatsApp.</p>
-    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a id="cta-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-      <a href="eligibility.html" class="border border-cave-cyan/50 text-cave-cyan px-8 py-4 rounded-lg font-headline-md hover:bg-cave-cyan/15 transition-all">Check Your Eligibility &rarr;</a>
+<!-- Section 6 — Final CTA -->
+<section class="dest-section dest-section-bg dest-bg-cta" id="get-started">
+  <div class="dest-section-inner">
+    <h2 class="dest-section-title scroll-reveal">Start Your Journey Today</h2>
+    <p class="dest-section-sub scroll-reveal">Our counsellors are ready to help you navigate your path to academic success in New Zealand &mdash; completely free, no commitment.</p>
+    <div class="dest-btn-row scroll-reveal">
+      <a href="contact.html" class="dest-btn dest-btn-primary">Book Free Consultation</a>
+      <!-- TODO: link a real downloadable New Zealand guide PDF when the asset exists -->
+      <a href="#" class="dest-btn dest-btn-outline">Download Guide</a>
+    </div>
+    <div class="dest-glass-panel dest-stats-bar scroll-reveal">
+      <div class="dest-stat">
+        <p class="dest-stat-label">Population</p>
+        <p class="dest-stat-value" data-dest-stat="population">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Currency</p>
+        <p class="dest-stat-value" data-dest-stat="currency">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Avg Tuition</p>
+        <p class="dest-stat-value" data-dest-stat="avgTuition">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Post-Study Visa</p>
+        <p class="dest-stat-value" data-dest-stat="postStudyVisa">&mdash;</p>
+      </div>
     </div>
   </div>
 </section>
@@ -96,19 +200,26 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var slug = 'new-zealand';
-    var dest = window.RIVIL_DATA.destinations.find(function (d) { return d.slug === slug; });
     initNavbar();
     initFooter();
-    initWhatsApp(dest.whatsapp_message);
-    document.getElementById('dest-tagline').textContent = dest.tagline;
-    document.getElementById('dest-overview').textContent = dest.overview;
-    document.getElementById('hero-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    document.getElementById('cta-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    renderWhyStudy('why-grid', slug, 'cave');
-    renderUniversityCards('university-cards-new-zealand', slug, 'cave');
-    renderCountryStats('stats-grid-new-zealand', slug, 'cave');
-    renderCountryMap('country-map-new-zealand', slug, 'cave');
+    initWhatsApp('Hi, I am interested in studying in New Zealand. Please contact me.');
+
+    var nz = window.RIVIL_DATA.nzInstitutions || {};
+    renderInstitutionGroup('university-cards-new-zealand', nz.universities);
+    renderInstitutionGroup('polytechnic-cards-new-zealand', nz.polytechnics);
+    initGlassHoverEffects('#universities .dest-university-card');
+
+    initKenBurnsHero('.dest-hero-img');
+    initParallaxHero('.dest-hero-media');
+    initGalleryScroll('#life-gallery');
+
+    /* Stats bar values come from the shared data file. */
+    var stats = (window.RIVIL_DATA.countryStats || {})['new-zealand'] || {};
+    ['population', 'currency', 'avgTuition', 'postStudyVisa'].forEach(function (key) {
+      var el = document.querySelector('[data-dest-stat="' + key + '"]');
+      if (el && stats[key]) el.textContent = stats[key];
+    });
+
     initScrollAnimations();
   });
 </script>

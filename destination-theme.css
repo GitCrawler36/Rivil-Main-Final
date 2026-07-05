@@ -1,0 +1,690 @@
+/* ==========================================================================
+   Rivil International — shared destination-page theme foundation
+   Generic structural rules for every "Study in <Country>" page. All colour
+   values are driven by CSS custom properties scoped under a body theme
+   class, so future destinations (body.theme-uk, body.theme-australia,
+   body.theme-canada, body.theme-malaysia, body.theme-singapore) can be
+   added below without touching any other theme's rules.
+
+   Loaded after mobile.css on destination pages.
+   ========================================================================== */
+
+/* ---------- Theme: New Zealand ---------- */
+/* --dest-accent sampled directly from the Stitch reference button (#556B2F,
+   the site's primary olive). Overlay stays within rgba(10,15,10, 0.5–0.65). */
+
+body.theme-nz {
+  --dest-accent: #556B2F;
+  --dest-bg: #0a0f0a;
+  --dest-glass-bg: rgba(15, 22, 15, 0.55);
+  --dest-glass-border: rgba(255, 255, 255, 0.08);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(255, 255, 255, 0.6);
+  --dest-overlay: rgba(10, 15, 10, 0.55);
+  --dest-overlay-soft: rgba(10, 15, 10, 0.5);
+  --dest-overlay-strong: rgba(10, 15, 10, 0.65);
+  background-color: var(--dest-bg);
+}
+
+/* Theme-scoped section photography. The photos stay sharp — only the glass
+   panels floating above them are blurred, via backdrop-filter. */
+body.theme-nz .dest-hero-img      { background-image: url("assets/destinations/new-zealand/hero-mount-cook.jpg"); }
+body.theme-nz .dest-bg-universities { background-image: url("assets/destinations/new-zealand/bg-universities-auckland.jpg"); }
+body.theme-nz .dest-bg-scholarships { background-image: url("assets/destinations/new-zealand/bg-scholarships-milford.jpg"); }
+body.theme-nz .dest-bg-gallery      { background-image: url("assets/destinations/new-zealand/bg-gallery-nelson.jpg"); }
+body.theme-nz .dest-bg-cta          { background-image: url("assets/destinations/new-zealand/bg-cta-ferns.jpg"); }
+
+/* body.theme-uk, body.theme-australia, body.theme-canada, body.theme-malaysia
+   and body.theme-singapore follow the same pattern: one variable block and
+   one set of background-image assignments per country. */
+
+/* ---------- Section shells ---------- */
+
+.dest-section {
+  position: relative;
+  padding: 112px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .dest-section { padding: 156px 64px; }
+}
+
+.dest-section-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Photo-backed section: image cover + dark overlay layered on top. */
+.dest-section-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.dest-section-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--dest-overlay);
+}
+
+.dest-overlay-soft::before   { background: var(--dest-overlay-soft); }
+.dest-overlay-strong::before { background: var(--dest-overlay-strong); }
+
+/* ---------- Glass panel ---------- */
+/* Transition list also carries opacity so .scroll-reveal fade-in keeps
+   working when this rule wins the cascade over mobile.css. */
+
+.dest-glass-panel {
+  background: var(--dest-glass-bg);
+  border: 1px solid var(--dest-glass-border);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6),
+              inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+/* ---------- Typography ---------- */
+
+.dest-pill {
+  display: inline-block;
+  padding: 9px 22px;
+  border: 1px solid color-mix(in srgb, var(--dest-accent) 70%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--dest-accent) 12%, transparent);
+  color: color-mix(in srgb, var(--dest-accent) 55%, #ffffff);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+/* Small accent eyebrow above a heading. */
+.dest-eyebrow {
+  display: block;
+  color: color-mix(in srgb, var(--dest-accent) 45%, #ffffff);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.dest-section-title {
+  color: var(--dest-text-primary);
+  font-size: clamp(34px, 4.4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.dest-section-sub {
+  color: var(--dest-text-muted);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 680px;
+  margin: 22px auto 72px;
+}
+
+.dest-align-left,
+.dest-align-left.dest-section-title,
+.dest-align-left.dest-section-sub {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* Removes the trailing gap when a .dest-section-sub sits inside a panel
+   or gallery header rather than directly above a grid. */
+.dest-sub-flush { margin-bottom: 0; }
+
+/* ---------- Buttons ---------- */
+
+.dest-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 36px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dest-btn-primary {
+  background: var(--dest-accent);
+  color: #ffffff;
+  box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--dest-accent) 80%, transparent);
+}
+.dest-btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); }
+
+.dest-btn-outline { border: 1px solid rgba(255, 255, 255, 0.35); color: #ffffff; }
+.dest-btn-outline:hover { background: rgba(255, 255, 255, 0.08); }
+
+.dest-btn-light { background: #ffffff; color: #0a0f0a; }
+.dest-btn-light:hover { filter: brightness(0.9); }
+
+.dest-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ---------- Hero ---------- */
+
+.dest-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Parallax target — oversized upward so translateY never exposes a gap. */
+.dest-hero-media {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -45%;
+  height: 145%;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* Ken Burns target — keyframes referenced by initKenBurnsHero(). */
+.dest-hero-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+@keyframes dest-kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+}
+
+.dest-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom,
+    rgba(10, 15, 10, 0.25) 0%,
+    rgba(10, 15, 10, 0.55) 60%,
+    rgba(10, 15, 10, 0.85) 100%);
+}
+
+.dest-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  padding: 0 16px;
+}
+
+.dest-hero-title {
+  color: var(--dest-text-primary);
+  font-size: clamp(32px, 6.5vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+  margin: 30px 0 24px;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dest-hero-sub {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.75;
+  max-width: 640px;
+  margin: 0 auto 44px;
+}
+
+/* ---------- Country intro ---------- */
+
+.dest-country-title {
+  color: var(--dest-text-primary);
+  font-size: clamp(44px, 12vw, 156px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  word-break: break-word;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-bottom: -0.2em;
+  pointer-events: none;
+  background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dest-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  padding-top: 72px;
+}
+
+@media (max-width: 900px) {
+  .dest-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.dest-img-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--dest-glass-border);
+}
+
+.dest-img-card img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+.dest-img-tag {
+  position: absolute;
+  padding: 6px 12px;
+  border: 1px solid var(--dest-glass-border);
+  border-radius: 8px;
+  background: rgba(10, 15, 10, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.dest-img-tag-tl { top: 16px; left: 16px; }
+.dest-img-tag-bl { bottom: 16px; left: 16px; }
+
+.dest-intro-heading {
+  color: var(--dest-text-primary);
+  font-size: clamp(30px, 3.6vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.dest-intro-copy {
+  color: var(--dest-text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 34px;
+}
+
+.dest-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dest-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dest-check-list .material-symbols-outlined {
+  color: var(--dest-accent);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* ---------- University cards ---------- */
+
+/* ---------- Institution group headers ---------- */
+
+.dest-group {
+  margin-top: 24px;
+}
+
+.dest-group-spaced {
+  margin-top: 96px;
+}
+
+.dest-group-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dest-group-head .dest-eyebrow {
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.dest-group-count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--dest-accent);
+  padding: 10px 14px;
+  border: 1px solid color-mix(in srgb, var(--dest-accent) 45%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--dest-accent) 12%, transparent);
+}
+
+.dest-group-title {
+  color: var(--dest-text-primary);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* ---------- University / institution cards ---------- */
+
+.dest-uni-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .dest-uni-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .dest-uni-grid { grid-template-columns: 1fr; }
+}
+
+.dest-university-card {
+  display: flex;
+  flex-direction: column;
+  padding: 34px 32px;
+}
+
+.dest-university-card:hover {
+  box-shadow: 0 32px 70px -28px rgba(0, 0, 0, 0.75),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Light backing panel so dark-on-transparent logos stay legible. */
+.dest-uni-logo {
+  position: relative;
+  width: 100%;
+  height: 96px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.dest-uni-logo img {
+  max-width: 74%;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.dest-uni-logo-fallback {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #2f342f;
+  user-select: none;
+}
+
+.dest-uni-name {
+  color: var(--dest-text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.dest-uni-city {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--dest-text-muted);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.dest-uni-city .material-symbols-outlined {
+  color: var(--dest-accent);
+  font-size: 16px;
+}
+
+.dest-uni-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.dest-uni-tag {
+  padding: 7px 12px;
+  border: 1px solid var(--dest-glass-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.72);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---------- Scholarships ---------- */
+
+.dest-scholarship-panel {
+  padding: 36px 24px;
+}
+
+@media (min-width: 768px) {
+  .dest-scholarship-panel { padding: 56px; }
+}
+
+.dest-scholarship-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 36px 0 40px;
+}
+
+@media (max-width: 768px) {
+  .dest-scholarship-grid { grid-template-columns: 1fr; }
+}
+
+.dest-scholarship-name {
+  color: var(--dest-accent);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dest-scholarship-desc {
+  color: var(--dest-text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ---------- Gallery ---------- */
+
+.dest-gallery-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.dest-gallery-arrows {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.dest-gallery-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--dest-glass-bg);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dest-gallery-arrow:hover {
+  background: var(--dest-accent);
+  border-color: var(--dest-accent);
+}
+
+.dest-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.dest-gallery::-webkit-scrollbar { display: none; }
+
+.dest-gallery-item {
+  position: relative;
+  flex: 0 0 280px;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--dest-glass-border);
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .dest-gallery-item { flex-basis: 340px; height: 440px; }
+}
+
+.dest-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark blurred glass strip over the bottom of each gallery photo. */
+.dest-gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 18px;
+  background: rgba(10, 15, 10, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--dest-glass-border);
+}
+
+.dest-gallery-caption h4 {
+  color: var(--dest-text-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.dest-gallery-caption p {
+  color: var(--dest-text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* ---------- Stats bar ---------- */
+
+.dest-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 56px;
+  padding: 28px 8px;
+}
+
+.dest-stat {
+  padding: 8px 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.dest-stat:first-child { border-left: 0; }
+
+.dest-stat-label {
+  color: var(--dest-accent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.dest-stat-value {
+  color: var(--dest-text-primary);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .dest-stats-bar { grid-template-columns: repeat(2, 1fr); row-gap: 20px; padding: 24px 8px; }
+  .dest-stat:nth-child(odd) { border-left: 0; }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .dest-hero-img { animation: none !important; }
+  .dest-gallery { scroll-behavior: auto; }
+  .dest-glass-panel,
+  .dest-btn,
+  .dest-gallery-arrow { transition: none; }
+}

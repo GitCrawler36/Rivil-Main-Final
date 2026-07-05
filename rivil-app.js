@@ -165,7 +165,7 @@
     el.innerHTML =
       '<nav id="site-nav" class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/50 transition-all duration-300">' +
         '<div class="mx-auto max-w-container-max flex h-[68px] items-center justify-between px-margin-mobile md:px-margin-desktop">' +
-          '<a href="index.html" class="font-display-lg text-[22px] lg:text-[26px] font-bold text-white tracking-tight shrink-0" aria-label="Rivil International — Home">' + BRAND + '</a>' +
+          '<a href="index.html" class="site-logo" aria-label="Rivil International — Home"><img src="assets/Rivil_Main_logo.png" alt="Rivil International Education Consultants" class="site-logo-image" width="867" height="288"></a>' +
           '<div class="hidden lg:flex items-center gap-1">' + desktopLinks + '</div>' +
           '<div class="hidden lg:flex items-center gap-3">' +
             '<a href="contact.html" class="bg-primary text-white px-6 py-2.5 rounded-lg font-body-md font-semibold tracking-wide hover:bg-[#465827] transition-colors duration-200">Free Consultation</a>' +
@@ -303,7 +303,7 @@
       '<footer class="bg-background pt-section-gap pb-8 px-margin-mobile md:px-margin-desktop w-full border-t border-outline-variant/30">' +
         '<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16">' +
           '<div class="space-y-6">' +
-            '<div class="font-headline-lg text-headline-lg text-white">' + BRAND + '</div>' +
+            '<img src="assets/Rivil_Main_logo.png" alt="Rivil International Education Consultants" class="h-12 w-auto" style="filter:brightness(0) invert(1)">' +
             '<p class="text-silver/60 font-body-md">Helping Sri Lankan students gain admission to universities abroad since 2004. Our guidance is completely free &mdash; no fees, no commissions, no hidden costs.</p>' +
             '<div class="flex gap-3">' + socialIcons + '</div>' +
           '</div>' +
@@ -546,6 +546,32 @@
     var dest = getDestination(slug);
     if (!container || !dest) return;
 
+    /* "nz-glass" — glassmorphism cards for the destination-page system
+       (destination-theme.css). Logo on a light backing square, name,
+       city and two subject chips. Styled entirely by .dest-* classes
+       driven by the body theme class, so future destination themes
+       reuse this branch unchanged. */
+    if (theme === 'nz-glass') {
+      var glassLogos = (window.RIVIL_DATA && window.RIVIL_DATA.universityLogos) || {};
+      container.innerHTML = dest.universities.map(function (u, i) {
+        var src = glassLogos[u.name] || '';
+        var tags = u.programmes.slice(0, 2).map(function (p) {
+          return '<span class="dest-uni-tag">' + p + '</span>';
+        }).join('');
+        return '<article class="dest-university-card dest-glass-panel scroll-reveal" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
+          '<div class="dest-uni-logo">' +
+            (src ? '<img src="' + src + '" alt="' + u.name + ' logo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '') +
+            '<span class="dest-uni-logo-fallback" aria-hidden="true"' + (src ? ' style="display:none"' : '') + '>' + initials(u.name) + '</span>' +
+          '</div>' +
+          '<h3 class="dest-uni-name">' + u.name + '</h3>' +
+          '<p class="dest-uni-city"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">location_on</span>' + u.city + '</p>' +
+          '<div class="dest-uni-tags">' + tags + '</div>' +
+        '</article>';
+      }).join('');
+      window.initScrollAnimations();
+      return;
+    }
+
     var cave = theme === 'cave';
     var t = cave ? {
       card: 'cave-card hover:border-cave-cyan/40',
@@ -601,6 +627,37 @@
             svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Enquire' +
           '</a>' +
         '</div>' +
+      '</article>';
+    }).join('');
+
+    window.initScrollAnimations();
+  };
+
+  /* ---------- Grouped institution cards (destination pages) ---------- */
+  /* Renders a glass-panel card grid from a plain list of institutions, each
+     { name, city, tags:[], logo }. Used to display grouped directories
+     (e.g. NZ universities vs polytechnics & colleges) independently of the
+     destinations[].universities data. The logo sits on a light backing
+     square; the initials fallback only appears if the logo fails to load. */
+
+  window.renderInstitutionGroup = function (containerId, items) {
+    var container = document.getElementById(containerId);
+    if (!container || !items) return;
+
+    container.innerHTML = items.map(function (u, i) {
+      var logo = u.logo || '';
+      var tags = (u.tags || []).slice(0, 2).map(function (p) {
+        return '<span class="dest-uni-tag">' + p + '</span>';
+      }).join('');
+
+      return '<article class="dest-university-card dest-glass-panel scroll-reveal" style="transition-delay:' + (i % 3) * 70 + 'ms">' +
+        '<div class="dest-uni-logo">' +
+          (logo ? '<img src="' + logo + '" alt="' + u.name + ' logo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '') +
+          '<span class="dest-uni-logo-fallback" aria-hidden="true"' + (logo ? ' style="display:none"' : '') + '>' + initials(u.name) + '</span>' +
+        '</div>' +
+        '<h3 class="dest-uni-name">' + u.name + '</h3>' +
+        '<p class="dest-uni-city"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>' + u.city + '</p>' +
+        '<div class="dest-uni-tags">' + tags + '</div>' +
       '</article>';
     }).join('');
 
