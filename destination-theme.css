@@ -201,13 +201,14 @@ body.theme-nz .dest-bg-cta          { background-image: url("assets/destinations
   text-align: center;
 }
 
-/* Parallax target — oversized upward so translateY never exposes a gap. */
+/* Slight overscan leaves room for parallax without making the hero feel
+   tightly cropped before the subtle Ken Burns animation begins. */
 .dest-hero-media {
   position: absolute;
   left: 0;
   right: 0;
-  top: -45%;
-  height: 145%;
+  top: -12%;
+  height: 112%;
   z-index: 0;
   will-change: transform;
 }
