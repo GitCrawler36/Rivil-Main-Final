@@ -291,6 +291,12 @@ body.theme-nz .dest-bg-cta          { background-image: url("assets/destinations
   padding-top: 72px;
 }
 
+/* When the oversized country heading is omitted, let the section's equal
+   vertical padding provide the full rhythm above and below the content. */
+.dest-section-no-title .dest-intro-grid {
+  padding-top: 0;
+}
+
 @media (max-width: 900px) {
   .dest-intro-grid { grid-template-columns: 1fr; gap: 40px; }
 }
