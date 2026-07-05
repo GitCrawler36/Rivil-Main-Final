@@ -28,7 +28,7 @@ body.theme-nz {
 
 /* Theme-scoped section photography. The photos stay sharp — only the glass
    panels floating above them are blurred, via backdrop-filter. */
-body.theme-nz .dest-hero-img      { background-image: url("assets/destinations/new-zealand/hero-mount-cook.jpg"); }
+body.theme-nz .dest-hero-img      { background-image: url("assets/mount-cook-updated.jpg"); }
 body.theme-nz .dest-bg-universities { background-image: url("assets/destinations/new-zealand/bg-universities-auckland.jpg"); }
 body.theme-nz .dest-bg-scholarships { background-image: url("assets/destinations/new-zealand/bg-scholarships-milford.jpg"); }
 body.theme-nz .dest-bg-gallery      { background-image: url("assets/destinations/new-zealand/bg-gallery-nelson.jpg"); }
