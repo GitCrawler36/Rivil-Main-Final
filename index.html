@@ -17,47 +17,40 @@
 
 <div id="navbar"></div>
 
-<!-- Hero -->
-<section class="relative h-screen min-h-[640px] flex items-center px-margin-mobile md:px-margin-desktop overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-r from-[#050708] via-[#050708]/80 to-[#050708]/40 z-10"></div>
-    <img class="w-full h-full object-cover hero-drift" alt="University graduates celebrating their success" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80">
-  </div>
-  <div class="relative z-20 max-w-2xl text-white">
-    <div class="flex items-center gap-2 mb-6 hero-rise hero-rise-1">
-      <span class="px-3 py-1 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full font-label-sm uppercase text-primary">Mount Lavinia, Colombo &middot; Trusted since 2004</span>
+<!-- Premium editorial hero -->
+<section class="home-premium-hero">
+  <div class="home-hero-aurora" aria-hidden="true"></div>
+  <div class="home-hero-shell">
+    <div class="home-hero-copy">
+      <div class="home-hero-kicker hero-rise hero-rise-1">
+        <span class="home-hero-kicker-dot"></span>
+        Mount Lavinia, Colombo &middot; Trusted since 2004
+      </div>
+      <h1 class="hero-rise hero-rise-2">Your future deserves a <span>world of possibility.</span></h1>
+      <p class="hero-rise hero-rise-3">Personal guidance for Sri Lankan students applying to recognised institutions across seven destinations. Experienced, ethical and completely free.</p>
+      <div class="home-hero-actions hero-rise hero-rise-4">
+        <a href="contact.html" class="home-hero-primary">Book a Free Consultation <span class="material-symbols-outlined">arrow_forward</span></a>
+        <a href="#destinations" class="home-hero-secondary">Explore Destinations</a>
+      </div>
+      <a href="eligibility.html" class="home-hero-eligibility hero-rise hero-rise-4"><span class="material-symbols-outlined">verified_user</span> Check your eligibility in under three minutes</a>
     </div>
-    <h1 class="hero-rise hero-rise-2 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-6">
-      Your Gateway to <br><span class="text-primary">Global Education</span>
-    </h1>
-    <p class="hero-rise hero-rise-3 font-body-lg text-body-lg text-silver/80 mb-10 max-w-lg">
-      For over 21 years, Rivil International has helped Sri Lankan students gain admission to universities across seven destinations &mdash; completely free. No fees, no commissions, no hidden costs.
-    </p>
-    <div class="hero-rise hero-rise-4 flex flex-col sm:flex-row gap-4 mb-12">
-      <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md flex items-center justify-center gap-2 hover:brightness-110 transition-all">
-        Book Free Consultation <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
-      <a href="#destinations" class="bg-white/5 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-headline-md text-center hover:bg-white/10 transition-all">
-        Explore Destinations
-      </a>
-      <a href="eligibility.html" class="border border-primary/60 text-primary px-8 py-4 rounded-lg font-headline-md flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all">
-        Check Eligibility <span class="material-symbols-outlined">arrow_forward</span>
-      </a>
-    </div>
-    <div class="flex items-center gap-6 opacity-80 hero-rise hero-rise-4">
-      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">verified</span><span class="font-label-sm text-silver">No Fees</span></div>
-      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">handshake</span><span class="font-label-sm text-silver">No Commissions</span></div>
-      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">lock_open</span><span class="font-label-sm text-silver">No Hidden Costs</span></div>
+
+    <div class="home-hero-visual hero-rise hero-rise-3">
+      <div class="home-hero-image-wrap">
+        <img src="assets/site/home-hero.jpg" alt="University students collaborating in a bright campus library" fetchpriority="high">
+        <div class="home-hero-image-shade"></div>
+        <div class="home-hero-image-caption"><span>Global pathways</span><strong>Built around your ambition</strong></div>
+      </div>
+      <div class="home-hero-float home-hero-float-top"><span class="material-symbols-outlined">public</span><div><strong>7 destinations</strong><small>One trusted guide</small></div></div>
+      <div class="home-hero-float home-hero-float-bottom"><span class="material-symbols-outlined">school</span><div><strong>1,000+ students</strong><small>Guided since 2004</small></div></div>
     </div>
   </div>
-  <!-- Stats bar -->
-  <div class="absolute bottom-0 left-0 w-full z-30 bg-[#050708]/60 backdrop-blur-md border-t border-white/10 py-6 px-margin-mobile md:px-margin-desktop">
-    <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-      <div class="flex flex-col items-start"><div class="text-[24px] font-bold text-white" data-target="21" data-suffix="+">0</div><div class="text-[10px] font-label-sm text-silver/60 uppercase tracking-widest">Years Experience</div></div>
-      <div class="flex flex-col items-start"><div class="text-[24px] font-bold text-white" data-target="1000" data-suffix="+">0</div><div class="text-[10px] font-label-sm text-silver/60 uppercase tracking-widest">Students Guided</div></div>
-      <div class="flex flex-col items-start"><div class="text-[24px] font-bold text-white" data-target="6">0</div><div class="text-[10px] font-label-sm text-silver/60 uppercase tracking-widest">Destinations</div></div>
-      <div class="flex flex-col items-start"><div class="text-[24px] font-bold text-white" data-target="100" data-suffix="%">0</div><div class="text-[10px] font-label-sm text-silver/60 uppercase tracking-widest">Free Service</div></div>
-    </div>
+
+  <div class="home-hero-stats">
+    <div><strong data-target="21" data-suffix="+">0</strong><span>Years of experience</span></div>
+    <div><strong data-target="1000" data-suffix="+">0</strong><span>Students guided</span></div>
+    <div><strong data-target="7">0</strong><span>Study destinations</span></div>
+    <div><strong data-target="100" data-suffix="%">0</strong><span>Free student service</span></div>
   </div>
 </section>
 
@@ -84,7 +77,7 @@
   <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
     <div class="relative group scroll-reveal">
       <div class="absolute -inset-4 border border-primary/20 rounded-xl group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
-      <img class="relative rounded-xl shadow-2xl w-full h-[460px] object-cover brightness-90" alt="Students working together" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80">
+      <img class="relative rounded-xl shadow-2xl w-full h-[460px] object-cover brightness-90" alt="Students working together around a laptop" src="assets/site/home-about.jpg" loading="lazy">
       <div class="absolute -bottom-5 -right-5 rounded-xl bg-surface-container border border-outline-variant/40 px-6 py-4 shadow-xl">
         <p class="font-display-lg text-[28px] font-bold text-primary leading-none">Since 2004</p>
         <p class="mt-1 font-label-sm uppercase tracking-wider text-silver/60">A family-founded consultancy</p>
@@ -169,7 +162,7 @@
 
 <!-- CTA -->
 <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
-  <div class="bg-tertiary-container border border-primary/20 rounded-3xl p-12 md:p-20 relative overflow-hidden shadow-2xl text-center scroll-reveal">
+  <div class="image-backed-cta bg-tertiary-container border border-primary/20 rounded-3xl p-12 md:p-20 relative overflow-hidden shadow-2xl text-center scroll-reveal">
     <h2 class="font-display-lg text-[40px] leading-tight text-white">Ready to begin your <span class="text-primary">journey abroad?</span></h2>
     <p class="text-silver/80 font-body-lg mt-4 max-w-xl mx-auto">Speak with a Rivil counsellor today &mdash; completely free, no commitment.</p>
     <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -189,10 +182,13 @@
     var grid = document.getElementById(containerId);
     if (!grid) return;
     grid.innerHTML = window.RIVIL_DATA.services.map(function (s, i) {
-      return '<div class="scroll-reveal p-10 bg-surface-container border border-outline-variant/30 rounded-xl bento-card space-y-4 hover:border-primary/50 group transition-colors" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
-        '<div class="w-14 h-14 rounded-lg bg-background flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-[32px]">' + s.icon + '</span></div>' +
-        '<h3 class="font-headline-md text-white">' + s.title + '</h3>' +
-        '<p class="text-silver/60 font-body-md">' + s.description + '</p>' +
+      return '<div class="site-service-card scroll-reveal group" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
+        '<div class="site-service-card-image"><img src="' + s.image + '" alt="" loading="lazy"><span class="site-service-number">0' + (i + 1) + '</span></div>' +
+        '<div class="site-service-card-body">' +
+          '<div class="w-12 h-12 rounded-lg bg-background flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-[28px]">' + s.icon + '</span></div>' +
+          '<h3 class="font-headline-md text-white">' + s.title + '</h3>' +
+          '<p class="text-silver/60 font-body-md">' + s.description + '</p>' +
+        '</div>' +
       '</div>';
     }).join('');
     window.initScrollAnimations();

@@ -211,7 +211,7 @@ window.RIVIL_DATA = {
       name: "Student Name",
       university: "University of Auckland",
       destination: "New Zealand",
-      thumbnailUrl: "assets/testimonials/video-1.jpg",
+      thumbnailUrl: "assets/site/success-hero.jpg",
       videoUrl: "https://www.youtube.com/watch?v=PLACEHOLDER",
       platform: "youtube"
     },
@@ -219,7 +219,7 @@ window.RIVIL_DATA = {
       name: "Student Name 2",
       university: "Coventry University",
       destination: "United Kingdom",
-      thumbnailUrl: "assets/testimonials/video-2.jpg",
+      thumbnailUrl: "assets/site/home-hero.jpg",
       videoUrl: "https://www.instagram.com/p/PLACEHOLDER",
       platform: "instagram"
     },
@@ -227,7 +227,7 @@ window.RIVIL_DATA = {
       name: "Student Name 3",
       university: "University of Tasmania",
       destination: "Australia",
-      thumbnailUrl: "assets/testimonials/video-3.jpg",
+      thumbnailUrl: "assets/site/service-departure.jpg",
       videoUrl: "https://www.youtube.com/watch?v=PLACEHOLDER",
       platform: "youtube"
     },
@@ -235,7 +235,7 @@ window.RIVIL_DATA = {
       name: "Student Name 4",
       university: "Humber College",
       destination: "Canada",
-      thumbnailUrl: "assets/testimonials/video-4.jpg",
+      thumbnailUrl: "assets/site/contact-hero.jpg",
       videoUrl: "https://www.instagram.com/p/PLACEHOLDER",
       platform: "instagram"
     }
@@ -303,37 +303,37 @@ window.RIVIL_DATA = {
       title: "Student Consultation",
       icon: "chat",
       description: "Personalised one-on-one sessions with an experienced counsellor to understand your academic goals, career aspirations, and find the right destination and programme for you.",
-      image: "assets/services/consultation.jpg"
+      image: "assets/site/service-consultation.jpg"
     },
     {
       title: "Admission Support",
       icon: "edit_note",
       description: "Complete guidance through the university application process — from shortlisting institutions to preparing documents, writing personal statements, and submitting applications.",
-      image: "assets/services/admission.jpg"
+      image: "assets/site/service-admission.jpg"
     },
     {
       title: "Visa Guidance",
       icon: "verified",
       description: "Step-by-step support with student visa applications across all seven destinations, including document checklists, application reviews, and mock interview preparation.",
-      image: "assets/services/visa.jpg"
+      image: "assets/site/service-visa.jpg"
     },
     {
       title: "IELTS Preparation",
       icon: "school",
       description: "Guidance on IELTS preparation resources, recommended study materials, and advice on meeting the English language requirements for your chosen institution.",
-      image: "assets/services/ielts.jpg"
+      image: "assets/site/service-ielts.jpg"
     },
     {
       title: "Accommodation Support",
       icon: "home",
       description: "Advice on finding suitable student accommodation — whether on-campus halls of residence or private rentals — tailored to your destination and budget.",
-      image: "assets/services/accommodation.jpg"
+      image: "assets/site/service-accommodation.jpg"
     },
     {
       title: "Pre-Departure Briefing",
       icon: "flight_takeoff",
       description: "A comprehensive pre-departure session covering what to expect on arrival, banking, transport, cultural adjustment, and connecting with the Sri Lankan student community abroad.",
-      image: "assets/services/departure.jpg"
+      image: "assets/site/service-departure.jpg"
     }
   ],
 

@@ -28,12 +28,12 @@
   ];
 
   var DEST_IMAGES = {
-    'new-zealand': 'https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=80',
-    'uk': 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80',
-    'australia': 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80',
-    'canada': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-    'malaysia': 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80',
-    'singapore': 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80',
+    'new-zealand': 'assets/mount-cook-updated.jpg',
+    'uk': 'assets/destinations/uk/overview-oxford.jpg',
+    'australia': 'assets/destinations/australia/hero-sydney-harbour.jpg',
+    'canada': 'assets/destinations/canada/overview-vancouver.jpg',
+    'malaysia': 'assets/destinations/malaysia/overview-kuala-lumpur.jpg',
+    'singapore': 'assets/destinations/singapore/overview-jewel-changi.jpg',
     'dubai': 'assets/destinations/dubai/overview-dubai-marina.jpg'
   };
 
@@ -401,6 +401,9 @@
 
   window.initSideAlert = function () {
     var DISMISS_KEY = 'rivil_side_alert_dismissed';
+    /* The full panel competes with page content on narrow screens. Events
+       remain available through the navigation and dedicated Events page. */
+    if (window.matchMedia('(max-width: 767px)').matches) return;
     var events = (window.RIVIL_DATA && window.RIVIL_DATA.events) || [];
     /* Show the next upcoming event */
     var today = new Date(); today.setHours(0, 0, 0, 0);
@@ -463,8 +466,8 @@
       try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (e) {}
     });
 
-    /* Slide in after a short delay on first load */
-    setTimeout(open, 3000);
+    /* Give visitors time to take in the page before presenting the event. */
+    setTimeout(open, 10000);
   };
 
   /* ---------- Animated stats counter ---------- */
