@@ -35,7 +35,7 @@ window.RIVIL_DATA = {
       why_study: [
         "World-renowned universities with global recognition",
         "Shorter degree programmes — save time and money",
-        "Post-study Graduate Route visa for 2 years",
+        "Graduate Route option after eligible UK study",
         "Diverse and multicultural student experience"
       ],
       universities: [
@@ -59,7 +59,7 @@ window.RIVIL_DATA = {
       overview: "Australia is a top destination for international students, offering excellent universities, a high standard of living, and post-study work opportunities in a diverse society.",
       whatsapp_message: "Hi, I am interested in studying in Australia. Please contact me.",
       why_study: [
-        "Post-study work visa up to 4 years",
+        "Temporary Graduate visa pathway after eligible study",
         "High quality of life and safety",
         "Strong international student support services",
         "Diverse and multicultural society"
@@ -78,12 +78,12 @@ window.RIVIL_DATA = {
       name: "Canada",
       slug: "canada",
       page: "study-canada.html",
-      tagline: "High-quality education with excellent post-graduation pathways",
-      overview: "Canada offers world-class college and university programmes, a clear pathway to permanent residency, and a welcoming multicultural environment for international students.",
+      tagline: "High-quality education in welcoming, globally connected communities",
+      overview: "Canada offers respected college and university programmes, practical learning opportunities and a welcoming multicultural environment for international students.",
       whatsapp_message: "Hi, I am interested in studying in Canada. Please contact me.",
       why_study: [
-        "Clear post-graduation work permit pathway",
-        "Pathway to Canadian permanent residency",
+        "Post-graduation work permit options for eligible programmes",
+        "Career-focused university and college pathways",
         "Affordable tuition compared to the UK and USA",
         "Safe and multicultural society"
       ],
@@ -99,11 +99,11 @@ window.RIVIL_DATA = {
       name: "Malaysia",
       slug: "malaysia",
       page: "study-malaysia.html",
-      tagline: "Affordable international education close to home",
-      overview: "Malaysia offers high-quality international education at affordable costs, with a familiar cultural environment and English-medium programmes from globally recognised institutions.",
+      tagline: "International education in a vibrant, accessible Asian destination",
+      overview: "Malaysia offers English-medium programmes, internationally connected institutions and a diverse student experience at costs that can be more accessible than many traditional study destinations.",
       whatsapp_message: "Hi, I am interested in studying in Malaysia. Please contact me.",
       why_study: [
-        "Significantly lower tuition and living costs",
+        "Competitive tuition and living costs",
         "English-medium programmes",
         "Familiar Asian cultural environment",
         "Degrees recognised internationally"
@@ -119,8 +119,8 @@ window.RIVIL_DATA = {
       name: "Singapore",
       slug: "singapore",
       page: "study-singapore.html",
-      tagline: "Asia's education hub — global quality, regional access",
-      overview: "Singapore is Asia's premier education destination, offering internationally recognised qualifications, a world-class living environment, and excellent career opportunities.",
+      tagline: "Globally connected education in one of Asia's most dynamic cities",
+      overview: "Singapore offers internationally connected qualifications, modern learning environments and direct exposure to a leading Asian centre for business, technology and innovation.",
       whatsapp_message: "Hi, I am interested in studying in Singapore. Please contact me.",
       why_study: [
         "Asia's top-ranked education hub",
@@ -132,6 +132,26 @@ window.RIVIL_DATA = {
         { name: "Singapore Institute of Management (SIM)", city: "Singapore", programmes: ["Business", "IT", "Communications", "Social Sciences"], ranking: null, website: "https://www.sim.edu.sg" },
         { name: "PSB Academy", city: "Singapore", programmes: ["Business", "Engineering", "IT", "Hospitality"], ranking: null, website: "https://www.psb-academy.edu.sg" },
         { name: "Kaplan Singapore", city: "Singapore", programmes: ["Business", "Law", "IT", "Finance"], ranking: null, website: "https://www.kaplan.com.sg" }
+      ]
+    },
+    {
+      name: "Dubai",
+      slug: "dubai",
+      page: "study-dubai.html",
+      tagline: "Premium international education in a global city built for ambition",
+      overview: "Dubai brings international university campuses, industry-focused learning and a highly connected global business environment together in one distinctive study destination.",
+      whatsapp_message: "Hi, I am interested in studying in Dubai. Please contact me.",
+      why_study: [
+        "International branch campuses and globally connected programmes",
+        "English-medium learning in a major business hub",
+        "Modern infrastructure and a multicultural student community",
+        "Strong exposure to technology, enterprise and hospitality sectors"
+      ],
+      universities: [
+        { name: "University of Birmingham Dubai", city: "Dubai International Academic City", programmes: ["Business", "Computer Science", "Engineering", "Psychology"], ranking: null, website: "https://www.birmingham.ac.uk/dubai" },
+        { name: "Heriot-Watt University Dubai", city: "Dubai Knowledge Park", programmes: ["Business", "Engineering", "Architecture", "Design"], ranking: null, website: "https://www.hw.ac.uk/dubai" },
+        { name: "Middlesex University Dubai", city: "Dubai Knowledge Park", programmes: ["Business", "Law", "Computing", "Media"], ranking: null, website: "https://www.mdx.ac.ae" },
+        { name: "University of Wollongong in Dubai", city: "Dubai Knowledge Park", programmes: ["Business", "Engineering", "Computer Science", "Communications"], ranking: null, website: "https://www.uowdubai.ac.ae" }
       ]
     }
   ],
@@ -294,7 +314,7 @@ window.RIVIL_DATA = {
     {
       title: "Visa Guidance",
       icon: "verified",
-      description: "Step-by-step support with student visa applications for all six destinations, including document checklists, application reviews, and mock interview preparation.",
+      description: "Step-by-step support with student visa applications across all seven destinations, including document checklists, application reviews, and mock interview preparation.",
       image: "assets/services/visa.jpg"
     },
     {
@@ -331,7 +351,7 @@ window.RIVIL_DATA = {
       population: "26 Million",
       currency: "AUD (1 AUD ≈ LKR 175)",
       avgTuition: "AUD 20,000 – 45,000 / year",
-      postStudyVisa: "Up to 4 years",
+      postStudyVisa: "Usually 2–3 years",
       capital: "Canberra",
       climate: "Varied",
       mapImage: "assets/maps/australia-map.png"
@@ -340,37 +360,45 @@ window.RIVIL_DATA = {
       population: "67 Million",
       currency: "GBP (1 GBP ≈ LKR 320)",
       avgTuition: "GBP 12,000 – 26,000 / year",
-      postStudyVisa: "2 years (Graduate Route)",
+      postStudyVisa: "Graduate Route available",
       capital: "London",
       climate: "Temperate oceanic",
       mapImage: "assets/maps/uk-map.png"
     },
     "canada": {
-      population: "38 Million",
-      currency: "CAD (1 CAD ≈ LKR 165)",
+      population: "41.4 Million",
+      currency: "Canadian Dollar (CAD)",
       avgTuition: "CAD 15,000 – 30,000 / year",
-      postStudyVisa: "Up to 3 years (PGWP)",
+      postStudyVisa: "PGWP subject to eligibility",
       capital: "Ottawa",
       climate: "Varied",
       mapImage: "assets/maps/canada-map.png"
     },
     "malaysia": {
-      population: "33 Million",
-      currency: "MYR (1 MYR ≈ LKR 50)",
+      population: "34.4 Million",
+      currency: "Malaysian Ringgit (MYR)",
       avgTuition: "MYR 20,000 – 50,000 / year",
-      postStudyVisa: "N/A",
+      postStudyVisa: "Graduate Pass: limited eligibility",
       capital: "Kuala Lumpur",
       climate: "Tropical",
       mapImage: "assets/maps/malaysia-map.png"
     },
     "singapore": {
-      population: "5.9 Million",
-      currency: "SGD (1 SGD ≈ LKR 170)",
+      population: "6.11 Million",
+      currency: "Singapore Dollar (SGD)",
       avgTuition: "SGD 15,000 – 40,000 / year",
-      postStudyVisa: "N/A",
+      postStudyVisa: "Work pass required after study",
       capital: "Singapore",
       climate: "Tropical",
       mapImage: "assets/maps/singapore-map.png"
+    },
+    "dubai": {
+      population: "4.25 Million",
+      currency: "UAE Dirham (AED)",
+      avgTuition: "AED 40,000 – 120,000 / year",
+      postStudyVisa: "Work or eligible jobseeker visa",
+      capital: "Dubai",
+      climate: "Desert"
     }
   },
 
@@ -409,6 +437,150 @@ window.RIVIL_DATA = {
       { name: "Air New Zealand Aviation Institute", city: "Auckland", tags: ["Aviation", "Engineering"], logo: "assets/logos/new-zealand/polytechnics/air-nz-aviation-institute.jpg" },
       { name: "The Culinary Collective", city: "Auckland", tags: ["Culinary Arts", "Hospitality"], logo: "assets/logos/new-zealand/polytechnics/the-culinary-collective.webp" },
       { name: "UP Education", city: "Auckland", tags: ["Foundation", "Pathways"], logo: "assets/logos/new-zealand/polytechnics/up-education.webp" }
+    ]
+  },
+
+  /* UK institution directory for the glassmorphism destination page. Logos
+     are intentionally omitted for now, so renderInstitutionGroup displays
+     the built-in initials placeholders until approved logo assets arrive. */
+  ukInstitutions: {
+    representedUniversities: [
+      { name: "University of Greenwich", city: "London", tags: ["University", "Direct Partner"] },
+      { name: "Oxford Brookes University", city: "Oxford", tags: ["University", "Direct Partner"] },
+      { name: "The University for the Creative Arts", city: "Farnham & Kent", tags: ["University", "Direct Partner"] },
+      { name: "Edge Hill University", city: "Ormskirk", tags: ["University", "Direct Partner"] }
+    ],
+    representedColleges: [
+      { name: "Bellerbys College", city: "United Kingdom", tags: ["College", "Direct Partner"] },
+      { name: "Istituto Marangoni", city: "London", tags: ["College", "Direct Partner"] },
+      { name: "NCC Education", city: "Manchester", tags: ["College", "Direct Partner"] }
+    ],
+    partnerUniversities: [
+      { name: "Coventry University", city: "Coventry", tags: ["University", "International Partner"] },
+      { name: "Coventry University – London", city: "London", tags: ["University", "International Partner"] },
+      { name: "University of Huddersfield", city: "Huddersfield", tags: ["University", "International Partner"] },
+      { name: "University of Huddersfield – London", city: "London", tags: ["University", "International Partner"] },
+      { name: "Middlesex University", city: "London", tags: ["University", "International Partner"] },
+      { name: "London South Bank University", city: "London", tags: ["University", "International Partner"] },
+      { name: "University of Plymouth", city: "Plymouth", tags: ["University", "International Partner"] },
+      { name: "University of South Wales", city: "Cardiff", tags: ["University", "International Partner"] },
+      { name: "University of Gloucestershire", city: "Cheltenham & Gloucester", tags: ["University", "International Partner"] },
+      { name: "Cranfield University", city: "Cranfield", tags: ["University", "International Partner"] },
+      { name: "University of Central Lancashire (UCLan)", city: "Preston", tags: ["University", "International Partner"] },
+      { name: "De Montfort University", city: "Leicester", tags: ["University", "International Partner"] },
+      { name: "University of York", city: "York", tags: ["University", "International Partner"] },
+      { name: "Northumbria University", city: "Newcastle", tags: ["University", "International Partner"] },
+      { name: "Bath Spa University", city: "Bath", tags: ["University", "International Partner"] },
+      { name: "University of Cumbria", city: "Carlisle & Lancaster", tags: ["University", "International Partner"] },
+      { name: "University of Exeter", city: "Exeter", tags: ["University", "International Partner"] },
+      { name: "University of Strathclyde", city: "Glasgow", tags: ["University", "International Partner"] }
+    ]
+  },
+
+  /* Australian institution directory for the destination page. Approved
+     logos can be added later without changing the card structure; until then
+     the shared renderer uses its initials placeholders. */
+  australiaInstitutions: {
+    institutions: [
+      { name: "University of Tasmania", city: "Hobart & Launceston", tags: ["University", "Australia Partner"] },
+      { name: "Deakin University", city: "Melbourne & Geelong", tags: ["University", "Australia Partner"] },
+      { name: "University of New South Wales (UNSW)", city: "Sydney", tags: ["University", "Australia Partner"] },
+      { name: "University of Technology Sydney (UTS)", city: "Sydney", tags: ["University", "Australia Partner"] },
+      { name: "La Trobe University", city: "Melbourne", tags: ["University", "Australia Partner"] },
+      { name: "Royal Melbourne Institute of Technology (RMIT)", city: "Melbourne", tags: ["University", "Australia Partner"] },
+      { name: "Curtin University", city: "Perth", tags: ["University", "Australia Partner"] },
+      { name: "Victoria University", city: "Melbourne", tags: ["University", "Australia Partner"] },
+      { name: "Bond University", city: "Gold Coast", tags: ["University", "Australia Partner"] },
+      { name: "Swinburne University of Technology", city: "Melbourne", tags: ["University", "Australia Partner"] },
+      { name: "Central Queensland University", city: "Multiple Campuses", tags: ["University", "Australia Partner"] },
+      { name: "Edith Cowan University (ECU)", city: "Perth", tags: ["University", "Australia Partner"] },
+      { name: "Torrens University", city: "Multiple Cities", tags: ["University", "Australia Partner"] },
+      { name: "Charles Sturt University", city: "Regional New South Wales", tags: ["University", "Australia Partner"] },
+      { name: "The University of Queensland", city: "Brisbane", tags: ["University", "Australia Partner"] },
+      { name: "University of South Australia (CELUSA)", city: "Adelaide", tags: ["University", "English Pathway"] },
+      { name: "Federation University – All campuses", city: "Victoria", tags: ["University", "All Campuses"] },
+      { name: "Griffith University – All campuses", city: "Brisbane & Gold Coast", tags: ["University", "All Campuses"] },
+      { name: "The University of Notre Dame Australia – All campuses", city: "Fremantle, Sydney & Broome", tags: ["University", "All Campuses"] },
+      { name: "University of Canberra – All campuses", city: "Canberra", tags: ["University", "All Campuses"] },
+      { name: "Western Sydney University – All campuses", city: "Western Sydney", tags: ["University", "All Campuses"] }
+    ]
+  },
+
+  /* Canadian institution directory for the destination page. Logos are
+     intentionally omitted so the shared renderer shows initials placeholders
+     until approved institution artwork is supplied. */
+  canadaInstitutions: {
+    representedUniversities: [
+      { name: "Royal Roads University", city: "Victoria, British Columbia", tags: ["University", "Direct Partner"] },
+      { name: "Vancouver Island University", city: "Nanaimo, British Columbia", tags: ["University", "Direct Partner"] }
+    ],
+    representedColleges: [
+      { name: "Niagara College", city: "Niagara Region, Ontario", tags: ["College", "Direct Partner"] },
+      { name: "Acsenda School of Management", city: "Vancouver, British Columbia", tags: ["College", "Direct Partner"] },
+      { name: "Arbutus College Vancouver", city: "Vancouver, British Columbia", tags: ["College", "Direct Partner"] }
+    ],
+    partnerUniversities: [
+      { name: "Adler University", city: "Vancouver, British Columbia", tags: ["University", "International Partner"] },
+      { name: "Bishop's University", city: "Sherbrooke, Quebec", tags: ["University", "International Partner"] },
+      { name: "Brock University", city: "St. Catharines, Ontario", tags: ["University", "International Partner"] },
+      { name: "Carleton University", city: "Ottawa, Ontario", tags: ["University", "International Partner"] },
+      { name: "Lakehead University", city: "Thunder Bay & Orillia, Ontario", tags: ["University", "International Partner"] },
+      { name: "Ontario Tech University", city: "Oshawa, Ontario", tags: ["University", "International Partner"] },
+      { name: "Queen's University", city: "Kingston, Ontario", tags: ["University", "International Partner"] },
+      { name: "Thompson Rivers University", city: "Kamloops, British Columbia", tags: ["University", "International Partner"] },
+      { name: "Trent University", city: "Peterborough, Ontario", tags: ["University", "International Partner"] },
+      { name: "Trinity Western University", city: "Langley, British Columbia", tags: ["University", "International Partner"] },
+      { name: "University Canada West", city: "Vancouver, British Columbia", tags: ["University", "International Partner"] },
+      { name: "University of Manitoba", city: "Winnipeg, Manitoba", tags: ["University", "International Partner"] },
+      { name: "University of Regina", city: "Regina, Saskatchewan", tags: ["University", "International Partner"] },
+      { name: "University of the Fraser Valley", city: "Abbotsford, British Columbia", tags: ["University", "International Partner"] },
+      { name: "University of Windsor", city: "Windsor, Ontario", tags: ["University", "International Partner"] },
+      { name: "Yorkville University", city: "Multiple Campuses", tags: ["University", "International Partner"] }
+    ],
+    partnerColleges: [
+      { name: "Conestoga College", city: "Kitchener-Waterloo, Ontario", tags: ["College", "International Partner"] },
+      { name: "Douglas College", city: "Metro Vancouver, British Columbia", tags: ["College", "International Partner"] },
+      { name: "Durham College", city: "Oshawa, Ontario", tags: ["College", "International Partner"] },
+      { name: "Fleming College", city: "Peterborough, Ontario", tags: ["College", "International Partner"] },
+      { name: "George Brown College", city: "Toronto, Ontario", tags: ["College", "International Partner"] },
+      { name: "Humber College", city: "Toronto, Ontario", tags: ["College", "International Partner"] },
+      { name: "Saskatchewan Polytechnic", city: "Saskatchewan", tags: ["College", "International Partner"] },
+      { name: "Southern Alberta Institute of Technology (SAIT)", city: "Calgary, Alberta", tags: ["College", "International Partner"] }
+    ]
+  },
+
+  /* Malaysian institution directory for the destination page. The current
+     project source does not define representation tiers, so these entries are
+     presented together as one university and college network. */
+  malaysiaInstitutions: {
+    institutions: [
+      { name: "Taylor's University", city: "Subang Jaya", tags: ["University", "Malaysia Network"] },
+      { name: "Sunway University", city: "Bandar Sunway", tags: ["University", "Malaysia Network"] },
+      { name: "INTI International University", city: "Nilai", tags: ["University", "Malaysia Network"] },
+      { name: "Manipal International University", city: "Nilai", tags: ["University", "Malaysia Network"] }
+    ]
+  },
+
+  /* Singapore institution directory for the destination page. The project
+     source does not define representation tiers, so all entries are shown in
+     one network with initials placeholders. */
+  singaporeInstitutions: {
+    institutions: [
+      { name: "Singapore Institute of Management (SIM)", city: "Clementi, Singapore", tags: ["Institute", "Singapore Network"] },
+      { name: "PSB Academy", city: "Marina Square, Singapore", tags: ["Academy", "Singapore Network"] },
+      { name: "Kaplan Singapore", city: "Singapore", tags: ["Academy", "Singapore Network"] }
+    ]
+  },
+
+  /* Featured Dubai study options. These are not labelled as representation
+     partners; counsellors should confirm current programme and application
+     availability for each student. */
+  dubaiInstitutions: {
+    institutions: [
+      { name: "University of Birmingham Dubai", city: "Dubai International Academic City", tags: ["International Campus", "Featured Option"] },
+      { name: "Heriot-Watt University Dubai", city: "Dubai Knowledge Park", tags: ["International Campus", "Featured Option"] },
+      { name: "Middlesex University Dubai", city: "Dubai Knowledge Park", tags: ["International Campus", "Featured Option"] },
+      { name: "University of Wollongong in Dubai", city: "Dubai Knowledge Park", tags: ["International Campus", "Featured Option"] }
     ]
   }
 };

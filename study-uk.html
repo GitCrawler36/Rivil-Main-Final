@@ -4,99 +4,205 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Study in the UK | Rivil International Education Consultants</title>
-<meta name="description" content="Study in the UK with Rivil International — explore our UK university network, key facts and post-study options. Free guidance for Sri Lankan students.">
+<meta name="description" content="Study in the United Kingdom with free guidance from Rivil International. Explore universities and colleges we represent, scholarships, student life and UK study pathways.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="tailwind-config.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="destination-theme.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
+<script src="destination-motion.js"></script>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="theme-uk text-on-background font-body-md antialiased overflow-x-hidden">
 
 <div id="navbar"></div>
 
-<!-- Hero -->
-<section class="relative flex items-center overflow-hidden" style="height:70vh;min-height:480px;">
-  <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover" alt="Study in the UK" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1920&q=85">
-    <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(5,8,5,0.92) 0%, rgba(5,8,5,0.4) 60%, rgba(5,8,5,0.1) 100%);"></div>
+<!-- Section 1 — Hero -->
+<section class="dest-hero">
+  <div class="dest-hero-media">
+    <div class="dest-hero-img" role="img" aria-label="The Palace of Westminster and Big Ben beside the River Thames in London"></div>
   </div>
-  <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div class="max-w-xl md:pl-4">
-      <span class="text-[48px] leading-none hero-rise hero-rise-1">🇬🇧</span>
-      <h1 id="dest-h1" class="hero-rise hero-rise-2 mt-4 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-white"></h1>
-      <p id="dest-tagline" class="hero-rise hero-rise-3 mt-6 font-body-lg text-body-lg text-silver/80 max-w-lg"></p>
-      <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row gap-4">
-        <a id="hero-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-        <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md text-center hover:bg-white/10 transition-all">Book Consultation</a>
+  <div class="dest-hero-overlay"></div>
+  <div class="dest-hero-content">
+    <span class="dest-pill hero-rise hero-rise-1">Study Abroad Excellence</span>
+    <h1 class="dest-hero-title hero-rise hero-rise-2">United Kingdom</h1>
+    <p class="dest-hero-sub hero-rise hero-rise-3">Build your future in one of the world&rsquo;s most established education systems &mdash; with internationally respected qualifications, focused degree pathways and a truly global student community.</p>
+    <div class="dest-btn-row hero-rise hero-rise-4">
+      <a href="#institutions" class="dest-btn dest-btn-primary">Explore Institutions</a>
+      <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 — Country intro -->
+<section class="dest-section dest-section-no-title" id="about-uk">
+  <div class="dest-section-inner">
+    <div class="dest-intro-grid">
+      <div class="dest-img-card scroll-reveal">
+        <img src="assets/destinations/uk/overview-oxford.jpg" alt="The Radcliffe Camera at the University of Oxford" loading="lazy" style="object-position: center 54%;">
+        <span class="dest-img-tag dest-img-tag-tl">Oxford</span>
+        <span class="dest-img-tag dest-img-tag-bl">England, UK</span>
+      </div>
+      <div class="scroll-reveal">
+        <h2 class="dest-intro-heading">A globally respected education</h2>
+        <p class="dest-intro-copy">The United Kingdom blends centuries of academic tradition with practical, career-focused teaching. Students can choose from a wide range of universities, specialist colleges and professionally aligned programmes across England, Scotland and Wales.</p>
+        <ul class="dest-check-list">
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Qualifications recognised by employers and institutions worldwide</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Focused degree structures that can help reduce overall study time</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Multicultural campuses in some of the world&rsquo;s most student-friendly cities</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Country stats strip -->
-<section class="bg-surface-container-low border-y border-outline-variant/30 py-16">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div id="stats-grid-uk" class="grid grid-cols-2 lg:grid-cols-4 gap-gutter"></div>
+<!-- Section 3 — World-Class Institutions -->
+<section class="dest-section dest-section-bg dest-bg-universities" id="institutions">
+  <div class="dest-section-inner">
+    <span class="dest-eyebrow scroll-reveal">Where you could study</span>
+    <h2 class="dest-section-title scroll-reveal">World-Class Institutions</h2>
+    <p class="dest-section-sub scroll-reveal">Our UK network combines institutions we represent directly with additional placements arranged through trusted international partnerships.</p>
+
+    <div class="dest-group scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">04</span>
+        <div>
+          <span class="dest-eyebrow">Direct Representation</span>
+          <h3 class="dest-group-title">Universities we represent</h3>
+        </div>
+      </div>
+    </div>
+    <div id="represented-universities-uk" class="dest-uni-grid"></div>
+
+    <div class="dest-group dest-group-spaced scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">03</span>
+        <div>
+          <span class="dest-eyebrow">Direct Representation</span>
+          <h3 class="dest-group-title">Colleges we represent</h3>
+        </div>
+      </div>
+    </div>
+    <div id="represented-colleges-uk" class="dest-uni-grid"></div>
+
+    <div class="dest-partnership-intro scroll-reveal">
+      <span class="dest-eyebrow">International Partnerships</span>
+      <h3 class="dest-partnership-title">We also place students for the following institutions via our international partnerships</h3>
+    </div>
+    <div class="dest-group scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">18</span>
+        <div>
+          <span class="dest-eyebrow">Partner Network</span>
+          <h4 class="dest-group-title">Universities</h4>
+        </div>
+      </div>
+    </div>
+    <div id="partner-universities-uk" class="dest-uni-grid"></div>
   </div>
 </section>
 
-<!-- Separator 3 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Why Study -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-12">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-primary">Why Study in the UK</span>
-    <h2 id="why-heading" class="mt-3 font-display-lg text-[40px] leading-tight text-white"></h2>
-  </div>
-  <div id="why-grid" class="grid grid-cols-1 md:grid-cols-2 gap-gutter"></div>
-</section>
-
-<!-- Separator 2 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-2.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- University Cards -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-4">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-primary">Our UK University Network</span>
-    <h2 class="mt-3 font-display-lg text-[40px] leading-tight text-white">Where you could study</h2>
-    <p class="mt-4 font-body-md text-silver/60">Click any university to visit their official website.</p>
-  </div>
-  <div id="university-cards-uk" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"></div>
-</section>
-
-<!-- Separator 1 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-1.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Map -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div id="country-map-uk"></div>
-</section>
-
-<!-- Separator 4 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-4.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Eligibility CTA -->
-<section class="py-section-gap bg-tertiary-container">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center scroll-reveal">
-    <h2 class="font-display-lg text-[36px] leading-tight text-white">Find out if you are eligible to study in the UK</h2>
-    <div class="mt-8"><a href="eligibility.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Check Your Eligibility <span class="material-symbols-outlined">arrow_forward</span></a></div>
+<!-- Section 4 — Scholarships & Funding -->
+<section class="dest-section dest-section-bg dest-bg-scholarships" id="scholarships">
+  <div class="dest-section-inner">
+    <div class="dest-glass-panel dest-scholarship-panel scroll-reveal">
+      <h2 class="dest-section-title dest-align-left">Scholarships &amp; Funding</h2>
+      <p class="dest-section-sub dest-align-left dest-sub-flush">UK study can be supported through government scholarship programmes and awards offered directly by universities. Eligibility, availability and award values vary, and our counsellors can help you identify realistic options for your profile.</p>
+      <div class="dest-scholarship-grid">
+        <div>
+          <h3 class="dest-scholarship-name">Chevening Scholarships</h3>
+          <p class="dest-scholarship-desc">The UK Government&rsquo;s international scholarship programme supports eligible applicants undertaking selected one-year taught master&rsquo;s degrees.</p>
+        </div>
+        <div>
+          <h3 class="dest-scholarship-name">Commonwealth Scholarships</h3>
+          <p class="dest-scholarship-desc">Students from eligible Commonwealth countries may be able to apply for postgraduate funding, subject to the criteria of each scholarship route.</p>
+        </div>
+      </div>
+      <a href="eligibility.html" class="dest-btn dest-btn-light">Check Eligibility</a>
+    </div>
   </div>
 </section>
 
-<!-- Separator 3 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
+<!-- Section 5 — Student Life & Culture -->
+<section class="dest-section dest-section-bg dest-bg-gallery dest-overlay-strong" id="student-life">
+  <div class="dest-section-inner" id="life-gallery">
+    <div class="dest-gallery-head scroll-reveal">
+      <div>
+        <h2 class="dest-section-title dest-align-left">Student Life &amp; Culture</h2>
+        <p class="dest-section-sub dest-align-left dest-sub-flush">From energetic cities and historic university towns to dramatic coastlines and highlands, the UK offers a student experience with remarkable variety.</p>
+      </div>
+      <div class="dest-gallery-arrows">
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="-1" aria-label="Scroll gallery left"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="1" aria-label="Scroll gallery right"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </div>
+    <div class="dest-gallery scroll-reveal">
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/uk/gallery-london-street.jpg" alt="A London street framed by modern city buildings" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>London Life</h4>
+          <p>Global culture, industry connections and something new around every corner.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/uk/gallery-oxford-campus.jpg" alt="Historic Oxford university buildings" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Campus Heritage</h4>
+          <p>Study among centuries of academic history and distinctive architecture.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/uk/bg-scholarships-library.jpg" alt="A warmly lit university library and study space" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Study Culture</h4>
+          <p>Libraries, societies and support networks designed around student success.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/uk/gallery-edinburgh-castle.jpg" alt="Edinburgh Castle above the city" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Historic Cities</h4>
+          <p>Discover the character of Edinburgh, York, Bath and many more.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/uk/gallery-highlands.jpg" alt="A loch and mountains in the Scottish Highlands" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Weekend Escapes</h4>
+          <p>Highlands, lakes and countryside are always within reach.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<!-- WhatsApp CTA -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
-  <div class="bg-tertiary-container border border-primary/20 rounded-3xl p-12 md:p-20 text-center scroll-reveal">
-    <h2 class="font-display-lg text-[40px] leading-tight text-white">Have questions about the UK?</h2>
-    <p class="mt-3 font-body-lg text-silver/80">Chat with our counsellors directly on WhatsApp &mdash; completely free.</p>
-    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a id="cta-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-      <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Book a Consultation</a>
+<!-- Section 6 — Final CTA -->
+<section class="dest-section dest-section-bg dest-bg-cta" id="get-started">
+  <div class="dest-section-inner">
+    <h2 class="dest-section-title scroll-reveal">Start Your UK Journey</h2>
+    <p class="dest-section-sub scroll-reveal">Our counsellors are ready to help you compare institutions, prepare your application and understand your next steps &mdash; completely free, with no commitment.</p>
+    <div class="dest-btn-row scroll-reveal">
+      <a href="contact.html" class="dest-btn dest-btn-primary">Book Free Consultation</a>
+      <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+    </div>
+    <div class="dest-glass-panel dest-stats-bar scroll-reveal">
+      <div class="dest-stat">
+        <p class="dest-stat-label">Population</p>
+        <p class="dest-stat-value" data-dest-stat="population">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Currency</p>
+        <p class="dest-stat-value" data-dest-stat="currency">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Avg Tuition</p>
+        <p class="dest-stat-value" data-dest-stat="avgTuition">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Post-Study Option</p>
+        <p class="dest-stat-value" data-dest-stat="postStudyVisa">&mdash;</p>
+      </div>
     </div>
   </div>
 </section>
@@ -105,20 +211,26 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var slug = 'uk';
-    var dest = window.RIVIL_DATA.destinations.find(function (d) { return d.slug === slug; });
     initNavbar();
     initFooter();
-    initWhatsApp(dest.whatsapp_message);
-    document.getElementById('dest-h1').textContent = 'Study in ' + dest.name;
-    document.getElementById('dest-tagline').textContent = dest.tagline;
-    document.getElementById('why-heading').textContent = 'A smart choice for your future';
-    document.getElementById('hero-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    document.getElementById('cta-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    renderWhyStudy('why-grid', slug);
-    renderUniversityCards('university-cards-' + slug, slug);
-    renderCountryStats('stats-grid-' + slug, slug);
-    renderCountryMap('country-map-' + slug, slug);
+    initWhatsApp('Hi, I am interested in studying in the UK. Please contact me.');
+
+    var uk = window.RIVIL_DATA.ukInstitutions || {};
+    renderInstitutionGroup('represented-universities-uk', uk.representedUniversities);
+    renderInstitutionGroup('represented-colleges-uk', uk.representedColleges);
+    renderInstitutionGroup('partner-universities-uk', uk.partnerUniversities);
+    initGlassHoverEffects('#institutions .dest-university-card');
+
+    initKenBurnsHero('.dest-hero-img');
+    initParallaxHero('.dest-hero-media');
+    initGalleryScroll('#life-gallery');
+
+    var stats = (window.RIVIL_DATA.countryStats || {}).uk || {};
+    ['population', 'currency', 'avgTuition', 'postStudyVisa'].forEach(function (key) {
+      var el = document.querySelector('[data-dest-stat="' + key + '"]');
+      if (el && stats[key]) el.textContent = stats[key];
+    });
+
     initScrollAnimations();
   });
 </script>

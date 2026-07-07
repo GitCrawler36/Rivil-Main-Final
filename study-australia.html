@@ -4,99 +4,179 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Study in Australia | Rivil International Education Consultants</title>
-<meta name="description" content="Study in Australia with Rivil International — explore our Australia university network, key facts and post-study options. Free guidance for Sri Lankan students.">
+<meta name="description" content="Study in Australia with free guidance from Rivil International. Explore our Australian university network, scholarships, student life and post-study pathways.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="tailwind-config.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="destination-theme.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
+<script src="destination-motion.js"></script>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="theme-australia text-on-background font-body-md antialiased overflow-x-hidden">
 
 <div id="navbar"></div>
 
-<!-- Hero -->
-<section class="relative flex items-center overflow-hidden" style="height:70vh;min-height:480px;">
-  <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover" alt="Study in Australia" src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1920&q=85">
-    <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(5,8,5,0.92) 0%, rgba(5,8,5,0.4) 60%, rgba(5,8,5,0.1) 100%);"></div>
+<!-- Section 1 — Hero -->
+<section class="dest-hero">
+  <div class="dest-hero-media">
+    <div class="dest-hero-img" role="img" aria-label="Sydney Opera House and Harbour Bridge at sunset"></div>
   </div>
-  <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div class="max-w-xl md:pl-4">
-      <span class="text-[48px] leading-none hero-rise hero-rise-1">🇦🇺</span>
-      <h1 id="dest-h1" class="hero-rise hero-rise-2 mt-4 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-white"></h1>
-      <p id="dest-tagline" class="hero-rise hero-rise-3 mt-6 font-body-lg text-body-lg text-silver/80 max-w-lg"></p>
-      <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row gap-4">
-        <a id="hero-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-        <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md text-center hover:bg-white/10 transition-all">Book Consultation</a>
+  <div class="dest-hero-overlay"></div>
+  <div class="dest-hero-content">
+    <span class="dest-pill hero-rise hero-rise-1">Study Abroad Excellence</span>
+    <h1 class="dest-hero-title hero-rise hero-rise-2">Australia</h1>
+    <p class="dest-hero-sub hero-rise hero-rise-3">Shape your future with globally respected education, innovative teaching and an exceptional student lifestyle &mdash; across vibrant cities, welcoming campuses and some of the world&rsquo;s most remarkable landscapes.</p>
+    <div class="dest-btn-row hero-rise hero-rise-4">
+      <a href="#institutions" class="dest-btn dest-btn-primary">Explore Institutions</a>
+      <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 — Country intro -->
+<section class="dest-section dest-section-no-title" id="about-australia">
+  <div class="dest-section-inner">
+    <div class="dest-intro-grid">
+      <div class="dest-img-card scroll-reveal">
+        <img src="assets/destinations/australia/gallery-brisbane.jpg" alt="Brisbane skyline beside the river at sunset" loading="lazy" style="object-position: center 56%;">
+        <span class="dest-img-tag dest-img-tag-tl">Brisbane</span>
+        <span class="dest-img-tag dest-img-tag-bl">Queensland, Australia</span>
+      </div>
+      <div class="scroll-reveal">
+        <h2 class="dest-intro-heading">World-class study, built for life</h2>
+        <p class="dest-intro-copy">Australia combines internationally respected qualifications with practical learning, strong student support and a famously high quality of life. Its universities span major global cities and welcoming regional communities, giving students a broad choice of study environments.</p>
+        <ul class="dest-check-list">
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Globally recognised qualifications with career-focused teaching</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Multicultural cities and extensive international student services</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Temporary Graduate visa pathways for eligible graduates</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Country stats strip -->
-<section class="bg-surface-container-low border-y border-outline-variant/30 py-16">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div id="stats-grid-australia" class="grid grid-cols-2 lg:grid-cols-4 gap-gutter"></div>
+<!-- Section 3 — World-Class Institutions -->
+<section class="dest-section dest-section-bg dest-bg-universities" id="institutions">
+  <div class="dest-section-inner">
+    <span class="dest-eyebrow scroll-reveal">Where you could study</span>
+    <h2 class="dest-section-title scroll-reveal">World-Class Institutions</h2>
+    <p class="dest-section-sub scroll-reveal">From leading metropolitan universities to flexible multi-campus institutions, our Australian network offers pathways across a wide range of locations and study areas.</p>
+
+    <div class="dest-group scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">21</span>
+        <div>
+          <span class="dest-eyebrow">Our Australian Network</span>
+          <h3 class="dest-group-title">Universities &amp; Colleges</h3>
+        </div>
+      </div>
+    </div>
+    <div id="institution-cards-australia" class="dest-uni-grid"></div>
   </div>
 </section>
 
-<!-- Separator 3 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Why Study -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-12">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-primary">Why Study in Australia</span>
-    <h2 id="why-heading" class="mt-3 font-display-lg text-[40px] leading-tight text-white"></h2>
-  </div>
-  <div id="why-grid" class="grid grid-cols-1 md:grid-cols-2 gap-gutter"></div>
-</section>
-
-<!-- Separator 2 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-2.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- University Cards -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-4">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-primary">Our Australia University Network</span>
-    <h2 class="mt-3 font-display-lg text-[40px] leading-tight text-white">Where you could study</h2>
-    <p class="mt-4 font-body-md text-silver/60">Click any university to visit their official website.</p>
-  </div>
-  <div id="university-cards-australia" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"></div>
-</section>
-
-<!-- Separator 1 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-1.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Map -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div id="country-map-australia"></div>
-</section>
-
-<!-- Separator 4 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-4.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Eligibility CTA -->
-<section class="py-section-gap bg-tertiary-container">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center scroll-reveal">
-    <h2 class="font-display-lg text-[36px] leading-tight text-white">Find out if you are eligible to study in Australia</h2>
-    <div class="mt-8"><a href="eligibility.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Check Your Eligibility <span class="material-symbols-outlined">arrow_forward</span></a></div>
+<!-- Section 4 — Scholarships & Funding -->
+<section class="dest-section dest-section-bg dest-bg-scholarships" id="scholarships">
+  <div class="dest-section-inner">
+    <div class="dest-glass-panel dest-scholarship-panel scroll-reveal">
+      <h2 class="dest-section-title dest-align-left">Scholarships &amp; Funding</h2>
+      <p class="dest-section-sub dest-align-left dest-sub-flush">Australian study can be supported through government programmes and scholarships offered directly by universities. Eligibility and award values vary by institution, course and intake, and our counsellors can help you identify suitable options.</p>
+      <div class="dest-scholarship-grid">
+        <div>
+          <h3 class="dest-scholarship-name">Australia Awards Scholarships</h3>
+          <p class="dest-scholarship-desc">Australian Government awards support eligible citizens from participating countries undertaking approved undergraduate or postgraduate study.</p>
+        </div>
+        <div>
+          <h3 class="dest-scholarship-name">University Merit Scholarships</h3>
+          <p class="dest-scholarship-desc">Many Australian universities offer academic merit awards, international student grants and faculty-specific scholarships for eligible applicants.</p>
+        </div>
+      </div>
+      <a href="eligibility.html" class="dest-btn dest-btn-light">Check Eligibility</a>
+    </div>
   </div>
 </section>
 
-<!-- Separator 3 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
+<!-- Section 5 — Student Life & Culture -->
+<section class="dest-section dest-section-bg dest-bg-gallery dest-overlay-strong" id="student-life">
+  <div class="dest-section-inner" id="life-gallery">
+    <div class="dest-gallery-head scroll-reveal">
+      <div>
+        <h2 class="dest-section-title dest-align-left">Student Life &amp; Culture</h2>
+        <p class="dest-section-sub dest-align-left dest-sub-flush">Australia pairs globally connected cities with beaches, wildlife and extraordinary landscapes &mdash; making every study break an opportunity to explore.</p>
+      </div>
+      <div class="dest-gallery-arrows">
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="-1" aria-label="Scroll gallery left"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="1" aria-label="Scroll gallery right"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </div>
+    <div class="dest-gallery scroll-reveal">
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/australia/gallery-sydney.jpg" alt="Sydney Opera House and harbour at golden hour" loading="lazy" style="object-position: 38% center;">
+        <figcaption class="dest-gallery-caption">
+          <h4>Sydney Harbour</h4>
+          <p>Iconic city living with global connections and waterfront energy.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/australia/gallery-melbourne.jpg" alt="Melbourne skyline framed by palm trees" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Melbourne Culture</h4>
+          <p>Creative neighbourhoods, sport, food and a celebrated student scene.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/australia/bg-scholarships-library.jpg" alt="Students studying in the State Library of New South Wales" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Campus Life</h4>
+          <p>Inspiring study spaces and support networks built around your success.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/australia/gallery-ocean-road.jpg" alt="Cliffs along Victoria's Great Ocean Road" loading="lazy" style="object-position: center;">
+        <figcaption class="dest-gallery-caption">
+          <h4>Coastal Escapes</h4>
+          <p>Beaches and spectacular road trips are never far from campus.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/australia/gallery-kangaroos.jpg" alt="Kangaroos grazing beside the Australian coast" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Australian Wildlife</h4>
+          <p>Encounter landscapes and native wildlife found nowhere else.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<!-- WhatsApp CTA -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
-  <div class="bg-tertiary-container border border-primary/20 rounded-3xl p-12 md:p-20 text-center scroll-reveal">
-    <h2 class="font-display-lg text-[40px] leading-tight text-white">Have questions about Australia?</h2>
-    <p class="mt-3 font-body-lg text-silver/80">Chat with our counsellors directly on WhatsApp &mdash; completely free.</p>
-    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a id="cta-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-      <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Book a Consultation</a>
+<!-- Section 6 — Final CTA -->
+<section class="dest-section dest-section-bg dest-bg-cta" id="get-started">
+  <div class="dest-section-inner">
+    <h2 class="dest-section-title scroll-reveal">Start Your Australian Journey</h2>
+    <p class="dest-section-sub scroll-reveal">Our counsellors are ready to help you compare institutions, prepare your application and understand your next steps &mdash; completely free, with no commitment.</p>
+    <div class="dest-btn-row scroll-reveal">
+      <a href="contact.html" class="dest-btn dest-btn-primary">Book Free Consultation</a>
+      <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+    </div>
+    <div class="dest-glass-panel dest-stats-bar scroll-reveal">
+      <div class="dest-stat">
+        <p class="dest-stat-label">Population</p>
+        <p class="dest-stat-value" data-dest-stat="population">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Currency</p>
+        <p class="dest-stat-value" data-dest-stat="currency">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Avg Tuition</p>
+        <p class="dest-stat-value" data-dest-stat="avgTuition">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Post-Study Option</p>
+        <p class="dest-stat-value" data-dest-stat="postStudyVisa">&mdash;</p>
+      </div>
     </div>
   </div>
 </section>
@@ -105,20 +185,24 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var slug = 'australia';
-    var dest = window.RIVIL_DATA.destinations.find(function (d) { return d.slug === slug; });
     initNavbar();
     initFooter();
-    initWhatsApp(dest.whatsapp_message);
-    document.getElementById('dest-h1').textContent = 'Study in ' + dest.name;
-    document.getElementById('dest-tagline').textContent = dest.tagline;
-    document.getElementById('why-heading').textContent = 'A smart choice for your future';
-    document.getElementById('hero-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    document.getElementById('cta-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    renderWhyStudy('why-grid', slug);
-    renderUniversityCards('university-cards-' + slug, slug);
-    renderCountryStats('stats-grid-' + slug, slug);
-    renderCountryMap('country-map-' + slug, slug);
+    initWhatsApp('Hi, I am interested in studying in Australia. Please contact me.');
+
+    var australia = window.RIVIL_DATA.australiaInstitutions || {};
+    renderInstitutionGroup('institution-cards-australia', australia.institutions);
+    initGlassHoverEffects('#institutions .dest-university-card');
+
+    initKenBurnsHero('.dest-hero-img');
+    initParallaxHero('.dest-hero-media');
+    initGalleryScroll('#life-gallery');
+
+    var stats = (window.RIVIL_DATA.countryStats || {}).australia || {};
+    ['population', 'currency', 'avgTuition', 'postStudyVisa'].forEach(function (key) {
+      var el = document.querySelector('[data-dest-stat="' + key + '"]');
+      if (el && stats[key]) el.textContent = stats[key];
+    });
+
     initScrollAnimations();
   });
 </script>

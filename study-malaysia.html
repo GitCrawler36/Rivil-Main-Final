@@ -4,99 +4,179 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Study in Malaysia | Rivil International Education Consultants</title>
-<meta name="description" content="Study in Malaysia with Rivil International — explore our Malaysia university network, key facts and post-study options. Free guidance for Sri Lankan students.">
+<meta name="description" content="Study in Malaysia with free guidance from Rivil International. Explore our Malaysian institution network, scholarships, student life and application pathways.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="tailwind-config.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="destination-theme.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
+<script src="destination-motion.js"></script>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="theme-malaysia text-on-background font-body-md antialiased overflow-x-hidden">
 
 <div id="navbar"></div>
 
-<!-- Hero -->
-<section class="relative flex items-center overflow-hidden" style="height:70vh;min-height:480px;">
-  <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover" alt="Study in Malaysia" src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1920&q=85">
-    <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(5,8,5,0.92) 0%, rgba(5,8,5,0.4) 60%, rgba(5,8,5,0.1) 100%);"></div>
+<!-- Section 1 — Hero -->
+<section class="dest-hero">
+  <div class="dest-hero-media">
+    <div class="dest-hero-img" role="img" aria-label="Petronas Twin Towers and Saloma Link illuminated at night"></div>
   </div>
-  <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div class="max-w-xl md:pl-4">
-      <span class="text-[48px] leading-none hero-rise hero-rise-1">🇲🇾</span>
-      <h1 id="dest-h1" class="hero-rise hero-rise-2 mt-4 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-white"></h1>
-      <p id="dest-tagline" class="hero-rise hero-rise-3 mt-6 font-body-lg text-body-lg text-silver/80 max-w-lg"></p>
-      <div class="hero-rise hero-rise-4 mt-10 flex flex-col sm:flex-row gap-4">
-        <a id="hero-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-        <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md text-center hover:bg-white/10 transition-all">Book Consultation</a>
+  <div class="dest-hero-overlay"></div>
+  <div class="dest-hero-content">
+    <span class="dest-pill hero-rise hero-rise-1">Study Abroad Excellence</span>
+    <h1 class="dest-hero-title hero-rise hero-rise-2">Malaysia</h1>
+    <p class="dest-hero-sub hero-rise hero-rise-3">Discover internationally connected education in a dynamic Asian destination &mdash; with English-medium programmes, vibrant cities, diverse communities and an accessible student lifestyle.</p>
+    <div class="dest-btn-row hero-rise hero-rise-4">
+      <a href="#institutions" class="dest-btn dest-btn-primary">Explore Institutions</a>
+      <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 — Country intro -->
+<section class="dest-section dest-section-no-title" id="about-malaysia">
+  <div class="dest-section-inner">
+    <div class="dest-intro-grid">
+      <div class="dest-img-card scroll-reveal">
+        <img src="assets/destinations/malaysia/overview-kuala-lumpur.jpg" alt="Historic Sultan Abdul Samad clock tower and KL Tower in Kuala Lumpur" loading="lazy" style="object-position: center 48%;">
+        <span class="dest-img-tag dest-img-tag-tl">Kuala Lumpur</span>
+        <span class="dest-img-tag dest-img-tag-bl">Malaysia</span>
+      </div>
+      <div class="scroll-reveal">
+        <h2 class="dest-intro-heading">A connected education in the heart of Asia</h2>
+        <p class="dest-intro-copy">Malaysia combines established local universities, internationally connected programmes and modern learning environments with a multicultural way of life. Students can study close to home while gaining qualifications designed for an increasingly global workplace.</p>
+        <ul class="dest-check-list">
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>English-medium programmes across popular study disciplines</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Internationally connected universities and progression opportunities</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Competitive tuition and living costs in a diverse Asian setting</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Country stats strip -->
-<section class="bg-surface-container-low border-y border-outline-variant/30 py-16">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div id="stats-grid-malaysia" class="grid grid-cols-2 lg:grid-cols-4 gap-gutter"></div>
+<!-- Section 3 — World-Class Institutions -->
+<section class="dest-section dest-section-bg dest-bg-universities" id="institutions">
+  <div class="dest-section-inner">
+    <span class="dest-eyebrow scroll-reveal">Where you could study</span>
+    <h2 class="dest-section-title scroll-reveal">World-Class Institutions</h2>
+    <p class="dest-section-sub scroll-reveal">Our Malaysian network offers modern campuses, internationally oriented programmes and study pathways across business, technology, engineering, health and the creative industries.</p>
+
+    <div class="dest-group scroll-reveal">
+      <div class="dest-group-head">
+        <span class="dest-group-count">04</span>
+        <div>
+          <span class="dest-eyebrow">Our Malaysian Network</span>
+          <h3 class="dest-group-title">Universities</h3>
+        </div>
+      </div>
+    </div>
+    <div id="institution-cards-malaysia" class="dest-uni-grid"></div>
   </div>
 </section>
 
-<!-- Separator 3 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Why Study -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-12">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-primary">Why Study in Malaysia</span>
-    <h2 id="why-heading" class="mt-3 font-display-lg text-[40px] leading-tight text-white"></h2>
-  </div>
-  <div id="why-grid" class="grid grid-cols-1 md:grid-cols-2 gap-gutter"></div>
-</section>
-
-<!-- Separator 2 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-2.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- University Cards -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div class="scroll-reveal mb-4">
-    <span class="font-label-sm uppercase tracking-[0.2em] text-primary">Our Malaysia University Network</span>
-    <h2 class="mt-3 font-display-lg text-[40px] leading-tight text-white">Where you could study</h2>
-    <p class="mt-4 font-body-md text-silver/60">Click any university to visit their official website.</p>
-  </div>
-  <div id="university-cards-malaysia" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"></div>
-</section>
-
-<!-- Separator 1 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-1.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Map -->
-<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-  <div id="country-map-malaysia"></div>
-</section>
-
-<!-- Separator 4 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-4.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
-
-<!-- Eligibility CTA -->
-<section class="py-section-gap bg-tertiary-container">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center scroll-reveal">
-    <h2 class="font-display-lg text-[36px] leading-tight text-white">Find out if you are eligible to study in Malaysia</h2>
-    <div class="mt-8"><a href="eligibility.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Check Your Eligibility <span class="material-symbols-outlined">arrow_forward</span></a></div>
+<!-- Section 4 — Scholarships & Funding -->
+<section class="dest-section dest-section-bg dest-bg-scholarships" id="scholarships">
+  <div class="dest-section-inner">
+    <div class="dest-glass-panel dest-scholarship-panel scroll-reveal">
+      <h2 class="dest-section-title dest-align-left">Scholarships &amp; Funding</h2>
+      <p class="dest-section-sub dest-align-left dest-sub-flush">Malaysian institutions may offer academic merit awards, tuition reductions and programme-specific funding for international applicants. Availability and values vary by institution and intake, and our counsellors can help you identify suitable options.</p>
+      <div class="dest-scholarship-grid">
+        <div>
+          <h3 class="dest-scholarship-name">Academic Merit Awards</h3>
+          <p class="dest-scholarship-desc">Eligible applicants may receive tuition support based on previous academic achievement and the strength of their application.</p>
+        </div>
+        <div>
+          <h3 class="dest-scholarship-name">Institution &amp; Programme Awards</h3>
+          <p class="dest-scholarship-desc">Additional awards may be available for selected faculties, progression routes, intakes or student profiles.</p>
+        </div>
+      </div>
+      <a href="eligibility.html" class="dest-btn dest-btn-light">Check Eligibility</a>
+    </div>
   </div>
 </section>
 
-<!-- Separator 3 -->
-<div class="maori-separator w-full bg-background overflow-hidden flex justify-center items-center py-8" aria-hidden="true"><img src="assets/separators/maori-art-3.png" alt="" class="h-12 md:h-16 object-cover w-full"></div>
+<!-- Section 5 — Student Life & Culture -->
+<section class="dest-section dest-section-bg dest-bg-gallery dest-overlay-strong" id="student-life">
+  <div class="dest-section-inner" id="life-gallery">
+    <div class="dest-gallery-head scroll-reveal">
+      <div>
+        <h2 class="dest-section-title dest-align-left">Student Life &amp; Culture</h2>
+        <p class="dest-section-sub dest-align-left dest-sub-flush">Malaysia moves easily between futuristic skylines, heritage streets, highland landscapes and tropical islands &mdash; offering students an experience rich in culture, food and exploration.</p>
+      </div>
+      <div class="dest-gallery-arrows">
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="-1" aria-label="Scroll gallery left"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+        <button type="button" class="dest-gallery-arrow" data-gallery-dir="1" aria-label="Scroll gallery right"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </div>
+    <div class="dest-gallery scroll-reveal">
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/malaysia/gallery-kuala-lumpur.jpg" alt="Petronas Twin Towers rising above Kuala Lumpur" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Kuala Lumpur</h4>
+          <p>Modern city life, global connections and endless food and culture.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/malaysia/gallery-penang.jpg" alt="People walking along a waterfront pier in George Town, Penang" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Penang Life</h4>
+          <p>Creative heritage, coastal neighbourhoods and celebrated street food.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/malaysia/gallery-batu-caves.jpg" alt="Colourful steps and temple entrance at Batu Caves" loading="lazy" style="object-position: center 42%;">
+        <figcaption class="dest-gallery-caption">
+          <h4>Cultural Discovery</h4>
+          <p>Living traditions and remarkable landmarks close to the capital.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/malaysia/gallery-cameron-highlands.jpg" alt="Green tea fields across the Cameron Highlands" loading="lazy">
+        <figcaption class="dest-gallery-caption">
+          <h4>Highland Escapes</h4>
+          <p>Cooler air, rolling tea fields and weekends surrounded by nature.</p>
+        </figcaption>
+      </figure>
+      <figure class="dest-gallery-item">
+        <img src="assets/destinations/malaysia/gallery-langkawi.jpg" alt="Palm tree beside a tropical beach in Langkawi" loading="lazy" style="object-position: center 55%;">
+        <figcaption class="dest-gallery-caption">
+          <h4>Island Weekends</h4>
+          <p>Tropical coastlines and relaxed escapes across Langkawi.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<!-- WhatsApp CTA -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
-  <div class="bg-tertiary-container border border-primary/20 rounded-3xl p-12 md:p-20 text-center scroll-reveal">
-    <h2 class="font-display-lg text-[40px] leading-tight text-white">Have questions about Malaysia?</h2>
-    <p class="mt-3 font-body-lg text-silver/80">Chat with our counsellors directly on WhatsApp &mdash; completely free.</p>
-    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a id="cta-wa" href="https://wa.me/94114341888?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20studying%20abroad.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Enquire on WhatsApp</a>
-      <a href="contact.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Book a Consultation</a>
+<!-- Section 6 — Final CTA -->
+<section class="dest-section dest-section-bg dest-bg-cta" id="get-started">
+  <div class="dest-section-inner">
+    <h2 class="dest-section-title scroll-reveal">Start Your Malaysian Journey</h2>
+    <p class="dest-section-sub scroll-reveal">Our counsellors are ready to help you compare institutions, prepare your application and understand your next steps &mdash; completely free, with no commitment.</p>
+    <div class="dest-btn-row scroll-reveal">
+      <a href="contact.html" class="dest-btn dest-btn-primary">Book Free Consultation</a>
+      <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+    </div>
+    <div class="dest-glass-panel dest-stats-bar scroll-reveal">
+      <div class="dest-stat">
+        <p class="dest-stat-label">Population</p>
+        <p class="dest-stat-value" data-dest-stat="population">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Currency</p>
+        <p class="dest-stat-value" data-dest-stat="currency">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Avg Tuition</p>
+        <p class="dest-stat-value" data-dest-stat="avgTuition">&mdash;</p>
+      </div>
+      <div class="dest-stat">
+        <p class="dest-stat-label">Post-Study Option</p>
+        <p class="dest-stat-value" data-dest-stat="postStudyVisa">&mdash;</p>
+      </div>
     </div>
   </div>
 </section>
@@ -105,20 +185,24 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var slug = 'malaysia';
-    var dest = window.RIVIL_DATA.destinations.find(function (d) { return d.slug === slug; });
     initNavbar();
     initFooter();
-    initWhatsApp(dest.whatsapp_message);
-    document.getElementById('dest-h1').textContent = 'Study in ' + dest.name;
-    document.getElementById('dest-tagline').textContent = dest.tagline;
-    document.getElementById('why-heading').textContent = 'A smart choice for your future';
-    document.getElementById('hero-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    document.getElementById('cta-wa').href = RIVIL.waLink(dest.whatsapp_message);
-    renderWhyStudy('why-grid', slug);
-    renderUniversityCards('university-cards-' + slug, slug);
-    renderCountryStats('stats-grid-' + slug, slug);
-    renderCountryMap('country-map-' + slug, slug);
+    initWhatsApp('Hi, I am interested in studying in Malaysia. Please contact me.');
+
+    var malaysia = window.RIVIL_DATA.malaysiaInstitutions || {};
+    renderInstitutionGroup('institution-cards-malaysia', malaysia.institutions);
+    initGlassHoverEffects('#institutions .dest-university-card');
+
+    initKenBurnsHero('.dest-hero-img');
+    initParallaxHero('.dest-hero-media');
+    initGalleryScroll('#life-gallery');
+
+    var stats = (window.RIVIL_DATA.countryStats || {}).malaysia || {};
+    ['population', 'currency', 'avgTuition', 'postStudyVisa'].forEach(function (key) {
+      var el = document.querySelector('[data-dest-stat="' + key + '"]');
+      if (el && stats[key]) el.textContent = stats[key];
+    });
+
     initScrollAnimations();
   });
 </script>

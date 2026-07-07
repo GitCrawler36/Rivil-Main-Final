@@ -34,9 +34,189 @@ body.theme-nz .dest-bg-scholarships { background-image: url("assets/destinations
 body.theme-nz .dest-bg-gallery      { background-image: url("assets/destinations/new-zealand/bg-gallery-nelson.jpg"); }
 body.theme-nz .dest-bg-cta          { background-image: url("assets/destinations/new-zealand/bg-cta-ferns.jpg"); }
 
-/* body.theme-uk, body.theme-australia, body.theme-canada, body.theme-malaysia
-   and body.theme-singapore follow the same pattern: one variable block and
-   one set of background-image assignments per country. */
+/* ---------- Theme: United Kingdom ---------- */
+
+body.theme-uk {
+  --dest-accent: #9a3f55;
+  --dest-bg: #080b12;
+  --dest-glass-bg: rgba(11, 18, 30, 0.58);
+  --dest-glass-border: rgba(255, 255, 255, 0.12);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(235, 240, 248, 0.68);
+  --dest-overlay: rgba(8, 13, 23, 0.62);
+  --dest-overlay-soft: rgba(8, 13, 23, 0.54);
+  --dest-overlay-strong: rgba(8, 13, 23, 0.7);
+  background-color: var(--dest-bg);
+}
+
+body.theme-uk .dest-hero-img        { background-image: url("assets/destinations/uk/hero-london-thames.jpg"); }
+body.theme-uk .dest-bg-universities { background-image: url("assets/destinations/uk/bg-universities-oxford.jpg"); }
+body.theme-uk .dest-bg-scholarships { background-image: url("assets/destinations/uk/bg-scholarships-library.jpg"); }
+body.theme-uk .dest-bg-gallery      { background-image: url("assets/destinations/uk/bg-gallery-highlands.jpg"); }
+body.theme-uk .dest-bg-cta          { background-image: url("assets/destinations/uk/bg-cta-phone-box.jpg"); }
+
+body.theme-uk .dest-img-tag,
+body.theme-uk .dest-gallery-caption {
+  background: rgba(8, 13, 23, 0.62);
+}
+
+/* ---------- Theme: Australia ---------- */
+
+body.theme-australia {
+  --dest-accent: #ad552f;
+  --dest-bg: #0d0d0b;
+  --dest-glass-bg: rgba(30, 22, 15, 0.58);
+  --dest-glass-border: rgba(255, 244, 232, 0.13);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(247, 239, 229, 0.68);
+  --dest-overlay: rgba(18, 13, 9, 0.6);
+  --dest-overlay-soft: rgba(18, 13, 9, 0.52);
+  --dest-overlay-strong: rgba(18, 13, 9, 0.68);
+  background-color: var(--dest-bg);
+}
+
+body.theme-australia .dest-hero-img        { background-image: url("assets/destinations/australia/hero-sydney-harbour.jpg"); }
+body.theme-australia .dest-bg-universities { background-image: url("assets/destinations/australia/bg-universities-sydney.jpg"); }
+body.theme-australia .dest-bg-scholarships { background-image: url("assets/destinations/australia/bg-scholarships-library.jpg"); }
+body.theme-australia .dest-bg-gallery      { background-image: url("assets/destinations/australia/bg-gallery-ocean-road.jpg"); }
+body.theme-australia .dest-bg-cta          { background-image: url("assets/destinations/australia/bg-cta-uluru.jpg"); }
+
+body.theme-australia .dest-img-tag,
+body.theme-australia .dest-gallery-caption {
+  background: rgba(18, 13, 9, 0.64);
+}
+
+/* ---------- Theme: Canada ---------- */
+
+body.theme-canada {
+  --dest-accent: #b83c48;
+  --dest-bg: #080c12;
+  --dest-glass-bg: rgba(12, 21, 31, 0.6);
+  --dest-glass-border: rgba(235, 244, 255, 0.13);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(231, 239, 247, 0.7);
+  --dest-overlay: rgba(8, 15, 24, 0.62);
+  --dest-overlay-soft: rgba(8, 15, 24, 0.54);
+  --dest-overlay-strong: rgba(8, 15, 24, 0.7);
+  background-color: var(--dest-bg);
+}
+
+body.theme-canada .dest-hero-img        { background-image: url("assets/destinations/canada/hero-toronto-skyline.jpg"); }
+body.theme-canada .dest-bg-universities { background-image: url("assets/destinations/canada/bg-universities-campus.jpg"); }
+body.theme-canada .dest-bg-scholarships { background-image: url("assets/destinations/canada/bg-scholarships-montreal-library.jpg"); }
+body.theme-canada .dest-bg-gallery      { background-image: url("assets/destinations/canada/bg-gallery-banff.jpg"); }
+body.theme-canada .dest-bg-cta          { background-image: url("assets/destinations/canada/bg-cta-niagara.jpg"); }
+
+body.theme-canada .dest-img-tag,
+body.theme-canada .dest-gallery-caption {
+  background: rgba(8, 15, 24, 0.66);
+}
+
+/* ---------- Theme: Malaysia ---------- */
+
+body.theme-malaysia {
+  --dest-accent: #c99b2e;
+  --dest-bg: #07100f;
+  --dest-glass-bg: rgba(9, 25, 23, 0.6);
+  --dest-glass-border: rgba(243, 231, 188, 0.14);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(233, 240, 235, 0.7);
+  --dest-overlay: rgba(5, 18, 17, 0.62);
+  --dest-overlay-soft: rgba(5, 18, 17, 0.54);
+  --dest-overlay-strong: rgba(5, 18, 17, 0.7);
+  background-color: var(--dest-bg);
+}
+
+body.theme-malaysia .dest-hero-img        { background-image: url("assets/destinations/malaysia/hero-kuala-lumpur.jpg"); }
+body.theme-malaysia .dest-bg-universities { background-image: url("assets/destinations/malaysia/bg-universities-putrajaya.jpg"); }
+body.theme-malaysia .dest-bg-scholarships { background-image: url("assets/destinations/malaysia/bg-scholarships-rexkl.jpg"); }
+body.theme-malaysia .dest-bg-gallery      { background-image: url("assets/destinations/malaysia/bg-gallery-cameron-highlands.jpg"); }
+body.theme-malaysia .dest-bg-cta          { background-image: url("assets/destinations/malaysia/bg-cta-langkawi.jpg"); }
+
+body.theme-malaysia .dest-img-tag,
+body.theme-malaysia .dest-gallery-caption {
+  background: rgba(5, 18, 17, 0.66);
+}
+
+/* ---------- Theme: Singapore ---------- */
+
+body.theme-singapore {
+  --dest-accent: #d14b57;
+  --dest-bg: #080d12;
+  --dest-glass-bg: rgba(10, 22, 29, 0.6);
+  --dest-glass-border: rgba(232, 242, 248, 0.14);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(231, 240, 244, 0.7);
+  --dest-overlay: rgba(6, 16, 23, 0.62);
+  --dest-overlay-soft: rgba(6, 16, 23, 0.54);
+  --dest-overlay-strong: rgba(6, 16, 23, 0.7);
+  background-color: var(--dest-bg);
+}
+
+body.theme-singapore .dest-hero-img        { background-image: url("assets/destinations/singapore/hero-marina-bay.jpg"); }
+body.theme-singapore .dest-bg-universities { background-image: url("assets/destinations/singapore/bg-universities-gardens.jpg"); }
+body.theme-singapore .dest-bg-scholarships { background-image: url("assets/destinations/singapore/bg-scholarships-library.jpg"); }
+body.theme-singapore .dest-bg-gallery      { background-image: url("assets/destinations/singapore/bg-gallery-supertrees.jpg"); }
+body.theme-singapore .dest-bg-cta          { background-image: url("assets/destinations/singapore/bg-cta-botanic-gardens.jpg"); }
+
+body.theme-singapore .dest-img-tag,
+body.theme-singapore .dest-gallery-caption {
+  background: rgba(6, 16, 23, 0.66);
+}
+
+/* ---------- Theme: Dubai ---------- */
+
+body.theme-dubai {
+  --dest-accent: #c9a35d;
+  --dest-bg: #090806;
+  --dest-glass-bg: rgba(20, 16, 10, 0.62);
+  --dest-glass-border: rgba(226, 190, 117, 0.22);
+  --dest-text-primary: #fffdf8;
+  --dest-text-muted: rgba(242, 232, 213, 0.72);
+  --dest-overlay: rgba(13, 10, 6, 0.64);
+  --dest-overlay-soft: rgba(13, 10, 6, 0.56);
+  --dest-overlay-strong: rgba(13, 10, 6, 0.72);
+  background-color: var(--dest-bg);
+}
+
+body.theme-dubai .dest-hero-img {
+  background-image: url("assets/destinations/dubai/hero-burj-khalifa-day.jpg");
+  background-position: center 18%;
+}
+body.theme-dubai .dest-bg-universities { background-image: url("assets/destinations/dubai/bg-universities-museum-future.jpg"); }
+body.theme-dubai .dest-bg-scholarships { background-image: url("assets/destinations/dubai/bg-scholarships-library.jpg"); }
+body.theme-dubai .dest-bg-gallery      { background-image: url("assets/destinations/dubai/bg-gallery-dubai-marina-night.jpg"); }
+body.theme-dubai .dest-bg-cta          { background-image: url("assets/destinations/dubai/bg-cta-desert-dunes.jpg"); }
+
+body.theme-dubai .dest-hero-overlay {
+  background:
+    radial-gradient(circle at 64% 28%, rgba(220, 166, 82, 0.12), transparent 42%),
+    linear-gradient(to bottom,
+      rgba(7, 6, 5, 0.16) 0%,
+      rgba(9, 7, 5, 0.52) 60%,
+      rgba(9, 7, 5, 0.88) 100%);
+}
+
+body.theme-dubai .dest-btn-primary {
+  color: #171006;
+  background: linear-gradient(135deg, #e1c27f 0%, #b88638 100%);
+  box-shadow: 0 16px 38px -14px rgba(201, 163, 93, 0.78);
+}
+
+body.theme-dubai .dest-glass-panel {
+  box-shadow: 0 28px 70px -30px rgba(0, 0, 0, 0.88),
+              inset 0 1px 0 rgba(255, 225, 164, 0.1);
+}
+
+body.theme-dubai .dest-hero-title {
+  text-shadow: 0 3px 48px rgba(0, 0, 0, 0.72), 0 0 34px rgba(201, 163, 93, 0.15);
+}
+
+body.theme-dubai .dest-img-tag,
+body.theme-dubai .dest-gallery-caption {
+  background: rgba(13, 10, 6, 0.72);
+  border-color: rgba(226, 190, 117, 0.22);
+}
 
 /* ---------- Section shells ---------- */
 
@@ -414,6 +594,24 @@ body.theme-nz .dest-bg-cta          { background-image: url("assets/destinations
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
+}
+
+.dest-partnership-intro {
+  max-width: 880px;
+  margin-top: 96px;
+}
+
+.dest-partnership-intro .dest-eyebrow {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.dest-partnership-title {
+  color: var(--dest-text-primary);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
 }
 
 /* ---------- University / institution cards ---------- */
