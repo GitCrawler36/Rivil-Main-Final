@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Rivil International — site-wide polish layer
+   Loaded last on every page (after mobile.css / destination-theme.css).
+   Refines typography, converts flat olive fills into a frosted-glass
+   treatment of the same green, and cleans up the fixed navbar. No layout
+   or structural changes — presentation only.
+   ========================================================================== */
+
+/* ---------- Typography polish ---------- */
+/* Premium text rendering: proper kerning, ligatures and tabular feel for
+   the shared Hanken Grotesk / JetBrains Mono pairing. */
+
+body {
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* ---------- Glass green buttons (site-wide) ---------- */
+/* Replaces the flat "dirty" olive fill with the same #556B2F green as a
+   frosted-glass surface: translucent fill, blur, lit top edge and a soft
+   green glow. Scoped to interactive elements only so avatar chips, icons
+   and badges keep their existing look. */
+
+a.bg-primary,
+button.bg-primary {
+  background: linear-gradient(160deg, rgba(96, 121, 53, 0.88) 0%, rgba(70, 88, 39, 0.78) 100%) !important;
+  border: 1px solid rgba(163, 190, 110, 0.38);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16),
+              0 12px 28px -14px rgba(85, 107, 47, 0.85);
+  transition: background 0.25s ease, border-color 0.25s ease,
+              box-shadow 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+
+a.bg-primary:hover,
+button.bg-primary:hover {
+  background: linear-gradient(160deg, rgba(108, 136, 60, 0.95) 0%, rgba(82, 103, 46, 0.88) 100%) !important;
+  border-color: rgba(178, 204, 126, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+              0 16px 34px -14px rgba(85, 107, 47, 0.95);
+  filter: none;
+}
+
+/* Outlined olive buttons pick up a subtle glass fill on hover instead of a
+   flat solid swap, keeping text readable during the transition. */
+a.hover\:bg-primary:hover,
+button.hover\:bg-primary:hover {
+  background: rgba(85, 107, 47, 0.82) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* ---------- Navbar refinement ---------- */
+/* More compact and readable: tighter link rhythm, consistent 14px size,
+   no wrapping or crowding against the logo / CTA. */
+
+#site-nav {
+  -webkit-backdrop-filter: blur(20px);
+}
+
+#site-nav a,
+#site-nav button {
+  white-space: nowrap;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 1280px) {
+  .nav-link { padding: 10px 14px; }
+}
+
+.nav-cta {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Micro-interactions ---------- */
+/* Gentle, consistent motion for every button-styled link on the site. */
+
+@media (prefers-reduced-motion: no-preference) {
+  a.bg-primary,
+  button.bg-primary {
+    will-change: transform;
+  }
+
+  a.bg-primary:hover,
+  button.bg-primary:hover {
+    transform: translateY(-1px);
+  }
+
+  a.bg-primary:active,
+  button.bg-primary:active {
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Focus visibility ---------- */
+/* Keyboard users get a clear, on-brand focus ring everywhere. */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(163, 190, 110, 0.85);
+  outline-offset: 2px;
+  border-radius: 6px;
+}

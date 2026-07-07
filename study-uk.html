@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
 <link rel="stylesheet" href="destination-theme.css">
+<link rel="stylesheet" href="site-polish.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
 <script src="destination-motion.js"></script>
@@ -185,6 +186,7 @@
     <div class="dest-btn-row scroll-reveal">
       <a href="contact.html" class="dest-btn dest-btn-primary">Book Free Consultation</a>
       <a href="eligibility.html" class="dest-btn dest-btn-outline">Check Eligibility</a>
+      <a data-wa-message="Inquiry: Studying in the UK — Hi, I am interested in studying in the UK and would like free guidance on institutions, courses and visas. Please contact me." class="dest-btn dest-btn-outline">Enquire on WhatsApp</a>
     </div>
     <div class="dest-glass-panel dest-stats-bar scroll-reveal">
       <div class="dest-stat">
@@ -216,9 +218,9 @@
     initWhatsApp('Hi, I am interested in studying in the UK. Please contact me.');
 
     var uk = window.RIVIL_DATA.ukInstitutions || {};
-    renderInstitutionGroup('represented-universities-uk', uk.representedUniversities);
-    renderInstitutionGroup('represented-colleges-uk', uk.representedColleges);
-    renderInstitutionGroup('partner-universities-uk', uk.partnerUniversities);
+    renderInstitutionGroup('represented-universities-uk', uk.representedUniversities, 'United Kingdom');
+    renderInstitutionGroup('represented-colleges-uk', uk.representedColleges, 'United Kingdom');
+    renderInstitutionGroup('partner-universities-uk', uk.partnerUniversities, 'United Kingdom');
     initGlassHoverEffects('#institutions .dest-university-card');
 
     initKenBurnsHero('.dest-hero-img');

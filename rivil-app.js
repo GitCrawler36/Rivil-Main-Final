@@ -136,11 +136,11 @@
     }).join('');
 
     var desktopLinks =
-      '<a href="index.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('index.html') + '">Home</a>' +
-      '<a href="about.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('about.html') + '">About</a>' +
+      '<a href="index.html" class="nav-link transition-colors ' + linkCls('index.html') + '">Home</a>' +
+      '<a href="about.html" class="nav-link transition-colors ' + linkCls('about.html') + '">About</a>' +
       '<div class="relative" id="nav-dd-wrap">' +
-        '<button id="nav-dd-btn" type="button" aria-expanded="false" class="flex items-center gap-1.5 px-4 py-2 font-body-md transition-colors ' + (onDestPage ? 'text-primary font-semibold' : 'text-silver hover:text-primary') + '">' +
-          'Study Destinations' +
+        '<button id="nav-dd-btn" type="button" aria-expanded="false" class="nav-link flex items-center gap-1 transition-colors ' + (onDestPage ? 'text-primary font-semibold' : 'text-silver hover:text-primary') + '">' +
+          'Destinations' +
           '<span id="nav-dd-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>' +
         '</button>' +
         '<div id="nav-dd-panel" class="hidden absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[600px] bg-surface-container rounded-xl shadow-2xl border border-outline-variant/50 overflow-hidden z-50">' +
@@ -151,11 +151,11 @@
           '</div>' +
         '</div>' +
       '</div>' +
-      '<a href="services.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('services.html') + '">Services</a>' +
-      '<a href="events.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('events.html') + '">Events</a>' +
-      '<a href="success-stories.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('success-stories.html') + '">Success Stories</a>' +
-      '<a href="eligibility.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('eligibility.html') + '">Eligibility</a>' +
-      '<a href="contact.html" class="px-4 py-2 font-body-md transition-colors ' + linkCls('contact.html') + '">Contact</a>';
+      '<a href="services.html" class="nav-link transition-colors ' + linkCls('services.html') + '">Services</a>' +
+      '<a href="events.html" class="nav-link transition-colors ' + linkCls('events.html') + '">Events</a>' +
+      '<a href="success-stories.html" class="nav-link transition-colors ' + linkCls('success-stories.html') + '">Success Stories</a>' +
+      '<a href="eligibility.html" class="nav-link transition-colors ' + linkCls('eligibility.html') + '">Eligibility</a>' +
+      '<a href="contact.html" class="nav-link transition-colors ' + linkCls('contact.html') + '">Contact</a>';
 
     var mobileDestLinks = destinations.map(function (d) {
       var flag = FLAG_EMOJIS[d.slug] || '🌍';
@@ -167,11 +167,11 @@
 
     el.innerHTML =
       '<nav id="site-nav" class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/50 transition-all duration-300">' +
-        '<div class="mx-auto max-w-container-max flex h-[68px] items-center justify-between px-margin-mobile md:px-margin-desktop">' +
+        '<div class="mx-auto max-w-container-max flex h-[68px] items-center justify-between gap-6 px-margin-mobile md:px-margin-desktop">' +
           '<a href="index.html" class="site-logo" aria-label="Rivil International — Home"><img src="assets/Rivil_Main_logo.png" alt="Rivil International Education Consultants" class="site-logo-image" width="867" height="288"></a>' +
-          '<div class="hidden lg:flex items-center gap-1">' + desktopLinks + '</div>' +
-          '<div class="hidden lg:flex items-center gap-3">' +
-            '<a href="contact.html" class="bg-primary text-white px-6 py-2.5 rounded-lg font-body-md font-semibold tracking-wide hover:bg-[#465827] transition-colors duration-200">Free Consultation</a>' +
+          '<div class="hidden lg:flex items-center gap-0.5 xl:gap-1">' + desktopLinks + '</div>' +
+          '<div class="hidden lg:flex items-center shrink-0">' +
+            '<a href="contact.html" class="nav-cta bg-primary text-white px-5 py-2.5 rounded-lg transition-colors duration-200">Free Consultation</a>' +
           '</div>' +
           '<button id="nav-mobile-btn" type="button" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-surface-container">' +
             '<span id="nav-icon-open" class="material-symbols-outlined">menu</span>' +
@@ -348,6 +348,16 @@
 
   window.initWhatsApp = function (message) {
     var msg = message || 'Hi, I would like to know more about studying abroad. Please contact me.';
+
+    /* Wire up any static anchors that declare their enquiry text via
+       data-wa-message, so pages never ship dead "#" WhatsApp buttons. */
+    document.querySelectorAll('a[data-wa-message]').forEach(function (a) {
+      /* "\n" written in the attribute becomes a real line break in the chat. */
+      a.href = waLink(a.getAttribute('data-wa-message').replace(/\\n/g, '\n'));
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+    });
+
     var wrap = document.createElement('div');
     wrap.className = 'fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50';
     wrap.innerHTML =
@@ -417,7 +427,8 @@
     panel.style.top = '50%';
     panel.style.transform = CLOSED;
 
-    var registerHref = ev.register_link || '#';
+    var registerHref = ev.register_link ||
+      waLink('Inquiry: ' + ev.title + '\n\nDate: ' + ev.date + '\nLocation: ' + ev.location + '\n\nHi, I would like to register for this event. Please contact me.');
 
     panel.innerHTML =
       '<button type="button" id="side-alert-tab" aria-label="Toggle event alert" class="absolute right-full top-1/2 -translate-y-1/2 flex items-center gap-1.5 rounded-l-xl bg-primary px-2.5 py-4 text-white shadow-lg hover:brightness-110 transition-all" style="writing-mode:vertical-rl">' +
@@ -643,7 +654,7 @@
      destinations[].universities data. The logo sits on a light backing
      square; the initials fallback only appears if the logo fails to load. */
 
-  window.renderInstitutionGroup = function (containerId, items) {
+  window.renderInstitutionGroup = function (containerId, items, countryName) {
     var container = document.getElementById(containerId);
     if (!container || !items) return;
 
@@ -653,6 +664,14 @@
         return '<span class="dest-uni-tag">' + p + '</span>';
       }).join('');
 
+      /* Structured WhatsApp enquiry carrying the inquiry title and full
+         institution details, so counsellors see the context immediately. */
+      var enquiry = 'Inquiry: ' + u.name + (countryName ? ' — Study in ' + countryName : '') + '\n\n' +
+        'Institution: ' + u.name + '\n' +
+        'Location: ' + u.city + (countryName ? ', ' + countryName : '') + '\n' +
+        ((u.tags && u.tags.length) ? 'Areas of interest: ' + u.tags.join(', ') + '\n' : '') +
+        '\nHi, I found this institution on your website and would like free guidance on courses, entry requirements and applying. Please contact me.';
+
       return '<article class="dest-university-card dest-glass-panel scroll-reveal" style="transition-delay:' + (i % 3) * 70 + 'ms">' +
         '<div class="dest-uni-logo">' +
           (logo ? '<img src="' + logo + '" alt="' + u.name + ' logo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '') +
@@ -661,6 +680,9 @@
         '<h3 class="dest-uni-name">' + u.name + '</h3>' +
         '<p class="dest-uni-city"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>' + u.city + '</p>' +
         '<div class="dest-uni-tags">' + tags + '</div>' +
+        '<a href="' + waLink(enquiry) + '" target="_blank" rel="noopener noreferrer" class="dest-uni-enquire" aria-label="Enquire about ' + u.name + ' on WhatsApp">' +
+          svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Enquire on WhatsApp' +
+        '</a>' +
       '</article>';
     }).join('');
 
@@ -870,10 +892,13 @@
       var badgeCls = isPast ? 'bg-black/60 text-white border border-white/20' : 'bg-primary text-white';
       var imgCls = isPast ? ' grayscale-[0.7]' : '';
 
+      var summaryMsg = 'Inquiry: ' + ev.title + '\n\nHi, I missed this event (' + ev.date + '). Could you share a summary and let me know about similar upcoming sessions? Please contact me.';
+      var registerHref = ev.register_link || waLink('Inquiry: ' + ev.title + '\n\nDate: ' + ev.date + '\nTime: ' + ev.time + '\nLocation: ' + ev.location + '\n\nHi, I would like to register for this event. Please contact me.');
+
       var ctaHtml = isPast
-        ? '<a href="#" class="block w-full text-center rounded-lg border-2 border-primary px-6 py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-colors">View Summary</a>'
-        : '<a href="' + (ev.register_link || '#') + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white hover:brightness-110 transition-all">Register Now →</a>' +
-          '<a href="' + calUrl + '" target="_blank" rel="noopener noreferrer" class="mt-3 block text-center text-sm font-medium text-primary hover:brightness-125 hover:underline underline-offset-2 transition-colors">Add to Calendar</a>';
+        ? '<a href="' + waLink(summaryMsg) + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg border-2 border-primary px-6 py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-colors">Ask About This Event</a>'
+        : '<a href="' + registerHref + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white hover:brightness-110 transition-all">Register Now →</a>' +
+          (calUrl !== '#' ? '<a href="' + calUrl + '" target="_blank" rel="noopener noreferrer" class="mt-3 block text-center text-sm font-medium text-primary hover:brightness-125 hover:underline underline-offset-2 transition-colors">Add to Calendar</a>' : '');
 
       return '<article class="scroll-reveal flex flex-col overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-colors duration-300" style="transition-delay:' + (i % 2) * 100 + 'ms">' +
         '<div class="relative aspect-[16/9] overflow-hidden">' +

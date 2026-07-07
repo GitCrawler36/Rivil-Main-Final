@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
 <link rel="stylesheet" href="destination-theme.css">
+<link rel="stylesheet" href="site-polish.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
 <script src="destination-motion.js"></script>
@@ -171,8 +172,7 @@
     <p class="dest-section-sub scroll-reveal">Our counsellors are ready to help you navigate your path to academic success in New Zealand &mdash; completely free, no commitment.</p>
     <div class="dest-btn-row scroll-reveal">
       <a href="contact.html" class="dest-btn dest-btn-primary">Book Free Consultation</a>
-      <!-- TODO: link a real downloadable New Zealand guide PDF when the asset exists -->
-      <a href="#" class="dest-btn dest-btn-outline">Download Guide</a>
+      <a data-wa-message="Inquiry: Studying in New Zealand — Hi, I am interested in studying in New Zealand and would like free guidance on institutions, courses and visas. Please contact me." class="dest-btn dest-btn-outline">Enquire on WhatsApp</a>
     </div>
     <div class="dest-glass-panel dest-stats-bar scroll-reveal">
       <div class="dest-stat">
@@ -204,8 +204,8 @@
     initWhatsApp('Hi, I am interested in studying in New Zealand. Please contact me.');
 
     var nz = window.RIVIL_DATA.nzInstitutions || {};
-    renderInstitutionGroup('university-cards-new-zealand', nz.universities);
-    renderInstitutionGroup('polytechnic-cards-new-zealand', nz.polytechnics);
+    renderInstitutionGroup('university-cards-new-zealand', nz.universities, 'New Zealand');
+    renderInstitutionGroup('polytechnic-cards-new-zealand', nz.polytechnics, 'New Zealand');
     initGlassHoverEffects('#universities .dest-university-card');
 
     initKenBurnsHero('.dest-hero-img');
