@@ -197,12 +197,6 @@ body.theme-dubai .dest-hero-overlay {
       rgba(9, 7, 5, 0.88) 100%);
 }
 
-body.theme-dubai .dest-btn-primary {
-  color: #171006;
-  background: linear-gradient(135deg, #e1c27f 0%, #b88638 100%);
-  box-shadow: 0 16px 38px -14px rgba(201, 163, 93, 0.78);
-}
-
 body.theme-dubai .dest-glass-panel {
   box-shadow: 0 28px 70px -30px rgba(0, 0, 0, 0.88),
               inset 0 1px 0 rgba(255, 225, 164, 0.1);
@@ -279,10 +273,12 @@ body.theme-dubai .dest-gallery-caption {
 .dest-pill {
   display: inline-block;
   padding: 9px 22px;
-  border: 1px solid color-mix(in srgb, var(--dest-accent) 70%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.52);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--dest-accent) 12%, transparent);
-  color: color-mix(in srgb, var(--dest-accent) 55%, #ffffff);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   font-family: "JetBrains Mono", monospace;
   font-size: 11px;
   font-weight: 500;
@@ -363,6 +359,24 @@ body.theme-dubai .dest-gallery-caption {
 .dest-btn-primary:hover {
   background: color-mix(in srgb, var(--dest-accent) 88%, transparent);
   transform: translateY(-2px);
+}
+
+/* Every destination hero uses one monochrome CTA treatment. Country accent
+   colours remain available for content and lower-page actions. */
+.dest-hero .dest-btn-primary {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #070909;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0 16px 38px -18px rgba(0, 0, 0, 0.72),
+              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dest-hero .dest-btn-primary:hover {
+  background: #eeeeeb;
+  border-color: #eeeeeb;
+  color: #070909;
 }
 
 .dest-btn-outline { border: 1px solid rgba(255, 255, 255, 0.35); color: #ffffff; }
