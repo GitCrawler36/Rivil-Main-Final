@@ -59,7 +59,18 @@ tailwind.config = {
         "pacific-turquoise": "#00A3AD",
         "bush-olive": "#556B2F",
         "silver": "#C0C0C0",
-        "cave-cyan": "#00C8E8"
+        "cave-cyan": "#00C8E8",
+
+        /* ---- Pounamu palette (non-destination pages only) ----
+           Applied to included pages that carry the `theme-pounamu` body
+           class. Destination pages never use these tokens, so adding them
+           here is inert for the destination-theme.css system. Mirrored as
+           CSS custom properties in pounamu-theme.css. */
+        "rivil-black": "#0B0B0B",
+        "rivil-jade": "#0F6E56",
+        "rivil-jade-bright": "#2FBF8F",
+        "rivil-bone": "#F4EFE4",
+        "rivil-ink-muted": "#4A4A46"
       },
       borderRadius: {
         "DEFAULT": "0.125rem",

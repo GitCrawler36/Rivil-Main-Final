@@ -10,47 +10,62 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
 <link rel="stylesheet" href="site-polish.css">
+<link rel="stylesheet" href="pounamu-theme.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
+<script src="hero.js" defer></script>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="theme-pounamu bg-background text-on-background font-body-md antialiased overflow-x-hidden">
 
 <div id="navbar"></div>
 
-<!-- Premium editorial hero -->
-<section class="home-premium-hero">
-  <div class="home-hero-aurora" aria-hidden="true"></div>
-  <div class="home-hero-shell">
-    <div class="home-hero-copy">
-      <div class="home-hero-kicker hero-rise hero-rise-1">
-        <span class="home-hero-kicker-dot"></span>
-        Mount Lavinia, Colombo &middot; Trusted since 2004
-      </div>
-      <h1 class="hero-rise hero-rise-2">Your future deserves a <span>world of possibility.</span></h1>
-      <p class="hero-rise hero-rise-3">Personal guidance for Sri Lankan students applying to recognised institutions across seven destinations. Experienced, ethical and completely free.</p>
-      <div class="home-hero-actions hero-rise hero-rise-4">
-        <a href="contact.html" class="home-hero-primary">Book a Free Consultation <span class="material-symbols-outlined">arrow_forward</span></a>
-        <a href="#destinations" class="home-hero-secondary">Explore Destinations</a>
-      </div>
-      <a href="eligibility.html" class="home-hero-eligibility hero-rise hero-rise-4"><span class="material-symbols-outlined">verified_user</span> Check your eligibility in under three minutes</a>
+<!-- Rotating destination hero (progressively enhanced by hero.js) -->
+<section id="home-hero" class="phero" aria-label="Study destinations showcase">
+  <div class="phero-stage" aria-hidden="true">
+    <div id="phero-layer-a" class="phero-layer" style="background-image:url('assets/mount-cook-updated.jpg')"></div>
+    <div id="phero-layer-b" class="phero-layer"></div>
+  </div>
+  <div class="phero-overlay" aria-hidden="true"></div>
+
+  <div class="phero-shell">
+    <span class="phero-eyebrow">Mount Lavinia, Colombo &middot; Trusted since 2004</span>
+    <h1>Your future deserves a world of possibility.</h1>
+    <p class="phero-subline">Personal guidance for Sri Lankan students applying to recognised institutions across seven destinations. Experienced, ethical and completely free.</p>
+
+    <!-- Per-slide content — the only part that changes between slides. -->
+    <div id="phero-meta" class="phero-meta phero-swap" aria-live="polite">
+      <span id="phero-pill" class="phero-pill">New Zealand — our specialty since 2004</span>
+      <a id="phero-explore" class="phero-explore" href="study-new-zealand.html" aria-label="Explore study options in New Zealand"><span id="phero-explore-label">Explore New Zealand</span> <span aria-hidden="true">&rarr;</span></a>
     </div>
 
-    <div class="home-hero-visual hero-rise hero-rise-3">
-      <div class="home-hero-image-wrap">
-        <img src="assets/site/home-hero.jpg" alt="University students collaborating in a bright campus library" fetchpriority="high">
-        <div class="home-hero-image-shade"></div>
-        <div class="home-hero-image-caption"><span>Global pathways</span><strong>Built around your ambition</strong></div>
-      </div>
-      <div class="home-hero-float home-hero-float-top"><span class="material-symbols-outlined">public</span><div><strong>7 destinations</strong><small>One trusted guide</small></div></div>
-      <div class="home-hero-float home-hero-float-bottom"><span class="material-symbols-outlined">school</span><div><strong>1,000+ students</strong><small>Guided since 2004</small></div></div>
+    <div class="phero-actions">
+      <a href="contact.html" class="phero-primary">Book a Free Consultation <span class="material-symbols-outlined">arrow_forward</span></a>
+      <a href="eligibility.html" class="phero-secondary">Check Your Eligibility</a>
     </div>
   </div>
 
-  <div class="home-hero-stats">
-    <div><strong data-target="21" data-suffix="+">0</strong><span>Years of experience</span></div>
-    <div><strong data-target="1000" data-suffix="+">0</strong><span>Students guided</span></div>
-    <div><strong data-target="7">0</strong><span>Study destinations</span></div>
-    <div><strong data-target="100" data-suffix="%">0</strong><span>Free student service</span></div>
+  <div id="phero-tabs" class="phero-tabs" role="group" aria-label="Choose a destination"></div>
+</section>
+
+<!-- Trust stats (real values baked in for no-JS / crawlers; animated by JS) -->
+<section class="bg-background py-16 md:py-20 border-b border-outline-variant/30">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center">
+    <div class="rounded-xl bg-surface-container border border-outline-variant/30 p-6 sm:p-8">
+      <strong class="block font-display-lg text-[40px] font-bold text-primary leading-none" data-target="21" data-suffix="+">21+</strong>
+      <span class="mt-3 block font-label-sm uppercase tracking-wider text-silver/60">Years of experience</span>
+    </div>
+    <div class="rounded-xl bg-surface-container border border-outline-variant/30 p-6 sm:p-8">
+      <strong class="block font-display-lg text-[40px] font-bold text-primary leading-none" data-target="1000" data-suffix="+">1,000+</strong>
+      <span class="mt-3 block font-label-sm uppercase tracking-wider text-silver/60">Students guided</span>
+    </div>
+    <div class="rounded-xl bg-surface-container border border-outline-variant/30 p-6 sm:p-8">
+      <strong class="block font-display-lg text-[40px] font-bold text-primary leading-none" data-target="7">7</strong>
+      <span class="mt-3 block font-label-sm uppercase tracking-wider text-silver/60">Study destinations</span>
+    </div>
+    <div class="rounded-xl bg-surface-container border border-outline-variant/30 p-6 sm:p-8">
+      <strong class="block font-display-lg text-[40px] font-bold text-primary leading-none" data-target="100" data-suffix="%">100%</strong>
+      <span class="mt-3 block font-label-sm uppercase tracking-wider text-silver/60">Free student service</span>
+    </div>
   </div>
 </section>
 

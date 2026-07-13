@@ -739,25 +739,54 @@ body.theme-dubai .dest-gallery-caption {
   text-transform: uppercase;
 }
 
-/* WhatsApp enquiry button on each institution card — glassy accent tint. */
+/* Institution card action buttons. */
+.dest-uni-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dest-uni-website,
 .dest-uni-enquire {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   width: 100%;
-  margin-top: 20px;
+  min-height: 46px;
   padding: 12px 16px;
-  border: 1px solid color-mix(in srgb, var(--dest-accent) 50%, transparent);
   border-radius: 10px;
-  background: color-mix(in srgb, var(--dest-accent) 16%, transparent);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   color: #ffffff;
   font-size: 13.5px;
   font-weight: 600;
+  line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
   transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.dest-uni-website {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dest-uni-website:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.34);
+  transform: translateY(-1px);
+}
+
+.dest-uni-website .material-symbols-outlined {
+  flex-shrink: 0;
+  font-size: 17px;
+}
+
+.dest-uni-enquire {
+  border: 1px solid color-mix(in srgb, var(--dest-accent) 50%, transparent);
+  background: color-mix(in srgb, var(--dest-accent) 16%, transparent);
 }
 
 .dest-uni-enquire:hover {

@@ -88,6 +88,12 @@
     return name.split(' ').map(function (w) { return w.charAt(0); }).slice(0, 2).join('').toUpperCase();
   }
 
+  function institutionWebsite(institution) {
+    var map = (window.RIVIL_DATA && window.RIVIL_DATA.institutionWebsites) || {};
+    var name = institution && institution.name;
+    return (institution && institution.website) || (name && map[name]) || '';
+  }
+
   /* ---------- Māori art separator ---------- */
   /* Returns a full-width separator section using a real pattern image.
      artNumber is 1, 2, 3 or 4. The image is rendered white via CSS
@@ -663,9 +669,15 @@
 
     container.innerHTML = items.map(function (u, i) {
       var logo = u.logo || '';
+      var website = institutionWebsite(u);
       var tags = (u.tags || []).slice(0, 2).map(function (p) {
         return '<span class="dest-uni-tag">' + p + '</span>';
       }).join('');
+      var websiteButton = website
+        ? '<a href="' + website + '" target="_blank" rel="noopener noreferrer" class="dest-uni-website" aria-label="Visit the official website for ' + u.name + '">' +
+            '<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Visit Website' +
+          '</a>'
+        : '';
 
       /* Structured WhatsApp enquiry carrying the inquiry title and full
          institution details, so counsellors see the context immediately. */
@@ -683,9 +695,12 @@
         '<h3 class="dest-uni-name">' + u.name + '</h3>' +
         '<p class="dest-uni-city"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>' + u.city + '</p>' +
         '<div class="dest-uni-tags">' + tags + '</div>' +
-        '<a href="' + waLink(enquiry) + '" target="_blank" rel="noopener noreferrer" class="dest-uni-enquire" aria-label="Enquire about ' + u.name + ' on WhatsApp">' +
-          svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Enquire on WhatsApp' +
-        '</a>' +
+        '<div class="dest-uni-actions">' +
+          websiteButton +
+          '<a href="' + waLink(enquiry) + '" target="_blank" rel="noopener noreferrer" class="dest-uni-enquire" aria-label="Enquire about ' + u.name + ' on WhatsApp">' +
+            svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Enquire on WhatsApp' +
+          '</a>' +
+        '</div>' +
       '</article>';
     }).join('');
 
