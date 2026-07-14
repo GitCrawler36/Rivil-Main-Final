@@ -25,13 +25,13 @@
 
   /* New Zealand is always first. All images are real local assets. */
   var SLIDES = [
-    { slug: 'new-zealand', name: 'New Zealand',    img: 'assets/mount-cook-updated.jpg',                        page: 'study-new-zealand.html', pill: 'New Zealand — our specialty since 2004' },
-    { slug: 'uk',          name: 'United Kingdom',  img: 'assets/destinations/uk/hero-london-thames.jpg',        page: 'study-uk.html',          pill: 'United Kingdom' },
-    { slug: 'australia',   name: 'Australia',       img: 'assets/destinations/australia/hero-sydney-harbour.jpg', page: 'study-australia.html',   pill: 'Australia' },
-    { slug: 'canada',      name: 'Canada',          img: 'assets/destinations/canada/hero-toronto-skyline.jpg',  page: 'study-canada.html',      pill: 'Canada' },
-    { slug: 'malaysia',    name: 'Malaysia',        img: 'assets/destinations/malaysia/hero-kuala-lumpur.jpg',   page: 'study-malaysia.html',    pill: 'Malaysia' },
-    { slug: 'singapore',   name: 'Singapore',       img: 'assets/destinations/singapore/hero-marina-bay.jpg',    page: 'study-singapore.html',   pill: 'Singapore' },
-    { slug: 'dubai',       name: 'Dubai',           img: 'assets/destinations/dubai/hero-burj-khalifa-day.jpg',  page: 'study-dubai.html',       pill: 'Dubai' }
+    { slug: 'new-zealand', name: 'New Zealand',    flag: 'assets/flags/new-zealand.svg',          img: 'assets/mount-cook-updated.jpg',                         page: 'study-new-zealand.html', pill: 'New Zealand — our specialty since 2004' },
+    { slug: 'uk',          name: 'United Kingdom', flag: 'assets/flags/united-kingdom.svg',        img: 'assets/destinations/uk/hero-london-thames.jpg',         page: 'study-uk.html',          pill: 'United Kingdom' },
+    { slug: 'australia',   name: 'Australia',      flag: 'assets/flags/australia.svg',             img: 'assets/destinations/australia/hero-sydney-harbour.jpg', page: 'study-australia.html',   pill: 'Australia' },
+    { slug: 'canada',      name: 'Canada',         flag: 'assets/flags/canada.svg',                img: 'assets/destinations/canada/hero-toronto-skyline.jpg',   page: 'study-canada.html',      pill: 'Canada' },
+    { slug: 'malaysia',    name: 'Malaysia',       flag: 'assets/flags/malaysia.svg',              img: 'assets/destinations/malaysia/hero-kuala-lumpur.jpg',    page: 'study-malaysia.html',    pill: 'Malaysia' },
+    { slug: 'singapore',   name: 'Singapore',      flag: 'assets/flags/singapore.svg',             img: 'assets/destinations/singapore/hero-marina-bay.jpg',     page: 'study-singapore.html',   pill: 'Singapore' },
+    { slug: 'dubai',       name: 'Dubai',          flag: 'assets/flags/united-arab-emirates.svg', img: 'assets/destinations/dubai/hero-burj-khalifa-day.jpg',   page: 'study-dubai.html',       pill: 'Dubai' }
   ];
 
   var DURATION = 3000;
@@ -59,7 +59,19 @@
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'phero-tab' + (i === 0 ? ' is-active' : '');
-    b.textContent = s.name;
+    var flag = document.createElement('span');
+    flag.className = 'phero-tab-flag';
+    flag.setAttribute('aria-hidden', 'true');
+    var flagImage = document.createElement('img');
+    flagImage.className = 'phero-tab-flag-image';
+    flagImage.src = s.flag;
+    flagImage.alt = '';
+    flag.appendChild(flagImage);
+    var label = document.createElement('span');
+    label.className = 'phero-tab-label';
+    label.textContent = s.name;
+    b.appendChild(flag);
+    b.appendChild(label);
     b.setAttribute('aria-label', 'Show ' + s.name);
     if (i === 0) b.setAttribute('aria-current', 'true');
     b.addEventListener('click', function () { go(i); });
