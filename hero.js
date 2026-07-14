@@ -34,7 +34,7 @@
     { slug: 'dubai',       name: 'Dubai',           img: 'assets/destinations/dubai/hero-burj-khalifa-day.jpg',  page: 'study-dubai.html',       pill: 'Dubai' }
   ];
 
-  var DURATION = 6000;
+  var DURATION = 3000;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var layerA = document.getElementById('phero-layer-a');
