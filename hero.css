@@ -3,10 +3,12 @@
    ========================================================================== */
 
 .phero {
+  --phero-nav-clearance: 68px;
+  --phero-edge-space: 48px;
   position: relative;
   width: 100%;
-  height: 85vh;
-  min-height: 560px;
+  height: auto;
+  min-height: max(560px, 85vh);
   isolation: isolate;
   overflow: hidden;
   background: var(--rivil-black);
@@ -53,10 +55,10 @@
 .phero-shell {
   position: relative;
   z-index: 2;
-  height: 100%;
+  min-height: inherit;
   width: min(1200px, 100%);
   margin: 0 auto;
-  padding: 120px max(20px, calc((100vw - 1200px) / 2)) 84px;
+  padding: calc(var(--phero-nav-clearance) + var(--phero-edge-space)) max(20px, calc((100vw - 1200px) / 2)) var(--phero-edge-space);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,19 +239,21 @@
 }
 
 @media (max-width: 1023px) {
-  .phero { height: 70vh; min-height: 520px; }
-  .phero-shell { padding-top: 104px; padding-bottom: 92px; }
+  .phero {
+    --phero-edge-space: 40px;
+    min-height: max(520px, 70vh);
+  }
 }
 
 /* Keep the CTA and destination rail separated on short laptop viewports. */
 @media (min-width: 768px) and (max-height: 700px) {
-  .phero-shell { padding-bottom: 52px; }
   .phero h1 { margin-top: 14px; }
   .phero-subline { margin-top: 14px; line-height: 1.45; }
   .phero-controls { margin-top: 18px; }
 }
 
 @media (max-width: 767px) {
+  .phero { --phero-edge-space: 32px; }
   .phero-tabs {
     gap: 2px;
     scroll-snap-type: x proximity;
@@ -260,8 +264,7 @@
 }
 
 @media (max-width: 639px) {
-  .phero { min-height: 640px; }
-  .phero-shell { padding-top: 96px; padding-bottom: 104px; }
+  .phero { min-height: max(640px, 70vh); }
   .phero-actions { flex-direction: column; align-items: stretch; }
   .phero-primary, .phero-secondary { width: 100%; }
 }
