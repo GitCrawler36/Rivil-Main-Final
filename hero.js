@@ -79,8 +79,8 @@
       else b.removeAttribute('aria-current');
     });
 
-    /* Keep mobile autoplay changes visible without moving the page vertically. */
-    if (activeTab && window.innerWidth <= 767 && tabsWrap.scrollWidth > tabsWrap.clientWidth) {
+    /* Keep autoplay changes visible whenever the destination rail overflows. */
+    if (activeTab && tabsWrap.scrollWidth > tabsWrap.clientWidth) {
       var target = activeTab.offsetLeft - ((tabsWrap.clientWidth - activeTab.offsetWidth) / 2);
       var maxScroll = tabsWrap.scrollWidth - tabsWrap.clientWidth;
       target = Math.max(0, Math.min(target, maxScroll));

@@ -212,6 +212,8 @@
 
 .phero-tabs::-webkit-scrollbar { display: none; }
 
+.phero-tab:last-child { margin-right: 20px; }
+
 .phero-tab {
   padding: 8px 12px;
   border: 0;
