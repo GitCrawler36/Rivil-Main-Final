@@ -35,6 +35,12 @@ p {
   text-wrap: pretty;
 }
 
+/* Keep the institution count silver only in the homepage destination grid. */
+#destination-cards-home .destination-card-institution-count {
+  color: var(--rivil-silver);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.72);
+}
+
 /* ---------- Fern CTA buttons (site-wide) ---------- */
 /* Interactive fills use the brightest fern; general accents continue to use
    the quieter primary token. Dark text keeps both default and hover states AA. */

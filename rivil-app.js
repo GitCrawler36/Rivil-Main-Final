@@ -547,7 +547,7 @@
         '<img src="' + DEST_IMAGES[d.slug] + '" alt="Study in ' + d.name + '" loading="lazy" class="h-full w-full object-cover opacity-80 transition-transform duration-700 ease-out group-hover:scale-105">' +
         '<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>' +
         '<div class="absolute inset-x-0 bottom-0 p-7">' +
-          '<p class="font-label-sm uppercase tracking-[0.18em] text-primary">' + d.universities.length + ' institutions</p>' +
+          '<p class="destination-card-institution-count font-label-sm uppercase tracking-[0.18em] text-primary">' + d.universities.length + ' institutions</p>' +
           '<h3 class="mt-1.5 font-headline-lg text-headline-lg text-white">' + d.name + '</h3>' +
           '<p class="mt-2 font-body-md text-silver/75 line-clamp-2">' + d.tagline + '</p>' +
           '<span class="mt-4 inline-flex items-center gap-2 font-label-sm uppercase text-primary-bright">Explore destination' +
