@@ -1,0 +1,262 @@
+/* ==========================================================================
+   Rivil International - rotating destination hero (index.html only)
+   ========================================================================== */
+
+.phero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 560px;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--rivil-black);
+  color: var(--rivil-offwhite);
+}
+
+.phero-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.phero-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1.2s ease;
+  will-change: opacity, transform;
+}
+
+.phero-layer.is-visible { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .phero-layer.is-visible.is-zooming {
+    animation: phero-kenburns 7s ease-out forwards;
+  }
+}
+
+@keyframes phero-kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+.phero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(11, 11, 11, 0.85) 0%, rgba(11, 11, 11, 0.55) 38%, rgba(11, 11, 11, 0.2) 70%, rgba(11, 11, 11, 0.35) 100%);
+}
+
+.phero-shell {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 120px max(20px, calc((100vw - 1200px) / 2)) 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.phero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(245, 245, 242, 0.75);
+  font: 600 11px/1.2 "JetBrains Mono", monospace;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.phero-eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rivil-fern);
+  box-shadow: 0 0 0 6px rgba(99, 153, 34, 0.18);
+}
+
+.phero h1 {
+  max-width: 760px;
+  margin-top: 22px;
+  color: var(--rivil-offwhite);
+  font: 700 clamp(40px, 5.2vw, 74px)/1.02 "Hanken Grotesk", sans-serif;
+  letter-spacing: 0;
+  text-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.phero-subline {
+  max-width: 600px;
+  margin-top: 22px;
+  color: rgba(199, 204, 201, 0.88);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+}
+
+.phero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 26px;
+  min-height: 40px;
+}
+
+.phero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--rivil-fern-bright);
+  background: rgba(39, 80, 10, 0.35);
+  color: var(--rivil-offwhite);
+  font: 600 12px/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.01em;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.phero-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--rivil-fern-bright);
+  font: 600 14px/1 "Hanken Grotesk", sans-serif;
+  transition: gap 0.2s ease;
+}
+
+.phero-explore:hover { gap: 10px; }
+
+.phero-swap {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.phero-swap.is-swapping {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.phero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.phero-primary,
+.phero-secondary {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 26px;
+  border-radius: 12px;
+  font: 700 15px/1 "Hanken Grotesk", sans-serif;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.phero-primary {
+  background: var(--rivil-fern-bright);
+  color: var(--rivil-black);
+  border: 1px solid var(--rivil-fern-bright);
+  box-shadow: 0 18px 40px -20px rgba(151, 196, 89, 0.58);
+}
+
+.phero-primary:hover {
+  background: var(--rivil-fern);
+  border-color: var(--rivil-fern);
+  color: var(--rivil-black);
+  transform: translateY(-2px);
+}
+
+.phero-secondary {
+  color: var(--rivil-offwhite);
+  border: 1px solid rgba(245, 245, 242, 0.55);
+  background: rgba(245, 245, 242, 0.06);
+}
+
+.phero-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--rivil-offwhite);
+  background: rgba(245, 245, 242, 0.12);
+}
+
+.phero-tabs {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 max(20px, calc((100vw - 1200px) / 2)) 22px;
+}
+
+.phero-tab {
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: rgba(199, 204, 201, 0.68);
+  font: 600 13px/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  scroll-snap-align: center;
+}
+
+.phero-tab:hover { color: var(--rivil-offwhite); }
+
+.phero-tab.is-active {
+  color: var(--rivil-fern-bright);
+  border-bottom-color: var(--rivil-fern-bright);
+}
+
+.phero-tab:focus-visible {
+  outline: 2px solid var(--rivil-fern-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1023px) {
+  .phero { height: 70vh; min-height: 520px; }
+  .phero-shell { padding-top: 104px; padding-bottom: 92px; }
+}
+
+@media (max-width: 767px) {
+  .phero-tabs {
+    flex-wrap: nowrap;
+    gap: 2px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+  }
+  .phero-tabs::-webkit-scrollbar { display: none; }
+  .phero-tab { flex: 0 0 auto; font-size: 12px; padding: 8px 9px; }
+}
+
+@media (max-width: 639px) {
+  .phero { min-height: 590px; }
+  .phero-shell { padding-top: 96px; padding-bottom: 104px; }
+  .phero-actions { flex-direction: column; align-items: stretch; }
+  .phero-primary, .phero-secondary { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phero-layer,
+  .phero-swap { transition: none; }
+}

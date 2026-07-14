@@ -106,8 +106,8 @@ html {
 }
 
 ::selection {
-  background-color: #556B2F;
-  color: #ffffff;
+  background-color: var(--rivil-fern);
+  color: var(--rivil-black);
 }
 
 /* ---------- Stitch homepage design-system components ---------- */
@@ -181,7 +181,7 @@ html {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #556B2F #050708;
+  scrollbar-color: var(--rivil-fern) #050708;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -191,12 +191,12 @@ html {
   background: #050708;
 }
 ::-webkit-scrollbar-thumb {
-  background: #556B2F;
+  background: var(--rivil-fern);
   border-radius: 9999px;
   border: 2px solid #050708;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6a8540;
+  background: var(--rivil-fern-bright);
 }
 
 /* ---------- New Zealand cave-atmosphere helpers ---------- */

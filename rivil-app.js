@@ -2,8 +2,8 @@
    Rivil International Education Consultants — shared site logic
    Plain vanilla JavaScript. No dependencies. Works on GitHub Pages as-is.
 
-   Visual language follows the Stitch homepage design system:
-     background #050708 · primary (olive) #556B2F · silver text #C0C0C0
+   Visual language follows the Rivil Fern & Silver design system:
+     background #050708 · fern #639922 · bright fern #97C459 · silver #C7CCC9
      Hanken Grotesk + JetBrains Mono · dark surface cards.
    ========================================================================== */
 
@@ -119,14 +119,14 @@
 
     function linkCls(href) {
       return href === page
-        ? 'text-primary font-semibold'
-        : 'text-silver hover:text-primary';
+        ? 'text-primary-bright font-semibold'
+        : 'text-silver hover:text-primary-bright';
     }
 
     function mobileLinkCls(href) {
       return href === page
-        ? 'bg-surface-container text-primary font-semibold'
-        : 'text-silver hover:bg-surface-container hover:text-primary';
+        ? 'bg-surface-container text-primary-bright font-semibold'
+        : 'text-silver hover:bg-surface-container hover:text-primary-bright';
     }
 
     var megaMenuItems = destinations.map(function (d) {
@@ -135,7 +135,7 @@
       return '<a href="' + d.page + '" class="group flex items-start gap-3 rounded-xl p-3.5 transition-colors ' + (active ? 'bg-background' : 'hover:bg-background') + '">' +
         '<span class="shrink-0 mt-0.5 text-[1.6rem] leading-none">' + flag + '</span>' +
         '<span class="min-w-0">' +
-          '<span class="block font-body-md font-semibold text-white group-hover:text-primary">' + d.name + '</span>' +
+          '<span class="block font-body-md font-semibold text-rivil-offwhite group-hover:text-primary-bright">' + d.name + '</span>' +
           '<span class="block text-xs text-silver/55 leading-snug mt-0.5 line-clamp-2">' + d.tagline + '</span>' +
         '</span>' +
       '</a>';
@@ -145,15 +145,15 @@
       '<a href="index.html" class="nav-link transition-colors ' + linkCls('index.html') + '">Home</a>' +
       '<a href="about.html" class="nav-link transition-colors ' + linkCls('about.html') + '">About</a>' +
       '<div class="relative" id="nav-dd-wrap">' +
-        '<button id="nav-dd-btn" type="button" aria-expanded="false" class="nav-link flex items-center gap-1 transition-colors ' + (onDestPage ? 'text-primary font-semibold' : 'text-silver hover:text-primary') + '">' +
+        '<button id="nav-dd-btn" type="button" aria-expanded="false" class="nav-link flex items-center gap-1 transition-colors ' + (onDestPage ? 'text-primary-bright font-semibold' : 'text-silver hover:text-primary-bright') + '">' +
           'Destinations' +
           '<span id="nav-dd-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>' +
         '</button>' +
         '<div id="nav-dd-panel" class="hidden absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[600px] bg-surface-container rounded-xl shadow-2xl border border-outline-variant/50 overflow-hidden z-50">' +
           '<div class="p-3 grid grid-cols-3 gap-1">' + megaMenuItems + '</div>' +
           '<div class="border-t border-outline-variant/50 bg-surface-container-low px-5 py-3 flex items-center justify-between gap-4">' +
-            '<p class="text-xs text-silver/50">Not sure where to study? <a href="eligibility.html" class="font-semibold text-primary hover:brightness-125">Try our eligibility check &rarr;</a></p>' +
-            '<a href="destinations-other.html" class="shrink-0 text-xs font-semibold text-primary hover:brightness-125">Other Destinations &rarr;</a>' +
+            '<p class="text-xs text-silver/50">Not sure where to study? <a href="eligibility.html" class="font-semibold text-primary-bright hover:brightness-125">Try our eligibility check &rarr;</a></p>' +
+            '<a href="destinations-other.html" class="shrink-0 text-xs font-semibold text-primary-bright hover:brightness-125">Other Destinations &rarr;</a>' +
           '</div>' +
         '</div>' +
       '</div>' +
@@ -165,7 +165,7 @@
 
     var mobileDestLinks = destinations.map(function (d) {
       var flag = FLAG_EMOJIS[d.slug] || '🌍';
-      return '<a href="' + d.page + '" class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-body-md ' + (d.page === page ? 'bg-surface-container text-primary font-semibold' : 'text-silver hover:bg-surface-container') + '">' +
+      return '<a href="' + d.page + '" class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-body-md ' + (d.page === page ? 'bg-surface-container text-primary-bright font-semibold' : 'text-silver hover:bg-surface-container') + '">' +
         '<span class="text-lg shrink-0">' + flag + '</span>' +
         '<span>' + d.name + '</span>' +
       '</a>';
@@ -177,9 +177,9 @@
           '<a href="index.html" class="site-logo" aria-label="Rivil International — Home"><img src="assets/Rivil_Main_logo.png" alt="Rivil International Education Consultants" class="site-logo-image" width="867" height="288"></a>' +
           '<div class="hidden lg:flex items-center gap-0.5 xl:gap-1">' + desktopLinks + '</div>' +
           '<div class="hidden lg:flex items-center shrink-0">' +
-            '<a href="contact.html" class="nav-cta bg-primary text-white px-5 py-2.5 rounded-lg transition-colors duration-200">Free Consultation</a>' +
+            '<a href="contact.html" class="nav-cta bg-primary-bright text-rivil-black px-5 py-2.5 rounded-lg hover:bg-primary hover:text-rivil-black transition-colors duration-200">Free Consultation</a>' +
           '</div>' +
-          '<button id="nav-mobile-btn" type="button" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-surface-container">' +
+          '<button id="nav-mobile-btn" type="button" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-rivil-offwhite hover:bg-surface-container">' +
             '<span id="nav-icon-open" class="material-symbols-outlined">menu</span>' +
             '<span id="nav-icon-close" class="material-symbols-outlined hidden">close</span>' +
           '</button>' +
@@ -187,12 +187,12 @@
         '<div id="nav-mobile-panel" class="hidden lg:hidden border-t border-outline-variant/50 bg-background px-4 pb-6 pt-3 max-h-[calc(100vh-68px)] overflow-y-auto">' +
           '<a href="index.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('index.html') + '">Home</a>' +
           '<a href="about.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('about.html') + '">About</a>' +
-          '<button id="nav-mobile-dd-btn" type="button" aria-expanded="false" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 ' + (onDestPage ? 'text-primary font-semibold' : 'text-silver') + ' hover:bg-surface-container">' +
+          '<button id="nav-mobile-dd-btn" type="button" aria-expanded="false" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 ' + (onDestPage ? 'text-primary-bright font-semibold' : 'text-silver') + ' hover:bg-surface-container">' +
             'Study Destinations' +
             '<span id="nav-mobile-dd-chevron" class="material-symbols-outlined transition-transform duration-200">expand_more</span>' +
           '</button>' +
           '<div id="nav-mobile-dd-panel" class="hidden ml-3 border-l-2 border-primary/50 pl-2 my-1">' + mobileDestLinks +
-            '<a href="destinations-other.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-body-md ' + (page === 'destinations-other.html' ? 'bg-surface-container text-primary font-semibold' : 'text-silver hover:bg-surface-container') + '">' +
+            '<a href="destinations-other.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-body-md ' + (page === 'destinations-other.html' ? 'bg-surface-container text-primary-bright font-semibold' : 'text-silver hover:bg-surface-container') + '">' +
               '<span class="text-lg shrink-0">🌍</span><span>Other Destinations</span>' +
             '</a>' +
           '</div>' +
@@ -201,7 +201,7 @@
           '<a href="success-stories.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('success-stories.html') + '">Success Stories</a>' +
           '<a href="eligibility.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('eligibility.html') + '">Eligibility</a>' +
           '<a href="contact.html" class="block rounded-lg px-3 py-2.5 ' + mobileLinkCls('contact.html') + '">Contact</a>' +
-          '<a href="contact.html" class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-body-md font-semibold tracking-wide text-white hover:bg-[#465827] transition-colors">Free Consultation</a>' +
+          '<a href="contact.html" class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary-bright px-5 py-3 font-body-md font-semibold tracking-wide text-rivil-black hover:bg-primary hover:text-rivil-black transition-colors">Free Consultation</a>' +
         '</div>' +
       '</nav>';
 
@@ -301,11 +301,11 @@
     var year = new Date().getFullYear();
 
     var socialIcons = SOCIALS.map(function (s) {
-      return '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer" aria-label="' + s.name + '" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors">' + svgIcon(s.icon, 'w-[18px] h-[18px]') + '</a>';
+      return '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer" aria-label="' + s.name + '" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-rivil-offwhite hover:bg-primary-bright hover:border-primary-bright hover:text-rivil-black transition-colors">' + svgIcon(s.icon, 'w-[18px] h-[18px]') + '</a>';
     }).join('');
 
     var destLinks = destinations.map(function (d) {
-      return '<li><a href="' + d.page + '" class="hover:text-primary transition-colors">Study in ' + d.name + '</a></li>';
+      return '<li><a href="' + d.page + '" class="hover:text-primary-bright transition-colors">Study in ' + d.name + '</a></li>';
     }).join('');
 
     el.innerHTML =
@@ -317,34 +317,34 @@
             '<div class="flex gap-3">' + socialIcons + '</div>' +
           '</div>' +
           '<div class="space-y-4">' +
-            '<h4 class="font-headline-md text-white">Study Destinations</h4>' +
+            '<h4 class="font-headline-md text-rivil-offwhite">Study Destinations</h4>' +
             '<ul class="space-y-2 text-silver/60 font-body-md">' + destLinks + '</ul>' +
           '</div>' +
           '<div class="space-y-4">' +
-            '<h4 class="font-headline-md text-white">Explore</h4>' +
+            '<h4 class="font-headline-md text-rivil-offwhite">Explore</h4>' +
             '<ul class="space-y-2 text-silver/60 font-body-md">' +
-              '<li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>' +
-              '<li><a href="how-it-works.html" class="hover:text-primary transition-colors">How It Works</a></li>' +
-              '<li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>' +
-              '<li><a href="success-stories.html" class="hover:text-primary transition-colors">Success Stories</a></li>' +
-              '<li><a href="events.html" class="hover:text-primary transition-colors">Events</a></li>' +
+              '<li><a href="about.html" class="hover:text-primary-bright transition-colors">About Us</a></li>' +
+              '<li><a href="how-it-works.html" class="hover:text-primary-bright transition-colors">How It Works</a></li>' +
+              '<li><a href="services.html" class="hover:text-primary-bright transition-colors">Services</a></li>' +
+              '<li><a href="success-stories.html" class="hover:text-primary-bright transition-colors">Success Stories</a></li>' +
+              '<li><a href="events.html" class="hover:text-primary-bright transition-colors">Events</a></li>' +
             '</ul>' +
           '</div>' +
           '<div class="space-y-4">' +
-            '<h4 class="font-headline-md text-white">Contact Us</h4>' +
+            '<h4 class="font-headline-md text-rivil-offwhite">Contact Us</h4>' +
             '<div class="text-silver/60 space-y-4 font-body-md">' +
               '<div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary">location_on</span><span>' + ADDRESS + '</span></div>' +
-              '<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">call</span><a href="tel:' + PHONE_TEL + '" class="hover:text-primary transition-colors">' + PHONE_DISPLAY + '</a></div>' +
-              '<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">mail</span><a href="mailto:' + EMAIL + '" class="hover:text-primary transition-colors">' + EMAIL + '</a></div>' +
-              '<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">chat</span><a href="' + waLink('Hi, I would like to know more about studying abroad. Please contact me.') + '" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">WhatsApp Us</a></div>' +
+              '<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">call</span><a href="tel:' + PHONE_TEL + '" class="hover:text-primary-bright transition-colors">' + PHONE_DISPLAY + '</a></div>' +
+              '<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">mail</span><a href="mailto:' + EMAIL + '" class="hover:text-primary-bright transition-colors">' + EMAIL + '</a></div>' +
+              '<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">chat</span><a href="' + waLink('Hi, I would like to know more about studying abroad. Please contact me.') + '" target="_blank" rel="noopener noreferrer" class="hover:text-primary-bright transition-colors">WhatsApp Us</a></div>' +
             '</div>' +
           '</div>' +
         '</div>' +
         '<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-silver/40 font-label-sm max-w-container-max mx-auto">' +
           '<div>&copy; ' + year + ' Rivil International Education Consultants. All rights reserved.</div>' +
           '<div class="flex gap-8">' +
-            '<a class="hover:text-white transition-colors" href="privacy-policy.html">Privacy Policy</a>' +
-            '<a class="hover:text-white transition-colors" href="terms-of-service.html">Terms of Service</a>' +
+            '<a class="hover:text-primary-bright transition-colors" href="privacy-policy.html">Privacy Policy</a>' +
+            '<a class="hover:text-primary-bright transition-colors" href="terms-of-service.html">Terms of Service</a>' +
           '</div>' +
         '</div>' +
       '</footer>';
@@ -440,7 +440,7 @@
       waLink('Inquiry: ' + ev.title + '\n\nDate: ' + ev.date + '\nLocation: ' + ev.location + '\n\nHi, I would like to register for this event. Please contact me.');
 
     panel.innerHTML =
-      '<button type="button" id="side-alert-tab" aria-label="Toggle event alert" class="absolute right-full top-1/2 -translate-y-1/2 flex items-center gap-1.5 rounded-l-xl bg-primary px-2.5 py-4 text-white shadow-lg hover:brightness-110 transition-all" style="writing-mode:vertical-rl">' +
+      '<button type="button" id="side-alert-tab" aria-label="Toggle event alert" class="absolute right-full top-1/2 -translate-y-1/2 flex items-center gap-1.5 rounded-l-xl bg-primary-bright px-2.5 py-4 text-rivil-black shadow-lg hover:bg-primary hover:text-rivil-black transition-all" style="writing-mode:vertical-rl">' +
         '<span class="material-symbols-outlined text-[18px]">notifications</span>' +
         '<span class="font-label-sm font-bold uppercase tracking-wider rotate-180">Event</span>' +
       '</button>' +
@@ -454,7 +454,7 @@
           '<li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span><span>' + ev.date + '</span></li>' +
           '<li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary">location_on</span><span>' + ev.location + '</span></li>' +
         '</ul>' +
-        '<a href="' + registerHref + '" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full rounded-lg bg-primary px-4 py-2.5 text-center text-xs font-bold text-white hover:brightness-110 transition-all">Register Now →</a>' +
+        '<a href="' + registerHref + '" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full rounded-lg bg-primary-bright px-4 py-2.5 text-center text-xs font-bold text-rivil-black hover:bg-primary hover:text-rivil-black transition-all">Register Now &rarr;</a>' +
       '</div>';
 
     document.body.appendChild(panel);
@@ -550,8 +550,8 @@
           '<p class="font-label-sm uppercase tracking-[0.18em] text-primary">' + d.universities.length + ' institutions</p>' +
           '<h3 class="mt-1.5 font-headline-lg text-headline-lg text-white">' + d.name + '</h3>' +
           '<p class="mt-2 font-body-md text-silver/75 line-clamp-2">' + d.tagline + '</p>' +
-          '<span class="mt-4 inline-flex items-center gap-2 font-label-sm uppercase text-primary">Explore destination' +
-            '<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1.5">arrow_forward</span>' +
+          '<span class="mt-4 inline-flex items-center gap-2 font-label-sm uppercase text-primary-bright">Explore destination' +
+            '<span class="text-[18px] transition-transform duration-300 group-hover:translate-x-1.5" aria-hidden="true">&rarr;</span>' +
           '</span>' +
         '</div>' +
       '</a>';
@@ -608,9 +608,9 @@
       card: 'bg-surface-container border border-outline-variant/30 hover:border-primary/50',
       title: 'text-white', city: 'text-silver/55', icon: 'text-primary',
       chip: 'bg-background text-silver border border-outline-variant/40',
-      ranking: 'bg-primary/15 text-primary',
+      ranking: 'bg-primary-deep/35 border border-primary-bright text-rivil-offwhite',
       logoBox: 'bg-background ring-1 ring-outline-variant/40', logoText: 'text-silver/45',
-      primaryBtn: 'bg-primary text-white hover:brightness-110',
+      primaryBtn: 'bg-primary-bright text-rivil-black hover:bg-primary hover:text-rivil-black',
       waBtn: 'border-2 border-[#25D366]/60 text-white hover:bg-[#25D366] hover:text-white'
     };
 
@@ -748,7 +748,7 @@
 
     var cave = theme === 'cave';
     var mapCardCls = cave ? 'cave-card' : 'bg-surface-container border border-outline-variant/30';
-    var iconWrap = cave ? 'bg-black/30 text-cave-cyan' : 'bg-primary text-white';
+    var iconWrap = cave ? 'bg-black/30 text-cave-cyan' : 'bg-primary-deep text-rivil-offwhite';
     var labelCls = cave ? 'text-cave-cyan' : 'text-primary';
 
     var mapImage = stats.mapImage
@@ -805,7 +805,7 @@
         '<span class="material-symbols-outlined text-[56px] absolute top-6 right-8 opacity-5 text-white">format_quote</span>' +
         '<blockquote class="relative z-10 flex-1 font-body-lg text-[18px] leading-relaxed italic text-silver">&ldquo;' + t.quote + '&rdquo;</blockquote>' +
         '<figcaption class="mt-7 flex items-center gap-4 border-t border-outline-variant/30 pt-5">' +
-          '<span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary font-headline-md text-base font-semibold text-white">' + initials(t.name) + '</span>' +
+          '<span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-deep font-headline-md text-base font-semibold text-rivil-offwhite">' + initials(t.name) + '</span>' +
           '<div>' +
             '<p class="font-headline-md text-[16px] font-semibold text-white">' + t.name + '</p>' +
             '<p class="mt-0.5 font-label-sm uppercase text-silver/55">' + t.destination + ' &middot; ' + t.date + '</p>' +
@@ -894,7 +894,7 @@
         '<div class="col-span-full rounded-xl bg-surface-container border border-outline-variant/30 p-12 text-center">' +
           '<span class="material-symbols-outlined text-[48px] text-primary">event_busy</span>' +
           '<p class="mt-4 font-body-lg text-silver/70">' + emptyMsg + '</p>' +
-          (filter === 'past' ? '' : '<a href="' + waLink('Hi, I would like to be notified about upcoming events at Rivil International. Please contact me.') + '" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white hover:brightness-110 transition-all">' + svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Notify Me on WhatsApp</a>') +
+          (filter === 'past' ? '' : '<a href="' + waLink('Hi, I would like to be notified about upcoming events at Rivil International. Please contact me.') + '" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary-bright px-6 py-3 text-sm font-semibold text-rivil-black hover:bg-primary hover:text-rivil-black transition-all">' + svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Notify Me on WhatsApp</a>') +
         '</div>';
       return;
     }
@@ -907,16 +907,16 @@
       var calUrl = buildCalendarUrl(ev);
 
       var badgeText = isPast ? 'PAST EVENT' : 'UPCOMING EVENT';
-      var badgeCls = isPast ? 'bg-black/60 text-white border border-white/20' : 'bg-primary text-white';
+      var badgeCls = isPast ? 'bg-black/60 text-white border border-white/20' : 'bg-primary-deep/35 text-rivil-offwhite border border-primary-bright';
       var imgCls = isPast ? ' grayscale-[0.7]' : '';
 
       var summaryMsg = 'Inquiry: ' + ev.title + '\n\nHi, I missed this event (' + ev.date + '). Could you share a summary and let me know about similar upcoming sessions? Please contact me.';
       var registerHref = ev.register_link || waLink('Inquiry: ' + ev.title + '\n\nDate: ' + ev.date + '\nTime: ' + ev.time + '\nLocation: ' + ev.location + '\n\nHi, I would like to register for this event. Please contact me.');
 
       var ctaHtml = isPast
-        ? '<a href="' + waLink(summaryMsg) + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg border-2 border-primary px-6 py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-colors">Ask About This Event</a>'
-        : '<a href="' + registerHref + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white hover:brightness-110 transition-all">Register Now →</a>' +
-          (calUrl !== '#' ? '<a href="' + calUrl + '" target="_blank" rel="noopener noreferrer" class="mt-3 block text-center text-sm font-medium text-primary hover:brightness-125 hover:underline underline-offset-2 transition-colors">Add to Calendar</a>' : '');
+        ? '<a href="' + waLink(summaryMsg) + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg border-2 border-primary-bright px-6 py-3 text-sm font-semibold text-primary-bright hover:bg-primary hover:text-rivil-black transition-colors">Ask About This Event</a>'
+        : '<a href="' + registerHref + '" target="_blank" rel="noopener noreferrer" class="block w-full text-center rounded-lg bg-primary-bright px-6 py-3 text-sm font-semibold text-rivil-black hover:bg-primary hover:text-rivil-black transition-all">Register Now &rarr;</a>' +
+          (calUrl !== '#' ? '<a href="' + calUrl + '" target="_blank" rel="noopener noreferrer" class="mt-3 block text-center text-sm font-medium text-primary-bright hover:brightness-125 hover:underline underline-offset-2 transition-colors">Add to Calendar</a>' : '');
 
       return '<article class="scroll-reveal flex flex-col overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-colors duration-300" style="transition-delay:' + (i % 2) * 100 + 'ms">' +
         '<div class="relative aspect-[16/9] overflow-hidden">' +

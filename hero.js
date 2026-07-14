@@ -68,12 +68,28 @@
   });
 
   function updateTabs(i) {
+    var activeTab = null;
     tabEls.forEach(function (b, j) {
       var active = j === i;
       b.classList.toggle('is-active', active);
-      if (active) b.setAttribute('aria-current', 'true');
+      if (active) {
+        b.setAttribute('aria-current', 'true');
+        activeTab = b;
+      }
       else b.removeAttribute('aria-current');
     });
+
+    /* Keep mobile autoplay changes visible without moving the page vertically. */
+    if (activeTab && window.innerWidth <= 767 && tabsWrap.scrollWidth > tabsWrap.clientWidth) {
+      var target = activeTab.offsetLeft - ((tabsWrap.clientWidth - activeTab.offsetWidth) / 2);
+      var maxScroll = tabsWrap.scrollWidth - tabsWrap.clientWidth;
+      target = Math.max(0, Math.min(target, maxScroll));
+      if (typeof tabsWrap.scrollTo === 'function') {
+        tabsWrap.scrollTo({ left: target, behavior: reduceMotion ? 'auto' : 'smooth' });
+      } else {
+        tabsWrap.scrollLeft = target;
+      }
+    }
   }
 
   var swapTimer;

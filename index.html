@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="mobile.css">
 <link rel="stylesheet" href="site-polish.css">
-<link rel="stylesheet" href="pounamu-theme.css">
+<link rel="stylesheet" href="hero.css">
 <script src="rivil-data.js"></script>
 <script src="rivil-app.js"></script>
 <script src="hero.js" defer></script>
 </head>
-<body class="theme-pounamu bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
 
 <div id="navbar"></div>
 
@@ -39,7 +39,7 @@
     </div>
 
     <div class="phero-actions">
-      <a href="contact.html" class="phero-primary">Book a Free Consultation <span class="material-symbols-outlined">arrow_forward</span></a>
+      <a href="contact.html" class="phero-primary">Book a Free Consultation <span aria-hidden="true">&rarr;</span></a>
       <a href="eligibility.html" class="phero-secondary">Check Your Eligibility</a>
     </div>
   </div>
@@ -79,7 +79,7 @@
       <span class="font-label-sm text-primary tracking-[0.2em] uppercase">Where will you go?</span>
       <h2 class="font-headline-lg text-headline-lg text-white">Seven destinations. One trusted guide.</h2>
     </div>
-    <a class="font-label-sm text-primary flex items-center gap-2 group" href="destinations-other.html">VIEW ALL DESTINATIONS <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+    <a class="font-label-sm text-primary-bright flex items-center gap-2 group" href="destinations-other.html">VIEW ALL DESTINATIONS <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span></a>
   </div>
   <div id="destination-cards-home" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"></div>
 </section>
@@ -107,7 +107,7 @@
         <li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><div><strong class="block font-headline-md text-[18px] text-white">Over 21 years of experience</strong><span class="text-silver/60 font-body-md">Placing Sri Lankan students at recognised universities abroad.</span></div></li>
         <li class="flex items-start gap-4"><span class="material-symbols-outlined text-primary mt-1">check_circle</span><div><strong class="block font-headline-md text-[18px] text-white">Based in Mount Lavinia</strong><span class="text-silver/60 font-body-md">Meet our counsellors face to face, right here in Colombo.</span></div></li>
       </ul>
-      <a href="about.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Our Story <span class="material-symbols-outlined">arrow_forward</span></a>
+      <a href="about.html" class="inline-flex items-center gap-2 bg-primary-bright text-rivil-black px-8 py-4 rounded-lg font-headline-md hover:bg-primary hover:text-rivil-black transition-all">Our Story <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -156,7 +156,7 @@
     <h2 class="font-display-lg text-[40px] text-white mt-4">Students who made it abroad</h2>
   </div>
   <div id="testimonials-home" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"></div>
-  <div class="mt-12 text-center scroll-reveal"><a href="success-stories.html" class="inline-flex items-center gap-2 font-label-sm text-primary uppercase group">Read all success stories <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div>
+  <div class="mt-12 text-center scroll-reveal"><a href="success-stories.html" class="inline-flex items-center gap-2 font-label-sm text-primary-bright uppercase group">Read all success stories <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span></a></div>
 </section>
 
 <!-- Separator -->
@@ -181,7 +181,7 @@
     <h2 class="font-display-lg text-[40px] leading-tight text-white">Ready to begin your <span class="text-primary">journey abroad?</span></h2>
     <p class="text-silver/80 font-body-lg mt-4 max-w-xl mx-auto">Speak with a Rivil counsellor today &mdash; completely free, no commitment.</p>
     <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-lg font-headline-md hover:brightness-110 transition-all">Book a Free Consultation</a>
+      <a href="contact.html" class="bg-primary-bright text-rivil-black px-8 py-4 rounded-lg font-headline-md hover:bg-primary hover:text-rivil-black transition-all">Book a Free Consultation</a>
       <a href="eligibility.html" class="border border-white/30 text-white px-8 py-4 rounded-lg font-headline-md hover:bg-white/10 transition-all">Check Your Eligibility &rarr;</a>
     </div>
   </div>
@@ -200,7 +200,7 @@
       return '<div class="site-service-card scroll-reveal group" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
         '<div class="site-service-card-image"><img src="' + s.image + '" alt="" loading="lazy"><span class="site-service-number">0' + (i + 1) + '</span></div>' +
         '<div class="site-service-card-body">' +
-          '<div class="w-12 h-12 rounded-lg bg-background flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-[28px]">' + s.icon + '</span></div>' +
+          '<div class="w-12 h-12 rounded-lg bg-background flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-rivil-black transition-colors"><span class="material-symbols-outlined text-[28px]">' + s.icon + '</span></div>' +
           '<h3 class="font-headline-md text-white">' + s.title + '</h3>' +
           '<p class="text-silver/60 font-body-md">' + s.description + '</p>' +
         '</div>' +
