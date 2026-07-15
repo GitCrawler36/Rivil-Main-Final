@@ -153,6 +153,30 @@ window.RIVIL_DATA = {
         { name: "Middlesex University Dubai", city: "Dubai Knowledge Park", programmes: ["Business", "Law", "Computing", "Media"], ranking: null, website: "https://www.mdx.ac.ae" },
         { name: "University of Wollongong in Dubai", city: "Dubai Knowledge Park", programmes: ["Business", "Engineering", "Computer Science", "Communications"], ranking: null, website: "https://www.uowdubai.ac.ae" }
       ]
+    },
+    {
+      name: "Ireland",
+      slug: "ireland",
+      page: "study-ireland.html",
+      tagline: "Respected English-speaking education in a welcoming European setting",
+      overview: "Ireland combines internationally respected universities, a thriving innovation economy and a warm, culturally rich student experience in the heart of Europe.",
+      whatsapp_message: "Hi, I am interested in studying in Ireland. Please contact me.",
+      why_study: [
+        "Internationally respected English-speaking education",
+        "Strong links between universities, research and industry",
+        "Post-study permission options for eligible graduates",
+        "Welcoming communities and a vibrant student culture"
+      ],
+      universities: [
+        { name: "Atlantic Technological University", city: "Multiple Campuses", programmes: ["Business", "Engineering", "Computing", "Science"], ranking: null, website: "https://www.atu.ie" },
+        { name: "Dublin City University", city: "Dublin", programmes: ["Business", "Computing", "Engineering", "Humanities"], ranking: null, website: "https://www.dcu.ie" },
+        { name: "Maynooth University", city: "Maynooth", programmes: ["Arts", "Science", "Business", "Law"], ranking: null, website: "https://www.maynoothuniversity.ie" },
+        { name: "South East Technological University", city: "Waterford & Carlow", programmes: ["Business", "Engineering", "Computing", "Health"], ranking: null, website: "https://www.setu.ie" },
+        { name: "Technological University of the Shannon", city: "Athlone & Limerick", programmes: ["Business", "Engineering", "Computing", "Hospitality"], ranking: null, website: "https://tus.ie" },
+        { name: "Trinity College Dublin", city: "Dublin", programmes: ["Business", "Engineering", "Health Sciences", "Arts"], ranking: null, website: "https://www.tcd.ie" },
+        { name: "University College Cork", city: "Cork", programmes: ["Business", "Medicine", "Science", "Humanities"], ranking: null, website: "https://www.ucc.ie" },
+        { name: "University of Limerick", city: "Limerick", programmes: ["Business", "Engineering", "Health", "Education"], ranking: null, website: "https://www.ul.ie" }
+      ]
     }
   ],
   events: [
@@ -413,7 +437,16 @@ window.RIVIL_DATA = {
     "University of Birmingham Dubai": "https://www.birmingham.ac.uk/dubai",
     "Heriot-Watt University Dubai": "https://www.hw.ac.uk/dubai",
     "Middlesex University Dubai": "https://www.mdx.ac.ae",
-    "University of Wollongong in Dubai": "https://www.uowdubai.ac.ae"
+    "University of Wollongong in Dubai": "https://www.uowdubai.ac.ae",
+
+    "Atlantic Technological University": "https://www.atu.ie",
+    "Dublin City University": "https://www.dcu.ie",
+    "Maynooth University": "https://www.maynoothuniversity.ie",
+    "South East Technological University": "https://www.setu.ie",
+    "Technological University of the Shannon": "https://tus.ie",
+    "Trinity College Dublin": "https://www.tcd.ie",
+    "University College Cork": "https://www.ucc.ie",
+    "University of Limerick": "https://www.ul.ie"
   },
 
   team: [
@@ -448,7 +481,7 @@ window.RIVIL_DATA = {
     {
       title: "Visa Guidance",
       icon: "verified",
-      description: "Step-by-step support with student visa applications across all seven destinations, including document checklists, application reviews, and mock interview preparation.",
+      description: "Step-by-step support with student visa applications across all eight destinations, including document checklists, application reviews, and mock interview preparation.",
       image: "assets/site/service-visa.jpg"
     },
     {
@@ -533,6 +566,14 @@ window.RIVIL_DATA = {
       postStudyVisa: "Work or eligible jobseeker visa",
       capital: "Dubai",
       climate: "Desert"
+    },
+    "ireland": {
+      population: "5.46 Million",
+      currency: "Euro (EUR)",
+      avgTuition: "EUR 10,300 – 29,000 / year",
+      postStudyVisa: "1–2 years for eligible graduates",
+      capital: "Dublin",
+      climate: "Temperate oceanic"
     }
   },
 
@@ -715,6 +756,20 @@ window.RIVIL_DATA = {
       { name: "Heriot-Watt University Dubai", city: "Dubai Knowledge Park", tags: ["International Campus", "Featured Option"] },
       { name: "Middlesex University Dubai", city: "Dubai Knowledge Park", tags: ["International Campus", "Featured Option"] },
       { name: "University of Wollongong in Dubai", city: "Dubai Knowledge Park", tags: ["International Campus", "Featured Option"] }
+    ]
+  },
+
+  /* Ireland institution network supplied for the destination page. */
+  irelandInstitutions: {
+    institutions: [
+      { name: "Atlantic Technological University", city: "Galway, Mayo, Sligo & Donegal", tags: ["Technological University", "Ireland Network"] },
+      { name: "Dublin City University", city: "Dublin", tags: ["University", "Ireland Network"] },
+      { name: "Maynooth University", city: "Maynooth, County Kildare", tags: ["University", "Ireland Network"] },
+      { name: "South East Technological University", city: "Waterford, Carlow & Wexford", tags: ["Technological University", "Ireland Network"] },
+      { name: "Technological University of the Shannon", city: "Athlone, Limerick & Thurles", tags: ["Technological University", "Ireland Network"] },
+      { name: "Trinity College Dublin", city: "Dublin", tags: ["University", "Ireland Network"] },
+      { name: "University College Cork", city: "Cork", tags: ["University", "Ireland Network"] },
+      { name: "University of Limerick", city: "Limerick", tags: ["University", "Ireland Network"] }
     ]
   }
 };

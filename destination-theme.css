@@ -164,6 +164,33 @@ body.theme-singapore .dest-gallery-caption {
   background: rgba(6, 16, 23, 0.66);
 }
 
+/* ---------- Theme: Ireland ---------- */
+
+body.theme-ireland {
+  --dest-accent: #66a873;
+  --dest-bg: #06100b;
+  --dest-glass-bg: rgba(8, 26, 18, 0.6);
+  --dest-glass-border: rgba(218, 239, 222, 0.15);
+  --dest-text-primary: #ffffff;
+  --dest-text-muted: rgba(255, 255, 255, 0.76);
+  --dest-overlay: rgba(5, 18, 12, 0.62);
+  --dest-overlay-soft: rgba(5, 18, 12, 0.54);
+  --dest-overlay-strong: rgba(5, 18, 12, 0.72);
+  background-color: var(--dest-bg);
+}
+
+body.theme-ireland .dest-hero-img        { background-image: url("assets/destinations/ireland/hero-dublin-liffey.jpg"); }
+body.theme-ireland .dest-bg-universities { background-image: url("assets/destinations/ireland/bg-universities-trinity.jpg"); }
+body.theme-ireland .dest-bg-scholarships { background-image: url("assets/destinations/ireland/bg-scholarships-library.jpg"); }
+body.theme-ireland .dest-bg-gallery      { background-image: url("assets/destinations/ireland/bg-gallery-wild-atlantic.jpg"); }
+body.theme-ireland .dest-bg-cta          { background-image: url("assets/destinations/ireland/bg-cta-cliffs-of-moher.jpg"); }
+
+body.theme-ireland .dest-img-tag,
+body.theme-ireland .dest-gallery-caption {
+  background: rgba(5, 18, 12, 0.7);
+  border-color: rgba(218, 239, 222, 0.16);
+}
+
 /* ---------- Theme: Dubai ---------- */
 
 body.theme-dubai {
