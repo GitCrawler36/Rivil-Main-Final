@@ -154,6 +154,27 @@ html {
   }
 }
 
+/* Bento cards reveal with a keyframe animation instead of the shared
+   .scroll-reveal transition, because the hover transition below would
+   otherwise override it (both set the `transition` property). The
+   animation staggers per card via --reveal-delay and releases the
+   transform afterwards so hover scaling keeps working. */
+@keyframes bento-reveal {
+  from { opacity: 0; transform: translateY(36px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.bento-card.scroll-reveal {
+  opacity: 0;
+  transform: none;
+}
+
+.bento-card.scroll-reveal.is-revealed {
+  opacity: 1;
+  animation: bento-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
 .bento-card {
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -231,10 +252,13 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 
-  .scroll-reveal {
+  .scroll-reveal,
+  .bento-card.scroll-reveal,
+  .bento-card.scroll-reveal.is-revealed {
     opacity: 1;
     transform: none;
     transition: none;
+    animation: none;
   }
 
   .wa-pulse-ring,

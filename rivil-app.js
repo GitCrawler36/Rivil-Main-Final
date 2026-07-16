@@ -546,7 +546,7 @@
     if (!container) return;
 
     container.innerHTML = window.RIVIL_DATA.destinations.map(function (d, i) {
-      return '<a href="' + d.page + '" class="scroll-reveal bento-card group relative block overflow-hidden rounded-xl border border-outline-variant/30 h-[400px]" style="transition-delay:' + (i % 3) * 90 + 'ms">' +
+      return '<a href="' + d.page + '" class="scroll-reveal bento-card group relative block overflow-hidden rounded-xl border border-outline-variant/30 h-[400px]" style="--reveal-delay:' + i * 70 + 'ms">' +
         '<img src="' + DEST_IMAGES[d.slug] + '" alt="Study in ' + d.name + '" loading="lazy" class="h-full w-full object-cover opacity-80 transition-transform duration-700 ease-out group-hover:scale-105">' +
         '<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>' +
         '<div class="absolute inset-x-0 bottom-0 p-7">' +
@@ -635,7 +635,7 @@
         '<img src="' + logoSrc + '" alt="' + u.name + ' logo" loading="lazy" class="absolute inset-0 m-auto max-h-[44px] max-w-[104px] object-contain" onerror="this.style.display=\'none\'">' +
       '</div>';
 
-      return '<article class="scroll-reveal bento-card flex flex-col rounded-xl ' + t.card + ' p-6 sm:p-7 transition-all duration-300" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
+      return '<article class="scroll-reveal bento-card flex flex-col rounded-xl ' + t.card + ' p-6 sm:p-7 transition-all duration-300" style="--reveal-delay:' + (i % 3) * 80 + 'ms">' +
         logoBox +
         '<div>' +
           '<h3 class="font-headline-md text-[20px] font-semibold ' + t.title + ' leading-tight">' + u.name + '</h3>' +
