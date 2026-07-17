@@ -525,3 +525,50 @@ button:focus-visible {
 @media (max-width: 639px) {
   .directors-message p { font-size: 17px; }
 }
+
+/* Awards & Recognition (about page) */
+.award-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.award-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(85, 107, 47, 0.6);
+  box-shadow: 0 0 24px rgba(85, 107, 47, 0.25);
+}
+
+.award-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.award-lightbox.is-open {
+  display: flex;
+}
+.award-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.award-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 639px) {
+  .award-lightbox-img {
+    max-width: 95vw;
+  }
+}
