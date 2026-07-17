@@ -511,3 +511,17 @@ button:focus-visible {
   .home-hero-stats > div:nth-child(n+3) { border-bottom: 0; }
   .editorial-hero { min-height: 430px !important; height: 55vh !important; padding: 110px 20px 54px !important; }
 }
+
+/* Director's Message (about page) */
+.directors-message p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 639px) {
+  .directors-message p { font-size: 17px; }
+}
