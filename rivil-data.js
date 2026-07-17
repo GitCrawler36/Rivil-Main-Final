@@ -615,113 +615,172 @@ window.RIVIL_DATA = {
     ]
   },
 
-  /* UK institution directory for the glassmorphism destination page. Logos
-     are intentionally omitted for now, so renderInstitutionGroup displays
-     the built-in initials placeholders until approved logo assets arrive. */
+  /* Complete UK institution directory supplied for the destination page. */
   ukInstitutions: {
-    representedUniversities: [
-      { name: "University of Greenwich", city: "London", tags: ["University", "Direct Partner"] },
-      { name: "Oxford Brookes University", city: "Oxford", tags: ["University", "Direct Partner"] },
-      { name: "The University for the Creative Arts", city: "Farnham & Kent", tags: ["University", "Direct Partner"] },
-      { name: "Edge Hill University", city: "Ormskirk", tags: ["University", "Direct Partner"] }
-    ],
-    representedColleges: [
-      { name: "Bellerbys College", city: "United Kingdom", tags: ["College", "Direct Partner"] },
-      { name: "Istituto Marangoni", city: "London", tags: ["College", "Direct Partner"] },
-      { name: "NCC Education", city: "Manchester", tags: ["College", "Direct Partner"] }
-    ],
-    partnerUniversities: [
-      { name: "Coventry University", city: "Coventry", tags: ["University", "International Partner"] },
-      { name: "Coventry University – London", city: "London", tags: ["University", "International Partner"] },
-      { name: "University of Huddersfield", city: "Huddersfield", tags: ["University", "International Partner"] },
-      { name: "University of Huddersfield – London", city: "London", tags: ["University", "International Partner"] },
-      { name: "Middlesex University", city: "London", tags: ["University", "International Partner"] },
-      { name: "London South Bank University", city: "London", tags: ["University", "International Partner"] },
-      { name: "University of Plymouth", city: "Plymouth", tags: ["University", "International Partner"] },
-      { name: "University of South Wales", city: "Cardiff", tags: ["University", "International Partner"] },
-      { name: "University of Gloucestershire", city: "Cheltenham & Gloucester", tags: ["University", "International Partner"] },
-      { name: "Cranfield University", city: "Cranfield", tags: ["University", "International Partner"] },
-      { name: "University of Central Lancashire (UCLan)", city: "Preston", tags: ["University", "International Partner"] },
-      { name: "De Montfort University", city: "Leicester", tags: ["University", "International Partner"] },
-      { name: "University of York", city: "York", tags: ["University", "International Partner"] },
-      { name: "Northumbria University", city: "Newcastle", tags: ["University", "International Partner"] },
-      { name: "Bath Spa University", city: "Bath", tags: ["University", "International Partner"] },
-      { name: "University of Cumbria", city: "Carlisle & Lancaster", tags: ["University", "International Partner"] },
-      { name: "University of Exeter", city: "Exeter", tags: ["University", "International Partner"] },
-      { name: "University of Strathclyde", city: "Glasgow", tags: ["University", "International Partner"] }
-    ]
+    institutions: [
+      "Aberystwyth University",
+      "Arden University",
+      "Bangor University",
+      "Bath Spa University",
+      "Birmingham City University",
+      "Bournemouth University",
+      "BPP University",
+      "Canterbury Christ Church University",
+      "Cardiff Metropolitan University",
+      "Cardiff University",
+      "Coventry University",
+      "De Montfort University",
+      "Edinburgh Napier University",
+      "Glasgow Caledonian University",
+      "Health Sciences University",
+      "Heriot-Watt University",
+      "Hult International Business School",
+      "Kingston University London",
+      "Leeds Arts University",
+      "Liverpool Hope University",
+      "London Metropolitan University",
+      "London South Bank University",
+      "Loughborough University",
+      "Middlesex University",
+      "Northeastern University London",
+      "Northumbria University",
+      "Nottingham Trent University",
+      "Oxford Brookes University",
+      "Ravensbourne University London",
+      "Regent's University London",
+      "Richmond American University London",
+      "Royal Holloway, University of London",
+      "SOAS University of London",
+      "Swansea University",
+      "Teesside University",
+      "The University of Edinburgh",
+      "Ulster University",
+      "University of Birmingham",
+      "University of Bradford",
+      "University of Brighton",
+      "University of Buckingham",
+      "University of Chester",
+      "University of Chichester",
+      "University of Cumbria",
+      "University of Derby",
+      "University of East London",
+      "University of Essex",
+      "University of Glasgow",
+      "University of Gloucestershire",
+      "University of Greenwich",
+      "University of Hertfordshire",
+      "University of Huddersfield",
+      "University of Kent",
+      "University of Lancashire (formerly UCLan)",
+      "University of Law",
+      "University of Leicester",
+      "University of Lincoln",
+      "University of Liverpool",
+      "University of Nottingham",
+      "University of Plymouth",
+      "University of Reading",
+      "University of Roehampton",
+      "University of South Wales",
+      "University of Southampton",
+      "University of Strathclyde",
+      "University of Sunderland",
+      "University of Surrey",
+      "University of Sussex",
+      "University of the West of England",
+      "University of West London",
+      "University of Westminster",
+      "University of Winchester",
+      "University of York"
+    ].map(function (name) {
+      return { name: name, city: "United Kingdom", tags: ["Institution", "UK Network"] };
+    })
   },
 
-  /* Australian institution directory for the destination page. Approved
-     logos can be added later without changing the card structure; until then
-     the shared renderer uses its initials placeholders. */
+  /* Complete Australian institution directory supplied for the destination page. */
   australiaInstitutions: {
     institutions: [
-      { name: "University of Tasmania", city: "Hobart & Launceston", tags: ["University", "Australia Partner"] },
-      { name: "Deakin University", city: "Melbourne & Geelong", tags: ["University", "Australia Partner"] },
-      { name: "University of New South Wales (UNSW)", city: "Sydney", tags: ["University", "Australia Partner"] },
-      { name: "University of Technology Sydney (UTS)", city: "Sydney", tags: ["University", "Australia Partner"] },
-      { name: "La Trobe University", city: "Melbourne", tags: ["University", "Australia Partner"] },
-      { name: "Royal Melbourne Institute of Technology (RMIT)", city: "Melbourne", tags: ["University", "Australia Partner"] },
-      { name: "Curtin University", city: "Perth", tags: ["University", "Australia Partner"] },
-      { name: "Victoria University", city: "Melbourne", tags: ["University", "Australia Partner"] },
-      { name: "Bond University", city: "Gold Coast", tags: ["University", "Australia Partner"] },
-      { name: "Swinburne University of Technology", city: "Melbourne", tags: ["University", "Australia Partner"] },
-      { name: "Central Queensland University", city: "Multiple Campuses", tags: ["University", "Australia Partner"] },
-      { name: "Edith Cowan University (ECU)", city: "Perth", tags: ["University", "Australia Partner"] },
-      { name: "Torrens University", city: "Multiple Cities", tags: ["University", "Australia Partner"] },
-      { name: "Charles Sturt University", city: "Regional New South Wales", tags: ["University", "Australia Partner"] },
-      { name: "The University of Queensland", city: "Brisbane", tags: ["University", "Australia Partner"] },
-      { name: "University of South Australia (CELUSA)", city: "Adelaide", tags: ["University", "English Pathway"] },
-      { name: "Federation University – All campuses", city: "Victoria", tags: ["University", "All Campuses"] },
-      { name: "Griffith University – All campuses", city: "Brisbane & Gold Coast", tags: ["University", "All Campuses"] },
-      { name: "The University of Notre Dame Australia – All campuses", city: "Fremantle, Sydney & Broome", tags: ["University", "All Campuses"] },
-      { name: "University of Canberra – All campuses", city: "Canberra", tags: ["University", "All Campuses"] },
-      { name: "Western Sydney University – All campuses", city: "Western Sydney", tags: ["University", "All Campuses"] }
-    ]
+      "Charles Sturt University",
+      "Deakin University",
+      "Federation University Australia",
+      "Griffith University",
+      "James Cook University",
+      "La Trobe University",
+      "RMIT University (Royal Melbourne Institute of Technology)",
+      "University of Tasmania",
+      "Victoria University",
+      "The University of Adelaide",
+      "The University of Newcastle",
+      "The University of Notre Dame Australia",
+      "University of the Sunshine Coast (UniSC)",
+      "Western Sydney University"
+    ].map(function (name) {
+      return { name: name, city: "Australia", tags: ["Institution", "Australia Network"] };
+    })
   },
 
-  /* Canadian institution directory for the destination page. Logos are
-     intentionally omitted so the shared renderer shows initials placeholders
-     until approved institution artwork is supplied. */
+  /* Complete Canadian institution directory supplied for the destination page. */
   canadaInstitutions: {
-    representedUniversities: [
-      { name: "Royal Roads University", city: "Victoria, British Columbia", tags: ["University", "Direct Partner"] },
-      { name: "Vancouver Island University", city: "Nanaimo, British Columbia", tags: ["University", "Direct Partner"] }
-    ],
-    representedColleges: [
-      { name: "Niagara College", city: "Niagara Region, Ontario", tags: ["College", "Direct Partner"] },
-      { name: "Acsenda School of Management", city: "Vancouver, British Columbia", tags: ["College", "Direct Partner"] },
-      { name: "Arbutus College Vancouver", city: "Vancouver, British Columbia", tags: ["College", "Direct Partner"] }
-    ],
-    partnerUniversities: [
-      { name: "Adler University", city: "Vancouver, British Columbia", tags: ["University", "International Partner"] },
-      { name: "Bishop's University", city: "Sherbrooke, Quebec", tags: ["University", "International Partner"] },
-      { name: "Brock University", city: "St. Catharines, Ontario", tags: ["University", "International Partner"] },
-      { name: "Carleton University", city: "Ottawa, Ontario", tags: ["University", "International Partner"] },
-      { name: "Lakehead University", city: "Thunder Bay & Orillia, Ontario", tags: ["University", "International Partner"] },
-      { name: "Ontario Tech University", city: "Oshawa, Ontario", tags: ["University", "International Partner"] },
-      { name: "Queen's University", city: "Kingston, Ontario", tags: ["University", "International Partner"] },
-      { name: "Thompson Rivers University", city: "Kamloops, British Columbia", tags: ["University", "International Partner"] },
-      { name: "Trent University", city: "Peterborough, Ontario", tags: ["University", "International Partner"] },
-      { name: "Trinity Western University", city: "Langley, British Columbia", tags: ["University", "International Partner"] },
-      { name: "University Canada West", city: "Vancouver, British Columbia", tags: ["University", "International Partner"] },
-      { name: "University of Manitoba", city: "Winnipeg, Manitoba", tags: ["University", "International Partner"] },
-      { name: "University of Regina", city: "Regina, Saskatchewan", tags: ["University", "International Partner"] },
-      { name: "University of the Fraser Valley", city: "Abbotsford, British Columbia", tags: ["University", "International Partner"] },
-      { name: "University of Windsor", city: "Windsor, Ontario", tags: ["University", "International Partner"] },
-      { name: "Yorkville University", city: "Multiple Campuses", tags: ["University", "International Partner"] }
-    ],
-    partnerColleges: [
-      { name: "Conestoga College", city: "Kitchener-Waterloo, Ontario", tags: ["College", "International Partner"] },
-      { name: "Douglas College", city: "Metro Vancouver, British Columbia", tags: ["College", "International Partner"] },
-      { name: "Durham College", city: "Oshawa, Ontario", tags: ["College", "International Partner"] },
-      { name: "Fleming College", city: "Peterborough, Ontario", tags: ["College", "International Partner"] },
-      { name: "George Brown College", city: "Toronto, Ontario", tags: ["College", "International Partner"] },
-      { name: "Humber College", city: "Toronto, Ontario", tags: ["College", "International Partner"] },
-      { name: "Saskatchewan Polytechnic", city: "Saskatchewan", tags: ["College", "International Partner"] },
-      { name: "Southern Alberta Institute of Technology (SAIT)", city: "Calgary, Alberta", tags: ["College", "International Partner"] }
-    ]
+    institutions: [
+      "Acadia University",
+      "Adler University",
+      "Alberta University of the Arts",
+      "Algoma University",
+      "Bishop's University",
+      "Brandon University",
+      "Brock University",
+      "Cape Breton University",
+      "Capilano University",
+      "Carleton University",
+      "Concordia University of Edmonton",
+      "Crandall University",
+      "Fairleigh Dickinson University",
+      "International Business University",
+      "Kwantlen Polytechnic University",
+      "Lakehead University",
+      "Laurentian University",
+      "MacEwan University",
+      "Memorial University of Newfoundland",
+      "Mount Allison University",
+      "Mount Royal University",
+      "Mount Saint Vincent University",
+      "Nipissing University",
+      "Northeastern University",
+      "OCAD University",
+      "Ontario Tech University",
+      "Providence University College and Theological Seminary",
+      "Queen's University",
+      "Royal Roads University",
+      "St. Francis Xavier University",
+      "St. Mary's University",
+      "St. Thomas University",
+      "Thompson Rivers University",
+      "Toronto Metropolitan University",
+      "Trent University",
+      "Trinity Western University",
+      "Tyndale University",
+      "University Canada West",
+      "University of Guelph",
+      "University of Lethbridge",
+      "University of Manitoba",
+      "University of New Brunswick",
+      "University of Niagara Falls Canada",
+      "University of Northern British Columbia",
+      "University of Ottawa",
+      "University of Prince Edward Island",
+      "University of Regina",
+      "University of Saskatchewan",
+      "University of the Fraser Valley",
+      "University of Toronto",
+      "University of Victoria",
+      "University of Waterloo",
+      "University of Windsor",
+      "Western University",
+      "Wilfrid Laurier University",
+      "Yorkville University",
+      "Yukon University"
+    ].map(function (name) {
+      return { name: name, city: "Canada", tags: ["Institution", "Canada Network"] };
+    })
   },
 
   /* Malaysian institution directory for the destination page. The current

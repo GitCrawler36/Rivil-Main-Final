@@ -63,56 +63,18 @@
   <div class="dest-section-inner">
     <span class="dest-eyebrow scroll-reveal">Where you could study</span>
     <h2 class="dest-section-title scroll-reveal">World-Class Institutions</h2>
-    <p class="dest-section-sub scroll-reveal">Our Canadian network combines universities and colleges we represent directly with additional placements arranged through trusted international partnerships.</p>
+    <p class="dest-section-sub scroll-reveal">Explore the universities and specialist institutions available through our Canadian network.</p>
 
     <div class="dest-group scroll-reveal">
       <div class="dest-group-head">
-        <span class="dest-group-count">02</span>
+        <span class="dest-group-count">57</span>
         <div>
-          <span class="dest-eyebrow">Direct Representation</span>
-          <h3 class="dest-group-title">Universities we represent</h3>
+          <span class="dest-eyebrow">Our Canadian Network</span>
+          <h3 class="dest-group-title">Universities &amp; Institutions</h3>
         </div>
       </div>
     </div>
-    <div id="represented-universities-canada" class="dest-uni-grid"></div>
-
-    <div class="dest-group dest-group-spaced scroll-reveal">
-      <div class="dest-group-head">
-        <span class="dest-group-count">03</span>
-        <div>
-          <span class="dest-eyebrow">Direct Representation</span>
-          <h3 class="dest-group-title">Colleges we represent</h3>
-        </div>
-      </div>
-    </div>
-    <div id="represented-colleges-canada" class="dest-uni-grid"></div>
-
-    <div class="dest-partnership-intro scroll-reveal">
-      <span class="dest-eyebrow">International Partnerships</span>
-      <h3 class="dest-partnership-title">We also place students for the following institutions via our international partnerships</h3>
-    </div>
-
-    <div class="dest-group scroll-reveal">
-      <div class="dest-group-head">
-        <span class="dest-group-count">16</span>
-        <div>
-          <span class="dest-eyebrow">Partner Network</span>
-          <h4 class="dest-group-title">Universities</h4>
-        </div>
-      </div>
-    </div>
-    <div id="partner-universities-canada" class="dest-uni-grid"></div>
-
-    <div class="dest-group dest-group-spaced scroll-reveal">
-      <div class="dest-group-head">
-        <span class="dest-group-count">08</span>
-        <div>
-          <span class="dest-eyebrow">Partner Network</span>
-          <h4 class="dest-group-title">Colleges</h4>
-        </div>
-      </div>
-    </div>
-    <div id="partner-colleges-canada" class="dest-uni-grid"></div>
+    <div id="institution-cards-canada" class="dest-uni-grid"></div>
   </div>
 </section>
 
@@ -230,10 +192,7 @@
     initWhatsApp('Hi, I am interested in studying in Canada. Please contact me.');
 
     var canada = window.RIVIL_DATA.canadaInstitutions || {};
-    renderInstitutionGroup('represented-universities-canada', canada.representedUniversities, 'Canada');
-    renderInstitutionGroup('represented-colleges-canada', canada.representedColleges, 'Canada');
-    renderInstitutionGroup('partner-universities-canada', canada.partnerUniversities, 'Canada');
-    renderInstitutionGroup('partner-colleges-canada', canada.partnerColleges, 'Canada');
+    renderInstitutionGroup('institution-cards-canada', canada.institutions, 'Canada');
     initGlassHoverEffects('#institutions .dest-university-card');
 
     initKenBurnsHero('.dest-hero-img');

@@ -63,44 +63,18 @@
   <div class="dest-section-inner">
     <span class="dest-eyebrow scroll-reveal">Where you could study</span>
     <h2 class="dest-section-title scroll-reveal">World-Class Institutions</h2>
-    <p class="dest-section-sub scroll-reveal">Our UK network combines institutions we represent directly with additional placements arranged through trusted international partnerships.</p>
+    <p class="dest-section-sub scroll-reveal">Explore the universities and specialist institutions available through our United Kingdom network.</p>
 
     <div class="dest-group scroll-reveal">
       <div class="dest-group-head">
-        <span class="dest-group-count">04</span>
+        <span class="dest-group-count">73</span>
         <div>
-          <span class="dest-eyebrow">Direct Representation</span>
-          <h3 class="dest-group-title">Universities we represent</h3>
+          <span class="dest-eyebrow">Our UK Network</span>
+          <h3 class="dest-group-title">Universities &amp; Institutions</h3>
         </div>
       </div>
     </div>
-    <div id="represented-universities-uk" class="dest-uni-grid"></div>
-
-    <div class="dest-group dest-group-spaced scroll-reveal">
-      <div class="dest-group-head">
-        <span class="dest-group-count">03</span>
-        <div>
-          <span class="dest-eyebrow">Direct Representation</span>
-          <h3 class="dest-group-title">Colleges we represent</h3>
-        </div>
-      </div>
-    </div>
-    <div id="represented-colleges-uk" class="dest-uni-grid"></div>
-
-    <div class="dest-partnership-intro scroll-reveal">
-      <span class="dest-eyebrow">International Partnerships</span>
-      <h3 class="dest-partnership-title">We also place students for the following institutions via our international partnerships</h3>
-    </div>
-    <div class="dest-group scroll-reveal">
-      <div class="dest-group-head">
-        <span class="dest-group-count">18</span>
-        <div>
-          <span class="dest-eyebrow">Partner Network</span>
-          <h4 class="dest-group-title">Universities</h4>
-        </div>
-      </div>
-    </div>
-    <div id="partner-universities-uk" class="dest-uni-grid"></div>
+    <div id="institution-cards-uk" class="dest-uni-grid"></div>
   </div>
 </section>
 
@@ -218,9 +192,7 @@
     initWhatsApp('Hi, I am interested in studying in the UK. Please contact me.');
 
     var uk = window.RIVIL_DATA.ukInstitutions || {};
-    renderInstitutionGroup('represented-universities-uk', uk.representedUniversities, 'United Kingdom');
-    renderInstitutionGroup('represented-colleges-uk', uk.representedColleges, 'United Kingdom');
-    renderInstitutionGroup('partner-universities-uk', uk.partnerUniversities, 'United Kingdom');
+    renderInstitutionGroup('institution-cards-uk', uk.institutions, 'United Kingdom');
     initGlassHoverEffects('#institutions .dest-university-card');
 
     initKenBurnsHero('.dest-hero-img');
