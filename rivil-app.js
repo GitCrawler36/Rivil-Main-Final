@@ -577,20 +577,64 @@
        driven by the body theme class, so future destination themes
        reuse this branch unchanged. */
     if (theme === 'nz-glass') {
+      var nzLogoBackgrounds = {
+        'University of Auckland': '#00467F',
+        'University of Otago': '#00214B',
+        'Victoria University of Wellington': '#FFFFFF',
+        'University of Canterbury': '#DA291C',
+        'University of Waikato': '#000000',
+        'Massey University': '#002F6C',
+        'Lincoln University': '#00563F',
+        /* The shared destination data uses the abbreviated institution name. */
+        'AUT University': '#000000'
+      };
+      var nzLogoBackgroundOverrides = {
+        /* Transparent red artwork disappears on the mapped Canterbury red. */
+        'University of Canterbury': '#FFFFFF',
+        /* These supplied assets need a white field for contrast or continuity. */
+        'University of Waikato': '#FFFFFF',
+        'Massey University': '#FFFFFF',
+        'AUT University': '#FFFFFF'
+      };
       var glassLogos = (window.RIVIL_DATA && window.RIVIL_DATA.universityLogos) || {};
-      container.innerHTML = dest.universities.map(function (u, i) {
+      var nzUniversities = dest.universities.filter(function (u) {
+        return Object.prototype.hasOwnProperty.call(nzLogoBackgrounds, u.name);
+      });
+      container.innerHTML = nzUniversities.map(function (u, i) {
         var src = glassLogos[u.name] || '';
+        var website = u.website || institutionWebsite(u);
+        var logoBackground = nzLogoBackgroundOverrides[u.name] || nzLogoBackgrounds[u.name] || '#FFFFFF';
+        var fallbackColour = logoBackground === '#FFFFFF' ? '#2f342f' : '#ffffff';
         var tags = u.programmes.slice(0, 2).map(function (p) {
           return '<span class="dest-uni-tag">' + p + '</span>';
         }).join('');
-        return '<article class="dest-university-card dest-glass-panel scroll-reveal" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
-          '<div class="dest-uni-logo">' +
+        var websiteButton = website
+          ? '<a href="' + website + '" target="_blank" rel="noopener noreferrer" class="dest-uni-website" aria-label="Visit the official website for ' + u.name + '">' +
+              '<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Visit Website' +
+            '</a>'
+          : '';
+        var enquiry = 'Inquiry: ' + u.name + ' — Study in ' + dest.name + '\n\n' +
+          'Institution: ' + u.name + '\n' +
+          'Location: ' + u.city + ', ' + dest.name + '\n' +
+          'Areas of interest: ' + u.programmes.join(', ') + '\n' +
+          '\nHi, I found this institution on your website and would like free guidance on courses, entry requirements and applying. Please contact me.';
+
+        return '<article class="dest-university-card dest-glass-panel dest-nz-university-card scroll-reveal" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
+          '<div class="dest-uni-logo" style="background-color:' + logoBackground + ';--nz-logo-fallback-color:' + fallbackColour + '">' +
             (src ? '<img src="' + src + '" alt="' + u.name + ' logo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '') +
             '<span class="dest-uni-logo-fallback" aria-hidden="true"' + (src ? ' style="display:none"' : '') + '>' + initials(u.name) + '</span>' +
           '</div>' +
-          '<h3 class="dest-uni-name">' + u.name + '</h3>' +
-          '<p class="dest-uni-city"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">location_on</span>' + u.city + '</p>' +
-          '<div class="dest-uni-tags">' + tags + '</div>' +
+          '<div class="dest-nz-university-content">' +
+            '<h3 class="dest-uni-name">' + u.name + '</h3>' +
+            '<p class="dest-uni-city"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">location_on</span>' + u.city + '</p>' +
+            '<div class="dest-uni-tags">' + tags + '</div>' +
+            '<div class="dest-uni-actions">' +
+              websiteButton +
+              '<a href="' + waLink(enquiry) + '" target="_blank" rel="noopener noreferrer" class="dest-uni-enquire" aria-label="Enquire about ' + u.name + ' on WhatsApp">' +
+                svgIcon(WHATSAPP_ICON, 'w-4 h-4') + 'Enquire on WhatsApp' +
+              '</a>' +
+            '</div>' +
+          '</div>' +
         '</article>';
       }).join('');
       window.initScrollAnimations();

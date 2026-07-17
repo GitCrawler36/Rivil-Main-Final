@@ -693,6 +693,56 @@ body.theme-dubai .dest-gallery-caption {
               inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
+/* New Zealand university cards use a 40:60 brand-field/content split.
+   The extra class is emitted only by renderUniversityCards("nz-glass"),
+   so the polytechnic grid and every other destination retain their layout. */
+body.theme-nz .dest-nz-university-card {
+  box-sizing: border-box;
+  height: 480px;
+  padding: 0;
+  overflow: hidden;
+}
+
+body.theme-nz .dest-nz-university-card > .dest-uni-logo {
+  flex: 0 0 192px;
+  width: 100%;
+  height: 192px;
+  margin: 0;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+body.theme-nz .dest-nz-university-card > .dest-uni-logo img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: 20px;
+  object-fit: contain;
+}
+
+body.theme-nz .dest-nz-university-card .dest-uni-logo-fallback {
+  color: var(--nz-logo-fallback-color, #2f342f);
+}
+
+body.theme-nz .dest-nz-university-content {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  flex-direction: column;
+  padding: 18px 22px;
+}
+
+body.theme-nz .dest-nz-university-content .dest-uni-tags {
+  padding-top: 14px;
+}
+
+body.theme-nz .dest-nz-university-content .dest-uni-actions {
+  margin-top: 16px;
+}
+
 /* Light backing panel so dark-on-transparent logos stay legible. */
 .dest-uni-logo {
   position: relative;
