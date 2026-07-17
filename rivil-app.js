@@ -371,7 +371,6 @@
     wrap.className = 'fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50';
     wrap.innerHTML =
       '<a href="' + waLink(msg) + '" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="group relative flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center">' +
-        '<span class="wa-pulse-ring absolute inset-0 rounded-full bg-[#25D366]"></span>' +
         '<span class="relative flex h-full w-full items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-green-900/30 transition-transform duration-200 group-hover:scale-110">' +
           svgIcon(WHATSAPP_ICON, 'w-7 h-7 sm:w-8 sm:h-8') +
         '</span>' +
