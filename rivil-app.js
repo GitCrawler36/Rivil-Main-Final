@@ -577,34 +577,24 @@
        driven by the body theme class, so future destination themes
        reuse this branch unchanged. */
     if (theme === 'nz-glass') {
-      var nzLogoBackgrounds = {
-        'University of Auckland': '#00467F',
-        'University of Otago': '#00214B',
-        'Victoria University of Wellington': '#FFFFFF',
-        'University of Canterbury': '#DA291C',
-        'University of Waikato': '#000000',
-        'Massey University': '#002F6C',
-        'Lincoln University': '#00563F',
+      var nzUniversityNames = [
+        'University of Auckland',
+        'University of Otago',
+        'Victoria University of Wellington',
+        'University of Canterbury',
+        'University of Waikato',
+        'Massey University',
+        'Lincoln University',
         /* The shared destination data uses the abbreviated institution name. */
-        'AUT University': '#000000'
-      };
-      var nzLogoBackgroundOverrides = {
-        /* Transparent red artwork disappears on the mapped Canterbury red. */
-        'University of Canterbury': '#FFFFFF',
-        /* These supplied assets need a white field for contrast or continuity. */
-        'University of Waikato': '#FFFFFF',
-        'Massey University': '#FFFFFF',
-        'AUT University': '#FFFFFF'
-      };
+        'AUT University'
+      ];
       var glassLogos = (window.RIVIL_DATA && window.RIVIL_DATA.universityLogos) || {};
       var nzUniversities = dest.universities.filter(function (u) {
-        return Object.prototype.hasOwnProperty.call(nzLogoBackgrounds, u.name);
+        return nzUniversityNames.indexOf(u.name) !== -1;
       });
       container.innerHTML = nzUniversities.map(function (u, i) {
         var src = glassLogos[u.name] || '';
         var website = u.website || institutionWebsite(u);
-        var logoBackground = nzLogoBackgroundOverrides[u.name] || nzLogoBackgrounds[u.name] || '#FFFFFF';
-        var fallbackColour = logoBackground === '#FFFFFF' ? '#2f342f' : '#ffffff';
         var tags = u.programmes.slice(0, 2).map(function (p) {
           return '<span class="dest-uni-tag">' + p + '</span>';
         }).join('');
@@ -620,7 +610,7 @@
           '\nHi, I found this institution on your website and would like free guidance on courses, entry requirements and applying. Please contact me.';
 
         return '<article class="dest-university-card dest-glass-panel dest-nz-university-card scroll-reveal" style="transition-delay:' + (i % 3) * 80 + 'ms">' +
-          '<div class="dest-uni-logo" style="background-color:' + logoBackground + ';--nz-logo-fallback-color:' + fallbackColour + '">' +
+          '<div class="dest-uni-logo">' +
             (src ? '<img src="' + src + '" alt="' + u.name + ' logo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '') +
             '<span class="dest-uni-logo-fallback" aria-hidden="true"' + (src ? ' style="display:none"' : '') + '>' + initials(u.name) + '</span>' +
           '</div>' +
