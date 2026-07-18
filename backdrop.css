@@ -1,0 +1,14 @@
+body.site-backdrop {
+  background-color: #050708;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  body.site-backdrop {
+    background-position: left center;
+    background-attachment: scroll;
+  }
+}
